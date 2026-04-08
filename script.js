@@ -298,6 +298,45 @@ document.querySelectorAll('.cat-pill').forEach(pill=>{
   pill.addEventListener('click',function(){ document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active')); this.classList.add('active'); });
 });
 
+// ============================================================
+// CATEGORY STRIP SLIDER
+// ============================================================
+let catPage = 0;
+
+function getCategoryPageSize(){
+  if(window.innerWidth <= 640) return 1;
+  if(window.innerWidth <= 1024) return 3;
+  return 4;
+}
+
+function getCategoryPageCount(){
+  const items = document.querySelectorAll('.cat-pill').length;
+  return Math.max(1, Math.ceil(items / getCategoryPageSize()));
+}
+
+function updateCategoryStrip(){
+  const track = document.getElementById('catTrack');
+  if(!track) return;
+  const pages = getCategoryPageCount();
+  catPage = Math.max(0, Math.min(catPage, pages - 1));
+  const pageSize = getCategoryPageSize();
+  const offset = (100 / pageSize) * pageSize * catPage;
+  track.style.transform = `translateX(-${offset}%)`;
+}
+
+function moveCategoryStrip(direction){
+  catPage += direction;
+  updateCategoryStrip();
+}
+
+function goCategoryPage(page){
+  catPage = page;
+  updateCategoryStrip();
+}
+
+window.addEventListener('resize', updateCategoryStrip);
+
 // INIT
 renderProducts('popular');
 updateCartBadge();
+updateCategoryStrip();

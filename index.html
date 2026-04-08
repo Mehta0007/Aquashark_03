@@ -186,39 +186,73 @@
 
 <!-- CATEGORIES -->
 <section class="cat-section">
-  <div class="cat-inner">
-    <div class="cat-pill active">
-      <div class="cat-icon" style="background:#e0f7ff;">🏊</div>
-      <span class="cat-name">Fiberglass Pools</span>
+  <div class="cat-slider">
+    <button class="cat-nav cat-prev" type="button" aria-label="Previous categories" onclick="moveCategoryStrip(-1)">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <div class="cat-viewport" id="catViewport">
+      <div class="cat-track" id="catTrack">
+        <div class="cat-pill active">
+          <div class="cat-icon">🏊</div>
+          <div class="cat-copy">
+            <span class="cat-name">Fiberglass Pools</span>
+            <span class="cat-meta">Elegant finishes</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">⬆️</div>
+          <div class="cat-copy">
+            <span class="cat-name">Above Ground</span>
+            <span class="cat-meta">Plug-and-play</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">🌊</div>
+          <div class="cat-copy">
+            <span class="cat-name">Swim Spas</span>
+            <span class="cat-meta">Fitness and therapy</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">🛁</div>
+          <div class="cat-copy">
+            <span class="cat-name">Hot Tubs</span>
+            <span class="cat-meta">Luxury seating</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">🧊</div>
+          <div class="cat-copy">
+            <span class="cat-name">Cold / Chill Tubs</span>
+            <span class="cat-meta">Cold immersion</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">🔥</div>
+          <div class="cat-copy">
+            <span class="cat-name">Saunas</span>
+            <span class="cat-meta">Wellness heat</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">⚙️</div>
+          <div class="cat-copy">
+            <span class="cat-name">Stainless Steel</span>
+            <span class="cat-meta">Commercial-grade</span>
+          </div>
+        </div>
+        <div class="cat-pill">
+          <div class="cat-icon">💊</div>
+          <div class="cat-copy">
+            <span class="cat-name">Hydrotherapy</span>
+            <span class="cat-meta">Recovery systems</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#fff3e0;">⬆️</div>
-      <span class="cat-name">Above Ground</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#e8f4fd;">🌊</div>
-      <span class="cat-name">Swim Spas</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#fce4ec;">🛁</div>
-      <span class="cat-name">Hot Tubs</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#e3f9ff;">🧊</div>
-      <span class="cat-name">Cold / Chill Tubs</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#fff8e1;">🔥</div>
-      <span class="cat-name">Saunas</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#e8eaf6;">⚙️</div>
-      <span class="cat-name">Stainless Steel</span>
-    </div>
-    <div class="cat-pill">
-      <div class="cat-icon" style="background:#f3e5f5;">💊</div>
-      <span class="cat-name">Hydrotherapy</span>
-    </div>
+    <button class="cat-nav cat-next" type="button" aria-label="Next categories" onclick="moveCategoryStrip(1)">
+      <i class="fa fa-chevron-right"></i>
+    </button>
   </div>
 </section>
 
