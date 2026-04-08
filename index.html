@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquashark Pools & Spas – Making Every Swim Extraordinary</title>
+<!-- Preconnect for faster external resource loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<!-- Preload hero images -->
+<link rel="preload" as="image" href="hero-pool.jpg">
+<!-- Fonts: display=swap prevents invisible text while loading -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 97653 76667</span>
+    <span class="promo">🦈 India's Leading Fiberglass Pool Manufacturer &nbsp;·&nbsp; <span>23 Cities</span> &nbsp;·&nbsp; <span>ISO Certified</span> &nbsp;·&nbsp; 15 Year Structural Warranty</span>
+    <div class="top-right">
+      <a href="mailto:info@aquashark.in"><i class="fa fa-envelope" style="margin-right:4px;"></i>info@aquashark.in</a>
+      <span class="divider">|</span>
+      <a href="#">Login</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <!-- LOGO -->
+    <a href="#" class="logo">
+      <img src="Aqua Shark Logo.png" alt="Aquashark Pools &amp; Spas" class="logo-icon">
+      <div class="logo-text">
+        <span class="brand">Aqua<span>shark</span></span>
+        <span class="sub">Pools &amp; Spas</span>
+      </div>
+    </a>
+
+    <nav>
+      <div class="nav-item"><a class="nav-link" href="#">Home</a></div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Products <i class="fa fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="#"><i class="fa fa-water"></i> Fiberglass Pools</a>
+          <a href="#"><i class="fa fa-person-swimming"></i> Above Ground Pools</a>
+          <a href="#"><i class="fa fa-hot-tub-person"></i> Swim Spas</a>
+          <a href="#"><i class="fa fa-bath"></i> Hot Tubs</a>
+          <div class="dd-divider"></div>
+          <a href="#"><i class="fa fa-snowflake"></i> Cold / Chill Tubs</a>
+          <a href="#"><i class="fa fa-fire"></i> Saunas</a>
+          <a href="#"><i class="fa fa-gear"></i> Stainless Steel Pools</a>
+          <a href="#"><i class="fa fa-heart-pulse"></i> Hydrotherapy Pools</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Brands <i class="fa fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="#"><i class="fa fa-star"></i> Platinum Spas (UK)</a>
+          <a href="#"><i class="fa fa-star"></i> Master Spas (USA)</a>
+          <a href="#"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
+          <a href="#"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
+          <a href="#"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+          <a href="#"><i class="fa fa-gear"></i> Natare Systems</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Company <i class="fa fa-chevron-down"></i></a>
+        <div class="nav-dropdown">
+          <a href="#"><i class="fa fa-circle-info"></i> About Aquashark</a>
+          <a href="#"><i class="fa fa-trophy"></i> Awards &amp; Accolades</a>
+          <a href="#"><i class="fa fa-users"></i> Our Team</a>
+          <a href="#"><i class="fa fa-globe"></i> Global Partners</a>
+          <a href="#"><i class="fa fa-newspaper"></i> Blog</a>
+        </div>
+      </div>
+      <div class="nav-item"><a class="nav-link" href="#">Dealers</a></div>
+      <div class="nav-item"><a class="nav-link" href="#">Contact</a></div>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="Search pools, spas…">
+        <button onclick="doSearch()"><i class="fa fa-search"></i></button>
+      </div>
+      <button class="cart-btn" onclick="openCart()">
+        <i class="fa fa-shopping-cart"></i>
+        <span class="badge" id="cartBadge">0</span>
+      </button>
+      <a href="tel:+917756999108" class="enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="hero">
+  <div class="slides" id="slides">
+    <!-- SLIDE 1: Fiberglass Pool -->
+    <div class="slide">
+      <div class="slide-bg">
+        <img src="hero-pool.jpg" alt="Aquashark Fiberglass Pool" fetchpriority="high">
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <span class="slide-tag"><i class="fa fa-award"></i> India's #1 Fiberglass Pool Brand</span>
+          <h1 class="slide-title">Making Every<br><span>Swim</span><br>Extraordinary!</h1>
+          <p class="slide-desc">17+ years of excellence · 23 cities · ISO Certified<br>Exclusive distributor for Master Spas, Platinum Spas &amp; more.</p>
+          <div class="slide-btns">
+            <a href="#" class="slide-cta">Explore Pools</a>
+            <a href="tel:+917756999108" class="slide-cta-ghost"><i class="fa fa-phone"></i> Call Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: Swim Spa -->
+    <div class="slide">
+      <div class="slide-bg">
+        <img src="hero-swimspa.jpg" alt="Aquashark Swim Spa" loading="lazy">
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <span class="slide-tag"><i class="fa fa-person-swimming"></i> Train · Swim · Relax</span>
+          <h1 class="slide-title">Premium<br><span>Swim Spas</span><br>For Every Home</h1>
+          <p class="slide-desc">Master Spas USA · Michael Phelps SwimSpas · Platinum Spas UK<br>Combines swimming &amp; spa therapy in one powerful unit.</p>
+          <div class="slide-btns">
+            <a href="#" class="slide-cta">View Swim Spas</a>
+            <a href="#" class="slide-cta-ghost">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: Hot Tub -->
+    <div class="slide">
+      <div class="slide-bg">
+        <img src="hero-hottub.jpg" alt="Aquashark Hot Tub" loading="lazy">
+      </div>
+      <div class="slide-overlay"></div>
+      <div class="slide-content">
+        <div class="slide-text">
+          <span class="slide-tag"><i class="fa fa-hot-tub-person"></i> Premium Wellness</span>
+          <h1 class="slide-title">Luxury Hot<br>Tubs &amp; <span>Spa</span><br>Experience</h1>
+          <p class="slide-desc">Exclusive distributor for Platinum Spas UK &amp; Master Spas USA.<br>World-class hydrotherapy delivered to your home.</p>
+          <div class="slide-btns">
+            <a href="#" class="slide-cta">View Hot Tubs</a>
+            <a href="tel:+917756999108" class="slide-cta-ghost"><i class="fa fa-phone"></i> Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="slider-arrow slider-prev" onclick="slide(-1)"><i class="fa fa-chevron-left"></i></button>
+  <button class="slider-arrow slider-next" onclick="slide(1)"><i class="fa fa-chevron-right"></i></button>
+  <div class="slider-dots">
+    <div class="dot active" onclick="goSlide(0)"></div>
+    <div class="dot" onclick="goSlide(1)"></div>
+    <div class="dot" onclick="goSlide(2)"></div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="trust-item"><i class="fa fa-shield-halved"></i><div><strong>15 Year</strong><div style="font-size:11px;opacity:.7;">Structural Warranty</div></div></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa fa-certificate"></i><div><strong>ISO Certified</strong><div style="font-size:11px;opacity:.7;">International Standards</div></div></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa fa-location-dot"></i><div><strong>23 Cities</strong><div style="font-size:11px;opacity:.7;">Across India + 4 Overseas</div></div></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa fa-clock-rotate-left"></i><div><strong>17+ Years</strong><div style="font-size:11px;opacity:.7;">Industry Experience</div></div></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa fa-trophy"></i><div><strong>9+ National Awards</strong><div style="font-size:11px;opacity:.7;">Best Pool &amp; Patio Brand</div></div></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><i class="fa fa-globe"></i><div><strong>Global Brands</strong><div style="font-size:11px;opacity:.7;">Exclusive Distributor</div></div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="cat-section">
+  <div class="cat-inner">
+    <div class="cat-pill active">
+      <div class="cat-icon" style="background:#e0f7ff;">🏊</div>
+      <span class="cat-name">Fiberglass Pools</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#fff3e0;">⬆️</div>
+      <span class="cat-name">Above Ground</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#e8f4fd;">🌊</div>
+      <span class="cat-name">Swim Spas</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#fce4ec;">🛁</div>
+      <span class="cat-name">Hot Tubs</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#e3f9ff;">🧊</div>
+      <span class="cat-name">Cold / Chill Tubs</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#fff8e1;">🔥</div>
+      <span class="cat-name">Saunas</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#e8eaf6;">⚙️</div>
+      <span class="cat-name">Stainless Steel</span>
+    </div>
+    <div class="cat-pill">
+      <div class="cat-icon" style="background:#f3e5f5;">💊</div>
+      <span class="cat-name">Hydrotherapy</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO BANNERS -->
+<div class="promo-banners">
+  <div class="promo-banner p1">
+    <div class="promo-banner-text">
+      <h4>Structural Warranty</h4>
+      <div class="disc" style="font-size:34px;font-weight:900;color:var(--primary-dark);">15 Year</div>
+      <p style="margin-top:6px;font-size:13px;">On all Fiberglass Pools</p>
+      <span class="tag">→ View Fiberglass Pools</span>
+    </div>
+    <div class="promo-banner-deco">🏊</div>
+  </div>
+  <div class="promo-banner p2">
+    <div class="promo-banner-text">
+      <h4>Exclusive India &amp; Middle East</h4>
+      <div class="disc" style="font-size:34px;font-weight:900;color:#7a5000;">Official Distributor</div>
+      <p style="margin-top:6px;font-size:13px;">Platinum Spas · Master Spas · Chilly Goat</p>
+      <span class="tag" style="color:var(--accent);">→ Explore Brands</span>
+    </div>
+    <div class="promo-banner-deco">🛁</div>
+  </div>
+  <div class="promo-banner p3">
+    <div class="promo-banner-text">
+      <h4>Quick Installation</h4>
+      <div class="disc" style="font-size:34px;font-weight:900;color:var(--primary-dark);">1 Day</div>
+      <p style="margin-top:6px;font-size:13px;">Fiberglass pool installed in as little as 1 day</p>
+      <span class="tag">→ Learn How</span>
+    </div>
+    <div class="promo-banner-deco">⚡</div>
+  </div>
+</div>
+
+<!-- PRODUCTS SECTION -->
+<section class="section" id="productsSection">
+  <div class="products-shell">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <span class="section-kicker">Signature Collection</span>
+      <h2 class="section-title">Our Products</h2>
+      <span class="section-sub">Premium pools, hot tubs &amp; wellness solutions for every need</span>
+    </div>
+    <div class="section-tabs">
+      <button class="tab-btn active" onclick="setTab(this,'popular')">Fiberglass Pools</button>
+      <button class="tab-btn" onclick="setTab(this,'bestsellers')">Hot Tubs</button>
+      <button class="tab-btn" onclick="setTab(this,'toprated')">Swim Spas &amp; More</button>
+    </div>
+    <a href="#" class="see-all">View All Products <i class="fa fa-arrow-right"></i></a>
+  </div>
+  <div class="product-grid visible" id="productGrid"></div>
+  <div class="products-footer">
+    <a href="#" class="products-footer-link">See Full Product Catalog</a>
+  </div>
+  </div>
+</section>
+
+<!-- DEALS OF THE WEEK -->
+<div class="deals-wrap">
+  <div class="deals-sidebar">
+    <div>
+      <div class="tag">Limited Time Offer</div>
+      <h2>Summer Sale</h2>
+      <div class="sub">Save up to</div>
+      <div class="pct">30%</div>
+      <div class="sub">On selected pools &amp; spas</div>
+      <div class="countdown" id="dealCountdown">
+        <div class="cd-unit"><div class="num" id="cdH">00</div><div class="lbl">Hours</div></div>
+        <div class="cd-unit"><div class="num" id="cdM">00</div><div class="lbl">Mins</div></div>
+        <div class="cd-unit"><div class="num" id="cdS">00</div><div class="lbl">Secs</div></div>
+      </div>
+    </div>
+    <a href="tel:+917756999108" class="view-all"><i class="fa fa-phone" style="margin-right:6px;"></i>ENQUIRE NOW</a>
+  </div>
+  <div class="deals-list">
+    <div class="deal-card">
+      <div class="deal-emoji">🏊</div>
+      <div class="deal-info">
+        <div class="deal-cat">Fiberglass Pool</div>
+        <div class="deal-name">Sydney Pool — 18×8×4.4ft Family Pool</div>
+        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(28 installs)</span></div>
+        <div class="deal-price">Get Best Price Quote</div>
+        <div class="deal-stock">🔥 High demand this season</div>
+        <div class="stock-bar"><div class="stock-fill" style="width:75%;"></div></div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-emoji">🛁</div>
+      <div class="deal-info">
+        <div class="deal-cat">Hot Tub — Platinum Spas UK</div>
+        <div class="deal-name">Santorini — 6 Person, 52 Jets, Bluetooth</div>
+        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(15 sold)</span></div>
+        <div class="deal-price">Get Best Price Quote</div>
+        <div class="deal-stock">⚡ Limited stock available</div>
+        <div class="stock-bar"><div class="stock-fill" style="width:40%;"></div></div>
+      </div>
+    </div>
+    <div class="deal-card">
+      <div class="deal-emoji">🧊</div>
+      <div class="deal-info">
+        <div class="deal-cat">Cold Tub — Chilly Goat USA</div>
+        <div class="deal-name">Chill Tubs Pro — Touchscreen WiFi, 700L</div>
+        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(9 sold)</span></div>
+        <div class="deal-price">Get Best Price Quote</div>
+        <div class="deal-stock">✅ In stock — ships in 2 weeks</div>
+        <div class="stock-bar"><div class="stock-fill" style="width:60%;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AWARDS -->
+<section class="awards-section">
+  <div class="awards-inner">
+    <div class="awards-title">🏆 Award-Winning Brand</div>
+    <div class="awards-grid">
+      <div class="award-card">
+        <div class="award-icon">🏅</div>
+        <div class="award-name">Pune Icon Award<br>"Best Pool &amp; Patio"</div>
+        <div class="award-year">Pune Mirror · 2022</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🥇</div>
+        <div class="award-name">Pride India Award<br>"Best Pool &amp; Patio Company"</div>
+        <div class="award-year">2023</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🌏</div>
+        <div class="award-name">International Glory Award<br>"Best Pool &amp; Patio Company"</div>
+        <div class="award-year">2023</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🎖️</div>
+        <div class="award-name">Asian Iconic Award<br>"Most Promising Brand"</div>
+        <div class="award-year">2024</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🇮🇳</div>
+        <div class="award-name">Bharat Shree Rashtriya Samman<br>"Best Pool &amp; Patio"</div>
+        <div class="award-year">Central Govt. of India · 2024</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🏆</div>
+        <div class="award-name">Bharat Samman Nidhi Puraskar<br>"Best Pool &amp; Patio"</div>
+        <div class="award-year">State Govt. Delhi · 2024</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">⭐</div>
+        <div class="award-name">Glamour &amp; Lifestyle Award<br>"Most Promising Brand"</div>
+        <div class="award-year">2024</div>
+      </div>
+      <div class="award-card">
+        <div class="award-icon">🎗️</div>
+        <div class="award-name">National Impact Award<br>"Most Promising Brand"</div>
+        <div class="award-year">2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <div class="solutions-inner">
+    <div class="solutions-head">
+      <h2>Complete Aquatic Solutions</h2>
+      <p>From compact plunge pools to Olympic-grade facilities — we build it all</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="sol-card">
+        <div class="sol-icon">🏠</div>
+        <div class="sol-label">For</div>
+        <h3>Residential &amp; Villas</h3>
+        <p>Custom fiberglass pools, above-ground plunge pools, hot tubs and saunas for premium homes. Quick installation, minimal maintenance and 15-year structural warranty included.</p>
+        <a href="#" class="sol-link">Explore Residential <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">🏨</div>
+        <div class="sol-label">For</div>
+        <h3>Hotels &amp; Resorts</h3>
+        <p>Infinity pools, swim spas, and stainless steel pools designed for boutique resorts, luxury hotels and wellness retreats. International standards with local execution excellence.</p>
+        <a href="#" class="sol-link">Explore Hospitality <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">🏥</div>
+        <div class="sol-label">For</div>
+        <h3>Healthcare &amp; Sports</h3>
+        <p>Medical-grade hydrotherapy pools, underwater treadmills, and rehabilitation pools for hospitals, physiotherapy clinics, sports facilities and recovery centres.</p>
+        <a href="#" class="sol-link">Explore Healthcare <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands">
+  <div class="brands-head">
+    <p>Our Exclusive Brand Partners</p>
+  </div>
+  <div class="brands-inner">
+    <div class="brand-item">
+      <span class="brand-flag">🇬🇧</span>
+      <span class="brand-logo-txt">Platinum Spas</span>
+      <span class="brand-country">United Kingdom</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-flag">🇺🇸</span>
+      <span class="brand-logo-txt">Master Spas</span>
+      <span class="brand-country">USA</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-flag">🇺🇸</span>
+      <span class="brand-logo-txt">Michael Phelps</span>
+      <span class="brand-country">SwimSpas · USA</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-flag">🇺🇸</span>
+      <span class="brand-logo-txt">Chilly Goat</span>
+      <span class="brand-country">Cold Tubs · USA</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-flag">🇺🇸</span>
+      <span class="brand-logo-txt">Sweaty Goat</span>
+      <span class="brand-country">Saunas · USA</span>
+    </div>
+    <div class="brand-item">
+      <span class="brand-flag">🌍</span>
+      <span class="brand-logo-txt">Natare</span>
+      <span class="brand-country">Pool Systems</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog">
+  <div class="section-header">
+    <div class="section-title-wrap">
+      <h2 class="section-title">Pool &amp; Spa Insights</h2>
+      <span class="section-sub">Tips, guides and news from our experts</span>
+    </div>
+    <a href="#" class="see-all">See More Articles <i class="fa fa-arrow-right"></i></a>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#0077b6,#00b4d8);">🏊
+        <span class="blog-thumb-cat">POOLS</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date"><i class="fa fa-calendar"></i> April 2025</div>
+        <div class="blog-title">Fiberglass vs Concrete Pools: Which is the Better Investment for Indian Homes?</div>
+        <a href="#" class="blog-read">Read more <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#023e8a,#0077b6);">🛁
+        <span class="blog-thumb-cat">HOT TUBS</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date"><i class="fa fa-calendar"></i> March 2025</div>
+        <div class="blog-title">The Complete Guide to Hot Tub Maintenance in India's Climate</div>
+        <a href="#" class="blog-read">Read more <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="blog-card">
+      <div class="blog-thumb" style="background:linear-gradient(135deg,#0096c7,#023e8a);">🧊
+        <span class="blog-thumb-cat">WELLNESS</span>
+      </div>
+      <div class="blog-body">
+        <div class="blog-date"><i class="fa fa-calendar"></i> February 2025</div>
+        <div class="blog-title">Cold Water Therapy: Why Athletes and Wellness Enthusiasts are Choosing Chill Tubs</div>
+        <a href="#" class="blog-read">Read more <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-inner">
+    <h2>What Our Clients Say</h2>
+    <p class="testi-subtitle">Trusted by homeowners, resorts and healthcare facilities across India</p>
+    <div class="testi-cards">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Aquashark installed our fiberglass pool at our Goa villa in just 3 days. The quality is outstanding and the team was professional throughout. The 15-year warranty gives us complete peace of mind. Absolutely recommend!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:rgba(0,180,216,.2);">👨</div>
+          <div>
+            <div class="testi-name">Rajesh Mehta</div>
+            <div class="testi-loc">Villa Owner, Goa</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"We chose Aquashark for our boutique resort in Pune and couldn't be happier. The Platinum Spas hot tub they supplied is a favourite with our guests. Excellent after-sales support and very responsive team."</p>
+        <div class="testi-author">
+          <div class="testi-avatar" style="background:rgba(0,150,199,.2);">👩</div>
+          <div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-loc">Resort Owner, Pune</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="features-inner">
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><i class="fa fa-shield-halved"></i></div>
+      <div class="feature-text">
+        <h4>15 Year Warranty</h4>
+        <p>Industry-best structural warranty on all fiberglass pools</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><i class="fa fa-location-dot"></i></div>
+      <div class="feature-text">
+        <h4>Pan-India Delivery</h4>
+        <p>Authorized dealers in 23 cities + 4 overseas locations</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><i class="fa fa-bolt"></i></div>
+      <div class="feature-text">
+        <h4>Fast Installation</h4>
+        <p>Fiberglass pools installed in as little as one day</p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon-wrap"><i class="fa fa-headset"></i></div>
+      <div class="feature-text">
+        <h4>Expert Support</h4>
+        <p>Consultation, design, commissioning &amp; lifecycle maintenance</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="Aqua Shark Logo.png" alt="Aquashark Pools &amp; Spas" class="footer-logo-img">
+          <span class="brand">Aqua<span style="color:var(--aqua);">shark</span></span>
+        </div>
+        <div class="iso-badge" style="margin-bottom:14px;"><i class="fa fa-certificate"></i> ISO Certified Company</div>
+        <p class="footer-desc">Making Every Swim Extraordinary. India's leading fiberglass pool manufacturer and exclusive distributor for Platinum Spas, Master Spas, Chilly Goat &amp; Michael Phelps SwimSpas.</p>
+        <div class="footer-subscribe">
+          <input type="email" id="newsletterEmail" placeholder="Your email for updates…">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <div class="newsletter-msg" id="newsletterMsg"></div>
+        <ul class="footer-contact-list" style="margin-top:18px;">
+          <li><i class="fa fa-phone"></i><span>+91 77569 99108 &nbsp;|&nbsp; +91 97653 76667</span></li>
+          <li><i class="fa fa-envelope"></i><span>info@aquashark.in</span></li>
+          <li><i class="fa fa-globe"></i><span>www.aquashark.in &nbsp;|&nbsp; www.aquasharkpools.in</span></li>
+          <li><i class="fa fa-location-dot"></i><span>29, Shyam Villa, Yeshwant Nagar, Shivajinagar, Pune – 411007</span></li>
+          <li><i class="fa fa-location-dot"></i><span>1390, Maximiana Villa, Madel, Thivim, North Goa – 403502</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="#">Fiberglass Pools</a></li>
+          <li><a href="#">Above Ground Pools</a></li>
+          <li><a href="#">Swim Spas</a></li>
+          <li><a href="#">Hot Tubs</a></li>
+          <li><a href="#">Cold / Chill Tubs</a></li>
+          <li><a href="#">Saunas</a></li>
+          <li><a href="#">Stainless Steel Pools</a></li>
+          <li><a href="#">Hydrotherapy Pools</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Brands</h5>
+        <ul>
+          <li><a href="#">Platinum Spas (UK)</a></li>
+          <li><a href="#">Master Spas (USA)</a></li>
+          <li><a href="#">Michael Phelps Swim Spas</a></li>
+          <li><a href="#">Chilly Goat (USA)</a></li>
+          <li><a href="#">Sweaty Goat Saunas</a></li>
+          <li><a href="#">Natare Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Awards &amp; Accolades</a></li>
+          <li><a href="#">Our Clients</a></li>
+          <li><a href="#">Dealer Network</a></li>
+          <li><a href="#">Blog / Insights</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Follow Us</h5>
+        <div class="social-links" style="flex-wrap:wrap;gap:8px;justify-content:flex-start;margin-bottom:20px;">
+          <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <h5 style="margin-top:4px;">Offices</h5>
+        <p style="font-size:12px;color:#556677;line-height:1.7;">🏙️ Pune, Maharashtra<br>🌴 Goa (North Goa)<br>🌍 India &amp; Middle East</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Aquashark Pools &amp; Spas. All rights reserved.</span>
+      <div style="display:flex;gap:16px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CART OVERLAY & DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h3><i class="fa fa-shopping-cart" style="margin-right:8px;color:var(--primary);"></i>Enquiry Cart</h3>
+    <button class="cart-close" onclick="closeCart()"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-subtotal"><span>Items in enquiry</span><span id="cartTotal" style="color:var(--primary);font-size:16px;"></span></div>
+    <p class="cart-note">Our team will contact you with a personalised quote.</p>
+    <div class="cart-actions">
+      <button class="cart-btn-view" onclick="closeCart()">Continue Browsing</button>
+      <button class="cart-btn-checkout"><i class="fa fa-paper-plane" style="margin-right:6px;"></i>Send Enquiry</button>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModalDirect()"><i class="fa fa-times"></i></button>
+    <div class="modal-inner">
+      <div class="modal-img" id="modalImg"></div>
+      <div class="modal-details">
+        <div class="modal-cat" id="modalCat"></div>
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-rating"><span class="stars" id="modalStars"></span><span id="modalReviews"></span></div>
+        <div id="modalPriceWrap"></div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-specs" id="modalSpecs"></div>
+        <div class="modal-qty-row">
+          <label>Qty:</label>
+          <div class="modal-qty">
+            <button class="qty-btn" onclick="changeModalQty(-1)">−</button>
+            <span class="qty-val" id="modalQtyVal">1</span>
+            <button class="qty-btn" onclick="changeModalQty(1)">+</button>
+          </div>
+        </div>
+        <button class="modal-add-btn" onclick="addFromModal()"><i class="fa fa-paper-plane" style="margin-right:8px;"></i>Add to Enquiry</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
