@@ -32,6 +32,8 @@ const PRODUCTS = {
     {id:22, emoji:'🧊', cat:'Cold Tub — Chilly Goat USA',   name:'Chill Tubs Original',                price:'Get Quote', rating:'★★★★★', reviews:19, badge:null,        desc:'Stainless steel 316. 400L capacity. Cools to 3°C. Built-in ozone purification system. Antifreeze function included.',     specs:'Material: SS316 · Water: 400L · Min: 3°C · Power: 13A/220V · Ozone filter'},
     {id:23, emoji:'🧊', cat:'Cold Tub — Chilly Goat USA',   name:'Chill Tubs Pro',                     price:'Get Quote', rating:'★★★★★', reviews:14, badge:'NEW',       desc:'Touchscreen + built-in WiFi. Aristech Acrylic, 700L, 3°C to 40°C range. LED corner lighting. Premium cold therapy.',      specs:'Material: Acrylic · Water: 700L · Temp: 3°C–40°C · WiFi · LED lighting'},
     {id:24, emoji:'🧊', cat:'Cold Tub — Master Spas USA',   name:'Alpine Cold Tub',                    price:'Get Quote', rating:'★★★★★', reviews:11, badge:null,        desc:'84×42×30in. 120 gallon. 2.1HP, 2 jets, LED lighting. Power: 120V/15A. 1-2 person cold plunge experience.',               specs:'Capacity: 1 · Fill: 455L · Power: 120V/15A · HP: 2.1 · LED lighting'},
+    {id:25, emoji:'⚙️', cat:'Stainless Steel Pool — Natare', name:'Rooftop Stainless Steel Pool',       price:'Get Quote', rating:'★★★★★', reviews:7,  badge:'CUSTOM',     desc:'Lightweight, hygienic stainless steel pool system for rooftop, infinity, competition and commercial aquatic projects.',       specs:'Partner: Natare · Lightweight · Waterproof · Hygienic · Custom engineered'},
+    {id:26, emoji:'💧', cat:'Hydrotherapy Pool',             name:'Rehabilitation Hydrotherapy Pool',   price:'Get Quote', rating:'★★★★★', reviews:6,  badge:'CUSTOM',     desc:'Medical and rehabilitation pool solution with therapy jets, underwater treadmill and variable depth floor options.',          specs:'Therapy jets · Underwater treadmill option · Variable depth option · Hospitals · Sports facilities'},
   ]
 };
 
@@ -397,6 +399,73 @@ function updateCategoryStrip(){
 function moveCategoryStrip(direction){ catPage += direction; updateCategoryStrip(); }
 function goCategoryPage(page){ catPage = page; updateCategoryStrip(); }
 window.addEventListener('resize', updateCategoryStrip);
+
+// ============================================================
+// PRODUCT DETAIL GALLERY
+// ============================================================
+function selectPoolModel(btn, image, name, size, desc){
+  const mainImage = document.getElementById('poolMainImage');
+  const modelName = document.getElementById('poolModelName');
+  const modelSize = document.getElementById('poolModelSize');
+  const modelDesc = document.getElementById('poolModelDesc');
+  if(mainImage) {
+    mainImage.src = image;
+    mainImage.alt = `${name} fiberglass pool model`;
+  }
+  if(modelName) modelName.textContent = name;
+  if(modelSize) modelSize.textContent = size;
+  if(modelDesc) modelDesc.textContent = desc;
+  document.querySelectorAll('.detail-thumbs button').forEach(item=>item.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+
+function selectSwimSpaModel(btn, image, name, brand, desc){
+  const mainImage = document.getElementById('swimSpaMainImage');
+  const modelName = document.getElementById('swimSpaModelName');
+  const modelBrand = document.getElementById('swimSpaModelBrand');
+  const modelDesc = document.getElementById('swimSpaModelDesc');
+  if(mainImage) {
+    mainImage.src = image;
+    mainImage.alt = `${name} swim spa model`;
+  }
+  if(modelName) modelName.textContent = name;
+  if(modelBrand) modelBrand.textContent = brand;
+  if(modelDesc) modelDesc.textContent = desc;
+  document.querySelectorAll('.detail-thumbs button').forEach(item=>item.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+
+function selectHotTubModel(btn, image, name, brand, desc){
+  const mainImage = document.getElementById('hotTubMainImage');
+  const modelName = document.getElementById('hotTubModelName');
+  const modelBrand = document.getElementById('hotTubModelBrand');
+  const modelDesc = document.getElementById('hotTubModelDesc');
+  if(mainImage) {
+    mainImage.src = image;
+    mainImage.alt = `${name} model`;
+  }
+  if(modelName) modelName.textContent = name;
+  if(modelBrand) modelBrand.textContent = brand;
+  if(modelDesc) modelDesc.textContent = desc;
+  document.querySelectorAll('.detail-thumbs button').forEach(item=>item.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
+
+function selectDetailModel(btn, image, imageId, name, nameId, meta, metaId, desc, descId){
+  const mainImage = document.getElementById(imageId);
+  const modelName = document.getElementById(nameId);
+  const modelMeta = document.getElementById(metaId);
+  const modelDesc = document.getElementById(descId);
+  if(mainImage && image) {
+    mainImage.src = image;
+    mainImage.alt = `${name} product model`;
+  }
+  if(modelName) modelName.textContent = name;
+  if(modelMeta) modelMeta.textContent = meta;
+  if(modelDesc) modelDesc.textContent = desc;
+  document.querySelectorAll('.detail-thumbs button').forEach(item=>item.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+}
 
 // ============================================================
 // INIT
