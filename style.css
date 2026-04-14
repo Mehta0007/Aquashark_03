@@ -290,6 +290,8 @@ background-size:32px 32px;mask-image:linear-gradient(180deg,rgba(0,0,0,.24),tran
 .brand-showcase-card{background:#fff;border:1px solid rgba(26,35,46,.1);border-radius:16px;padding:24px;box-shadow:0 14px 36px rgba(26,35,46,.07);transition:.22s;}
 .brand-showcase-card:hover{transform:translateY(-4px);box-shadow:0 22px 52px rgba(26,35,46,.12);border-color:rgba(0,119,182,.22);}
 .brand-mark{width:58px;height:58px;border-radius:12px;background:linear-gradient(135deg,#f0f9ff,#caf0f8);border:1px solid rgba(0,119,182,.14);display:flex;align-items:center;justify-content:center;color:var(--primary-dark);font-family:'Poppins',sans-serif;font-weight:900;font-size:18px;margin-bottom:18px;}
+.brand-logo-img-wrap{width:100%;height:90px;display:flex;align-items:center;justify-content:flex-start;margin-bottom:18px;}
+.brand-logo-img{max-height:72px;max-width:180px;width:auto;object-fit:contain;display:block;}
 .brand-card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;}
 .brand-card-top span{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--primary);}
 .brand-card-top strong{font-size:11px;color:#7b8590;text-align:right;}
