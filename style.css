@@ -238,8 +238,17 @@ background-size:32px 32px;mask-image:linear-gradient(180deg,rgba(0,0,0,.24),tran
 .award-card{background:#fff;border-radius:12px;padding:20px;border:1px solid var(--border);text-align:center;transition:.2s;}
 .award-card:hover{box-shadow:0 6px 20px rgba(0,119,182,.12);transform:translateY(-2px);}
 .award-icon{font-size:32px;margin-bottom:10px;}
-.award-name{font-size:12px;font-weight:700;color:var(--primary-dark);margin-bottom:4px;line-height:1.4;}
-.award-year{font-size:11px;color:var(--text-light);font-weight:600;}
+
+/* ── AWARD IMAGE GRID ── */
+.awards-img-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.award-img-card{background:#fff;border-radius:16px;overflow:hidden;border:1px solid rgba(0,52,89,.08);box-shadow:0 2px 12px rgba(0,52,89,.06);transition:transform .2s,box-shadow .2s;text-align:center;}
+.award-img-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,119,182,.15);}
+.award-img-wrap{background:#f8fafc;padding:20px;display:flex;align-items:center;justify-content:center;min-height:180px;}
+.award-img-wrap img{width:100%;max-width:160px;height:160px;object-fit:contain;display:block;margin:0 auto;}
+.award-img-placeholder{min-height:180px;display:flex;align-items:center;justify-content:center;}
+.award-img-caption{padding:16px 14px 18px;border-top:1px solid rgba(0,52,89,.06);}
+.award-name{font-size:13px;font-weight:700;color:#003459;margin-bottom:4px;line-height:1.4;}
+.award-year{font-size:11px;color:#7a8fa6;font-weight:600;text-transform:uppercase;letter-spacing:.4px;}
 
 /* ── SOLUTIONS ── */
 .solutions{background:#fff;padding:60px 0;}
@@ -599,6 +608,7 @@ footer{background:#040d1a;color:#8899aa;padding:60px 0 20px;}
   .section-tabs{width:max-content;max-width:100%;overflow:auto;}
   .product-grid{grid-template-columns:repeat(3,1fr);}
   .awards-grid{grid-template-columns:repeat(2,1fr);}
+  .awards-img-grid{grid-template-columns:repeat(2,1fr);}
   .cat-pill{min-width:33.3333%;flex-basis:33.3333%;}
   .product-detail-wrap{grid-template-columns:1fr;}
   .product-enquiry-panel{position:static;}
@@ -619,6 +629,7 @@ footer{background:#040d1a;color:#8899aa;padding:60px 0 20px;}
   .blog-grid{grid-template-columns:1fr;}
   .deals-wrap{grid-template-columns:1fr;}
   .awards-grid{grid-template-columns:repeat(2,1fr);}
+  .awards-img-grid{grid-template-columns:repeat(2,1fr);}
   nav{display:none;}
   .slide-title{font-size:30px;}
   .slide{height:400px;}
