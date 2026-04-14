@@ -24,17 +24,20 @@
         <h1>Recovery Begins with Cold Therapy</h1>
         <p>Premium cold immersion tubs engineered for accelerated recovery, reduced inflammation and improved mental clarity. Trusted by elite athletes, wellness spas and health enthusiasts worldwide.</p>
         <div class="detail-main-image">
-          <div style="width:100%;height:340px;background:linear-gradient(135deg,#0c4a6e,#0369a1);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:100px;">🧊</div>
+          <img id="coldTubMainImg" src="images/Aquashark Images for Developer/05_cold-tubs/cold-tub-product-outdoor.jpeg" alt="Cold plunge tub outdoor — Aquashark">
         </div>
         <div class="detail-thumbs" aria-label="Cold tub models">
-          <button type="button" class="active">
-            <span class="thumb-placeholder">Chill Tubs Original</span>
+          <button type="button" class="active" onclick="document.getElementById('coldTubMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/05_cold-tubs/cold-tub-chill-tubs-uk.jpeg" alt="Chill Tubs Original" loading="lazy">
+            <span>Chill Tubs Original</span>
           </button>
-          <button type="button">
-            <span class="thumb-placeholder">Chill Tubs Pro</span>
+          <button type="button" onclick="document.getElementById('coldTubMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/05_cold-tubs/cold-tub-chilly-goat-model.jpeg" alt="Chill Tubs Pro" loading="lazy">
+            <span>Chill Tubs Pro</span>
           </button>
-          <button type="button">
-            <span class="thumb-placeholder">Alpine Cold Tub</span>
+          <button type="button" onclick="document.getElementById('coldTubMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/05_cold-tubs/cold-tub-athlete-recovery.png" alt="Alpine Cold Tub" loading="lazy">
+            <span>Alpine Cold Tub</span>
           </button>
         </div>
       </div>

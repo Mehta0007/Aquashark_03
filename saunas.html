@@ -24,14 +24,16 @@
         <h1>Relax. Detox. Revive.</h1>
         <p>Premium infrared and traditional Finnish saunas for deep detoxification, cardiovascular health and total relaxation. Built with premium timber and advanced heating systems.</p>
         <div class="detail-main-image">
-          <div style="width:100%;height:340px;background:linear-gradient(135deg,#7b2d00,#d4470a);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:100px;">🔥</div>
+          <img id="saunaMainImg" src="images/Aquashark Images for Developer/06_saunas/sauna-premium-installation.png" alt="Premium sauna installation — Aquashark">
         </div>
         <div class="detail-thumbs" aria-label="Sauna models">
-          <button type="button" class="active">
-            <span class="thumb-placeholder">MP3 Infrared Sauna</span>
+          <button type="button" class="active" onclick="document.getElementById('saunaMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/06_saunas/sauna-infrared-product.png" alt="MP3 Infrared Sauna" loading="lazy">
+            <span>MP3 Infrared Sauna</span>
           </button>
-          <button type="button">
-            <span class="thumb-placeholder">Barrel 250 Sauna</span>
+          <button type="button" onclick="document.getElementById('saunaMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/06_saunas/sauna-hekla-finland.png" alt="Barrel 250 Sauna" loading="lazy">
+            <span>Barrel 250 Sauna</span>
           </button>
         </div>
       </div>
