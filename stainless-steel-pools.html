@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Stainless steel pools in India by Aquashark. Commercial-grade rooftop pools, infinity pools and competition pools powered by Natare Corporation USA.">
-<title>Stainless Steel Pools India | Aquashark Pools &amp; Spas</title>
+<meta name="description" content="Stainless steel pools in India and UAE by Aquashark. Commercial-grade rooftop pools, infinity pools and competition pools powered by Natare Corporation USA technology.">
+<title>Stainless Steel Pools | Aquashark Pools &amp; Spas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -12,17 +12,90 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="style.css">
+<style>
+/* ── STAINLESS STEEL PAGE STYLES ── */
+.ss-natare-section{padding:80px 20px;background:linear-gradient(135deg,#0a1628 0%,#0f2744 100%);}
+.ss-natare-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.ss-natare-content h2{font-family:'Poppins',sans-serif;font-size:36px;font-weight:900;color:#fff;margin:10px 0 18px;}
+.ss-natare-content .section-kicker{background:rgba(255,255,255,.12);color:#7dd3fc;}
+.ss-natare-content p{font-size:15px;line-height:1.85;color:rgba(255,255,255,.75);margin-bottom:18px;}
+.ss-natare-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;}
+.ss-natare-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:20px;text-align:center;}
+.ss-natare-stat .num{font-family:'Poppins',sans-serif;font-size:30px;font-weight:900;color:#7dd3fc;line-height:1;}
+.ss-natare-stat .lbl{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);margin-top:4px;text-transform:uppercase;letter-spacing:.04em;}
+.ss-natare-gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:480px;}
+.ss-natare-gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px;display:block;}
+.ss-natare-gallery img:first-child{grid-row:1/3;border-radius:18px;}
+
+.ss-systems-section{padding:72px 20px;background:#f8fafc;}
+.ss-systems-inner{max-width:1280px;margin:0 auto;}
+.ss-systems-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px;}
+.ss-system-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;transition:all .3s;}
+.ss-system-card:hover{box-shadow:0 16px 40px rgba(0,0,0,.1);transform:translateY(-4px);}
+.ss-system-card .ssc-img{height:220px;overflow:hidden;}
+.ss-system-card .ssc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+.ss-system-card:hover .ssc-img img{transform:scale(1.05);}
+.ss-system-card .ssc-body{padding:24px;}
+.ss-system-card .ssc-label{font-size:11px;font-weight:700;color:var(--primary);letter-spacing:.06em;text-transform:uppercase;margin-bottom:8px;}
+.ss-system-card .ssc-title{font-family:'Poppins',sans-serif;font-size:19px;font-weight:800;color:#1a2330;margin-bottom:10px;}
+.ss-system-card .ssc-desc{font-size:13.5px;line-height:1.7;color:#64748b;margin-bottom:16px;}
+.ss-system-card .ssc-features{list-style:none;padding:0;margin:0 0 18px;}
+.ss-system-card .ssc-features li{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#475569;padding:4px 0;}
+.ss-system-card .ssc-features li i{color:var(--primary);font-size:11px;}
+
+.ss-material-section{padding:72px 20px;background:#fff;}
+.ss-material-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.ss-material-content h2{font-family:'Poppins',sans-serif;font-size:32px;font-weight:900;color:#1a2330;margin:10px 0 18px;}
+.ss-material-content p{font-size:15px;line-height:1.8;color:#4a5568;margin-bottom:20px;}
+.ss-material-specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+.ss-material-spec{background:#f8fafc;border:1px solid var(--border);border-radius:12px;padding:16px;}
+.ss-material-spec .spec-label{font-size:11px;font-weight:700;color:#94a3b8;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;}
+.ss-material-spec .spec-value{font-size:14.5px;font-weight:700;color:#1a2330;}
+.ss-material-img{border-radius:22px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.1);}
+.ss-material-img img{width:100%;height:460px;object-fit:cover;display:block;}
+
+.ss-process-section{padding:72px 20px;background:linear-gradient(135deg,#f0f9ff,#e0f2fe);}
+.ss-process-inner{max-width:1280px;margin:0 auto;}
+.ss-process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px;}
+.ss-process-step{text-align:center;position:relative;}
+.ss-process-step::after{content:'→';position:absolute;top:28px;right:-12px;font-size:18px;color:var(--primary);font-weight:700;}
+.ss-process-step:last-child::after{display:none;}
+.ss-process-num{width:56px;height:56px;border-radius:50%;background:var(--primary);color:#fff;font-family:'Poppins',sans-serif;font-size:20px;font-weight:900;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.ss-process-step h4{font-family:'Poppins',sans-serif;font-size:13.5px;font-weight:700;color:#1a2330;margin-bottom:6px;}
+.ss-process-step p{font-size:12px;line-height:1.6;color:#64748b;}
+
+/* Responsive */
+@media(max-width:1024px){
+  .ss-systems-grid{grid-template-columns:1fr 1fr;}
+  .ss-process-grid{grid-template-columns:1fr 1fr;}
+  .ss-process-step::after{display:none;}
+}
+@media(max-width:900px){
+  .ss-natare-inner,.ss-material-inner{grid-template-columns:1fr;}
+  .ss-natare-gallery{height:300px;}
+}
+@media(max-width:640px){
+  .ss-systems-grid{grid-template-columns:1fr;}
+  .ss-process-grid{grid-template-columns:1fr 1fr;}
+  .ss-natare-stats{grid-template-columns:1fr 1fr;}
+  .ss-material-specs{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
-<div class="top-bar"><div class="top-bar-inner"><span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span><span class="promo">🦈 India's Leading Fiberglass Pool Manufacturer &nbsp;·&nbsp; <span>23 Cities</span> &nbsp;·&nbsp; <span>ISO Certified</span> &nbsp;·&nbsp; 15 Year Structural Warranty</span><div class="top-right"><a href="mailto:info@aquashark.in"><i class="fa fa-envelope" style="margin-right:4px;"></i>info@aquashark.in</a><span class="divider">|</span><a href="#">Login</a></div></div></div>
-<header><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo/aquashark-logo-new.png" alt="Aquashark Pools &amp; Spas" class="logo-icon"><div class="logo-text"><span class="brand">Aqua<span>shark</span></span><span class="sub">Pools &amp; Spas</span></div></a><nav><div class="nav-item"><a class="nav-link" href="index.html">Home</a></div><div class="nav-item"><a class="nav-link" href="products.html">Products <i class="fa fa-chevron-down"></i></a><div class="nav-dropdown"><a href="fiberglass-pools.html"><i class="fa fa-water"></i> Fiberglass Pools</a><a href="above-ground-pools.html"><i class="fa fa-person-swimming"></i> Above Ground Pools</a><a href="swim-spas.html"><i class="fa fa-hot-tub-person"></i> Swim Spas</a><a href="hot-tubs.html"><i class="fa fa-bath"></i> Hot Tubs</a><div class="dd-divider"></div><a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Cold / Chill Tubs</a><a href="saunas.html"><i class="fa fa-fire"></i> Saunas</a><a href="stainless-steel-pools.html"><i class="fa fa-gear"></i> Stainless Steel Pools</a><a href="hydrotherapy-pools.html"><i class="fa fa-heart-pulse"></i> Hydrotherapy Pools</a></div></div><div class="nav-item"><a class="nav-link" href="brands.html">Brands</a></div><div class="nav-item"><a class="nav-link" href="wellness.html">Wellness</a></div><div class="nav-item"><a class="nav-link" href="projects.html">Projects</a></div><div class="nav-item"><a class="nav-link" href="resources.html">Resources</a></div><div class="nav-item"><a class="nav-link" href="contact.html">Contact</a></div></nav><div class="header-actions"><button class="cart-btn" onclick="openCart()"><i class="fa fa-shopping-cart"></i><span class="badge" id="cartBadge">0</span></button><a href="contact.html" class="enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a></div></div></header>
+<div class="top-bar"><div class="top-bar-inner"><span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span><span class="promo">🦈 India's Leading Pool Manufacturer &nbsp;·&nbsp; <span>UAE &amp; India</span> &nbsp;·&nbsp; <span>ISO Certified</span> &nbsp;·&nbsp; 15 Year Structural Warranty</span><div class="top-right"><a href="mailto:info@aquashark.in"><i class="fa fa-envelope" style="margin-right:4px;"></i>info@aquashark.in</a></div></div></div>
+
+<header><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo/Aqua Shark Logo.png alt="Aquashark Pools &amp; Spas" class="logo-icon"><div class="logo-text"><span class="brand">Aqua<span>shark</span></span><span class="sub">Pools &amp; Spas</span></div></a><nav><div class="nav-item"><a class="nav-link" href="index.html">Home</a></div><div class="nav-item"><a class="nav-link" href="products.html">Products <i class="fa fa-chevron-down"></i></a><div class="nav-dropdown"><a href="fiberglass-pools.html"><i class="fa fa-water"></i> Fiberglass Pools</a><a href="above-ground-pools.html"><i class="fa fa-person-swimming"></i> Above Ground Pools</a><a href="swim-spas.html"><i class="fa fa-hot-tub-person"></i> Swim Spas</a><a href="hot-tubs.html"><i class="fa fa-bath"></i> Hot Tubs</a><div class="dd-divider"></div><a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Cold / Chill Tubs</a><a href="saunas.html"><i class="fa fa-fire"></i> Saunas</a><a href="stainless-steel-pools.html"><i class="fa fa-gear"></i> Stainless Steel Pools</a><a href="hydrotherapy-pools.html"><i class="fa fa-heart-pulse"></i> Hydrotherapy Pools</a></div></div><div class="nav-item"><a class="nav-link" href="brands.html">Brands <i class="fa fa-chevron-down"></i></a><div class="nav-dropdown"><a href="brands.html#platinum-spas"><i class="fa fa-star"></i> Platinum Spas (UK)</a><a href="brands.html#master-spas"><i class="fa fa-star"></i> Master Spas (USA)</a><a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a><a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a><a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a><a href="brands.html#portcril"><i class="fa fa-globe"></i> Portcril (Portugal)</a><a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a></div></div><div class="nav-item"><a class="nav-link" href="about.html">Company <i class="fa fa-chevron-down"></i></a><div class="nav-dropdown"><a href="about.html"><i class="fa fa-circle-info"></i> About Aquashark</a><a href="about.html#awards"><i class="fa fa-trophy"></i> Awards &amp; Accolades</a><a href="about.html#team"><i class="fa fa-users"></i> Our Team</a><a href="brands.html"><i class="fa fa-globe"></i> Global Partners</a><a href="resources.html#blog"><i class="fa fa-newspaper"></i> Blog</a></div></div><div class="nav-item"><a class="nav-link" href="wellness.html">Wellness</a></div><div class="nav-item"><a class="nav-link" href="projects.html">Projects</a></div><div class="nav-item"><a class="nav-link" href="resources.html">Resources</a></div><div class="nav-item"><a class="nav-link" href="contact.html">Contact</a></div></nav><div class="header-actions"><button class="cart-btn" onclick="openCart()"><i class="fa fa-shopping-cart"></i><span class="badge" id="cartBadge">0</span></button><a href="contact.html" class="enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a></div></div></header>
+
 <main>
+
+  <!-- ── HERO ── -->
   <section class="product-detail-hero">
     <div class="product-detail-wrap">
       <div class="product-visual-panel">
         <span class="detail-kicker">Stainless Steel Pools</span>
         <h1>Strength Meets Elegance</h1>
-        <p>Commercial-grade stainless steel pools engineered for rooftops, high-rises and luxury commercial properties. Lightweight, hygienic, waterproof and built to last decades.</p>
+        <p>Commercial-grade stainless steel pool systems engineered for rooftops, high-rises, hotels and luxury commercial properties. Lightweight, hygienic, completely waterproof and built to last decades — powered by Natare Corporation technology.</p>
         <div class="detail-main-image">
           <img id="steelPoolMainImg" src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-luxury-resort.png" alt="Stainless steel pool luxury resort — Aquashark">
         </div>
@@ -39,6 +112,10 @@
             <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-competition.png" alt="Competition Pool" loading="lazy">
             <span>Competition Pool</span>
           </button>
+          <button type="button" onclick="document.getElementById('steelPoolMainImg').src=this.querySelector('img').src;document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
+            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-hotel-installation.jpeg" alt="Hotel Pool" loading="lazy">
+            <span>Hotel Pool</span>
+          </button>
         </div>
       </div>
       <aside class="product-enquiry-panel">
@@ -48,97 +125,264 @@
           <p>Custom-engineered stainless steel pool systems for rooftops, hotels and commercial facilities. Powered by Natare Corporation technology.</p>
           <div class="detail-price">Get Custom Quote</div>
           <div class="quick-specs">
-            <div><span>Material</span><strong>316L Stainless</strong></div>
+            <div><span>Material</span><strong>316L Stainless Steel</strong></div>
             <div><span>Finish</span><strong>Mirror or Brushed</strong></div>
-            <div><span>Use</span><strong>Rooftop &amp; Commercial</strong></div>
+            <div><span>Use Case</span><strong>Rooftop &amp; Commercial</strong></div>
             <div><span>Partner</span><strong>Natare Corp (USA)</strong></div>
           </div>
           <div class="detail-actions">
-            <a class="detail-btn whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20Stainless%20Steel%20Pools.%20Please%20share%20details." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a class="detail-btn primary" href="contact.html"><i class="fa fa-paper-plane"></i> Start Project</a>
+            <a class="detail-btn whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20Stainless%20Steel%20Pools." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             <a class="detail-btn ghost" href="tel:+917756999108"><i class="fa fa-phone"></i> Call Now</a>
           </div>
-          <p class="enquiry-note">Each stainless steel pool is custom designed for your space. Contact us to begin the design process.</p>
+          <p class="enquiry-note">Each stainless steel pool is custom designed for your space. Contact us to begin the engineering process.</p>
         </div>
       </aside>
     </div>
   </section>
 
+  <!-- ── NATARE PARTNERSHIP ── -->
+  <section class="ss-natare-section">
+    <div class="ss-natare-inner">
+      <div class="ss-natare-content">
+        <span class="section-kicker">Technology Partner</span>
+        <h2>Powered by Natare Corporation</h2>
+        <p>Natare Corporation (USA) is the world leader in stainless steel aquatic systems, with over four decades of engineering excellence trusted by Olympic training facilities, five-star hotels, premier universities and commercial developers globally.</p>
+        <p>Natare's proprietary modular stainless steel panel system — using 316L marine-grade stainless — delivers pools of any shape, size and configuration. From compact rooftop plunge pools to full Olympic competition lanes, Natare technology sets the global benchmark for permanence and hygiene.</p>
+        <p>As Natare's authorised partner in India and the Middle East, Aquashark brings this world-class technology with complete local engineering, installation and service support.</p>
+        <div class="ss-natare-stats">
+          <div class="ss-natare-stat"><div class="num">40+</div><div class="lbl">Years of Engineering</div></div>
+          <div class="ss-natare-stat"><div class="num">316L</div><div class="lbl">Marine Grade Steel</div></div>
+          <div class="ss-natare-stat"><div class="num">Olympic</div><div class="lbl">Certified Systems</div></div>
+          <div class="ss-natare-stat"><div class="num">Custom</div><div class="lbl">Any Shape &amp; Size</div></div>
+        </div>
+        <div style="margin-top:24px;display:flex;gap:12px;">
+          <a href="contact.html" class="detail-btn primary"><i class="fa fa-paper-plane"></i> Start Your Project</a>
+          <a href="brands.html#natare" class="detail-btn ghost" style="color:#7dd3fc;border-color:rgba(255,255,255,.2);">View Brand</a>
+        </div>
+      </div>
+      <div class="ss-natare-gallery">
+        <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-natare-model-01.png" alt="Natare stainless steel pool system" loading="lazy">
+        <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-natare-model-02.png" alt="Natare pool model 2" loading="lazy">
+        <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-natare-model-03.png" alt="Natare pool model 3" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY STAINLESS ── -->
   <section class="detail-section">
     <div class="detail-section-head">
-      <span class="section-kicker">Overview</span>
-      <h2>Why stainless steel?</h2>
-      <p>Stainless steel pools offer unmatched durability, hygiene and design flexibility for projects where fiberglass or concrete options are not viable.</p>
+      <span class="section-kicker">Material Advantage</span>
+      <h2>Why stainless steel outperforms every alternative</h2>
+      <p>For rooftop, elevated, commercial or architecturally demanding projects, stainless steel delivers what concrete and fiberglass cannot.</p>
     </div>
     <div class="detail-feature-grid">
       <div class="detail-feature">
         <i class="fa fa-shield-halved"></i>
         <h3>Corrosion Resistant</h3>
-        <p>316L marine-grade stainless withstands pool chemicals, salt water and outdoor exposure indefinitely.</p>
+        <p>316L marine-grade stainless withstands pool chemicals, salt water and harsh outdoor environments indefinitely.</p>
       </div>
       <div class="detail-feature">
         <i class="fa fa-feather"></i>
         <h3>Lightweight Structure</h3>
-        <p>Significantly lighter than concrete, making it the preferred choice for rooftop and elevated installations.</p>
+        <p>Significantly lighter than concrete, making it the preferred choice for rooftop, podium and elevated slab installations.</p>
       </div>
       <div class="detail-feature">
         <i class="fa fa-droplet"></i>
-        <h3>Hygienic Surface</h3>
-        <p>Non-porous stainless steel resists biofilm and algae growth, ensuring superior water hygiene.</p>
+        <h3>Superior Hygiene</h3>
+        <p>Non-porous stainless resists biofilm, algae and bacteria — delivering better water quality with lower chemical usage.</p>
       </div>
       <div class="detail-feature">
         <i class="fa fa-infinity"></i>
-        <h3>Long Lifespan</h3>
-        <p>Engineered for decades of continuous use with minimal maintenance requirements.</p>
+        <h3>Decades of Lifespan</h3>
+        <p>Engineered for permanent installations requiring minimal maintenance across 30+ year project lifespans.</p>
+      </div>
+      <div class="detail-feature">
+        <i class="fa fa-ruler-combined"></i>
+        <h3>Any Shape or Size</h3>
+        <p>Modular panel system enables any custom shape — round, L-shaped, lap lanes, infinity edges and multi-depth configurations.</p>
+      </div>
+      <div class="detail-feature">
+        <i class="fa fa-palette"></i>
+        <h3>Premium Aesthetics</h3>
+        <p>Mirror or brushed finish options. Interior can be fitted with mosaic, epoxy or bare stainless to match any architectural vision.</p>
+      </div>
+      <div class="detail-feature">
+        <i class="fa fa-bolt"></i>
+        <h3>Rapid Fabrication</h3>
+        <p>Factory-precision manufacturing with modular panels cuts site installation time significantly versus cast concrete.</p>
+      </div>
+      <div class="detail-feature">
+        <i class="fa fa-recycle"></i>
+        <h3>Fully Recyclable</h3>
+        <p>100% recyclable material at end of life — the most environmentally responsible choice for permanent aquatic facilities.</p>
       </div>
     </div>
   </section>
 
+  <!-- ── POOL SYSTEMS ── -->
+  <section class="ss-systems-section">
+    <div class="ss-systems-inner">
+      <div class="detail-section-head">
+        <span class="section-kicker">Pool Systems</span>
+        <h2>Natare stainless steel pool systems for every project type</h2>
+        <p>From intimate hotel plunge pools to full-scale competition facilities, every system is custom engineered to your specifications.</p>
+      </div>
+      <div class="ss-systems-grid">
+        <div class="ss-system-card">
+          <div class="ssc-img">
+            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-rooftop.png" alt="Rooftop Stainless Steel Pool" loading="lazy">
+          </div>
+          <div class="ssc-body">
+            <div class="ssc-label">Most Popular</div>
+            <div class="ssc-title">Rooftop &amp; Podium Pools</div>
+            <div class="ssc-desc">Specifically designed for elevated installations where weight, waterproofing and structural load are critical considerations.</div>
+            <ul class="ssc-features">
+              <li><i class="fa fa-check"></i> Lightweight panel construction</li>
+              <li><i class="fa fa-check"></i> Integrated waterproofing system</li>
+              <li><i class="fa fa-check"></i> Structural load calculations included</li>
+              <li><i class="fa fa-check"></i> Custom shape and depth</li>
+            </ul>
+            <a href="contact.html" class="detail-btn primary" style="font-size:13px;"><i class="fa fa-paper-plane"></i> Enquire</a>
+          </div>
+        </div>
+        <div class="ss-system-card">
+          <div class="ssc-img">
+            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-infinity-product.png" alt="Infinity Stainless Steel Pool" loading="lazy">
+          </div>
+          <div class="ssc-body">
+            <div class="ssc-label">Luxury</div>
+            <div class="ssc-title">Infinity &amp; Vanishing Edge Pools</div>
+            <div class="ssc-desc">Architecturally striking infinity edge designs for hotels, villas and hillside properties where the pool meets the horizon.</div>
+            <ul class="ssc-features">
+              <li><i class="fa fa-check"></i> Precision-engineered overflow edge</li>
+              <li><i class="fa fa-check"></i> Mirror or brushed steel finish</li>
+              <li><i class="fa fa-check"></i> Custom panoramic configurations</li>
+              <li><i class="fa fa-check"></i> Integrated LED lighting options</li>
+            </ul>
+            <a href="contact.html" class="detail-btn primary" style="font-size:13px;"><i class="fa fa-paper-plane"></i> Enquire</a>
+          </div>
+        </div>
+        <div class="ss-system-card">
+          <div class="ssc-img">
+            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-competition.png" alt="Competition Stainless Steel Pool" loading="lazy">
+          </div>
+          <div class="ssc-body">
+            <div class="ssc-label">Olympic Standard</div>
+            <div class="ssc-title">Competition &amp; Training Pools</div>
+            <div class="ssc-desc">Full competition standard pools for aquatic centres, universities and sports facilities — built to FINA and international standards.</div>
+            <ul class="ssc-features">
+              <li><i class="fa fa-check"></i> FINA-compliant lane configurations</li>
+              <li><i class="fa fa-check"></i> Anti-turbulence lane rope channels</li>
+              <li><i class="fa fa-check"></i> Precision depth and level control</li>
+              <li><i class="fa fa-check"></i> Touch-pad and timing system ready</li>
+            </ul>
+            <a href="contact.html" class="detail-btn primary" style="font-size:13px;"><i class="fa fa-paper-plane"></i> Enquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MATERIAL SPECS ── -->
+  <section class="ss-material-section">
+    <div class="ss-material-inner">
+      <div class="ss-material-content">
+        <span class="section-kicker">Material &amp; Engineering</span>
+        <h2>316L Stainless Steel — The Gold Standard</h2>
+        <p>Every Natare pool system is built from 316L austenitic stainless steel — the highest grade used in marine and aquatic applications. The 'L' designation (low carbon) ensures exceptional resistance to sensitisation and inter-granular corrosion, critical for permanent immersion in chemically treated water.</p>
+        <p>Panels are precision CNC-formed and TIG-welded at controlled tolerances, then passivated for maximum corrosion resistance before dispatch. Every joint is watertight by design — no sealants or coatings are required.</p>
+        <div class="ss-material-specs">
+          <div class="ss-material-spec"><div class="spec-label">Grade</div><div class="spec-value">316L Austenitic Stainless Steel</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Surface Finish</div><div class="spec-value">Mirror or Brushed (#4 / #8)</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Welding</div><div class="spec-value">TIG-welded, passivated</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Panel System</div><div class="spec-value">Modular CNC-formed panels</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Interior Options</div><div class="spec-value">Mosaic · Epoxy · Bare Steel</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Lifespan</div><div class="spec-value">30+ years (structural)</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Chemical Resistance</div><div class="spec-value">Chlorine, salt, ozone compatible</div></div>
+          <div class="ss-material-spec"><div class="spec-label">Recyclability</div><div class="spec-value">100% recyclable at end of life</div></div>
+        </div>
+      </div>
+      <div class="ss-material-img">
+        <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-panoramic-banner.png" alt="Stainless steel pool panoramic view" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECT PROCESS ── -->
+  <section class="ss-process-section">
+    <div class="ss-process-inner">
+      <div class="detail-section-head">
+        <span class="section-kicker">Project Process</span>
+        <h2>From brief to installed — how every project works</h2>
+        <p>Stainless steel pools are custom-engineered for every site. Here's the Aquashark project delivery process.</p>
+      </div>
+      <div class="ss-process-grid">
+        <div class="ss-process-step">
+          <div class="ss-process-num">1</div>
+          <h4>Consultation &amp; Brief</h4>
+          <p>We discuss your project requirements, site constraints, aesthetic goals and timeline.</p>
+        </div>
+        <div class="ss-process-step">
+          <div class="ss-process-num">2</div>
+          <h4>Site Survey</h4>
+          <p>Structural and civil survey to assess rooftop load, drainage and plumbing routing.</p>
+        </div>
+        <div class="ss-process-step">
+          <div class="ss-process-num">3</div>
+          <h4>Engineering Design</h4>
+          <p>Natare-powered custom pool engineering drawings, with full structural calculations.</p>
+        </div>
+        <div class="ss-process-step">
+          <div class="ss-process-num">4</div>
+          <h4>Fabrication</h4>
+          <p>CNC-precision panel manufacture and TIG welding in controlled factory conditions.</p>
+        </div>
+        <div class="ss-process-step">
+          <div class="ss-process-num">5</div>
+          <h4>Installation</h4>
+          <p>Expert installation team assembles, waterproofs, and commissions the complete pool system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── APPLICATIONS ── -->
   <section class="detail-section detail-section-alt">
-    <div class="detail-two-col">
-      <div>
-        <span class="section-kicker">Partner</span>
-        <h2>Powered by Natare Corporation</h2>
-        <p>Natare Corporation (USA) is the world leader in stainless steel aquatic systems, trusted by Olympic facilities, five-star hotels and commercial developers globally.</p>
-      </div>
-      <div class="application-grid">
-        <span>Rooftop Pools</span>
-        <span>Infinity Pools</span>
-        <span>Competition Pools</span>
-        <span>Hotel Pools</span>
-        <span>Lap Pools</span>
-        <span>Custom Shapes</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="detail-section">
-    <div class="detail-two-col">
+    <div class="detail-two-col" style="max-width:1280px;margin:0 auto;padding:0 20px;">
       <div>
         <span class="section-kicker">Applications</span>
         <h2>Built for demanding environments</h2>
-        <p>Ideal where weight limits, hygiene requirements or architectural constraints rule out other pool types.</p>
+        <p>Stainless steel pools are the first choice where weight, hygiene, architectural demands or longevity requirements rule out other pool types.</p>
       </div>
       <div class="application-grid">
         <span>High-Rise Buildings</span>
         <span>Rooftop Terraces</span>
         <span>Boutique Hotels</span>
-        <span>Commercial Resorts</span>
+        <span>Luxury Resorts</span>
+        <span>Infinity Edge Pools</span>
         <span>Sports Facilities</span>
+        <span>University Aquatics</span>
         <span>Architectural Showpieces</span>
+        <span>Lap Pools</span>
+        <span>Competition Venues</span>
       </div>
     </div>
   </section>
 
+  <!-- ── CTA ── -->
   <section class="cta-band">
     <div class="cta-band-inner">
       <div class="cta-band-text">
         <h2>Design Your Stainless Steel Pool</h2>
-        <p>Every project is custom engineered. Share your requirements and we'll design a solution.</p>
+        <p>Every project is custom engineered. Share your site, requirements and vision — we'll handle the rest from design to commissioning.</p>
       </div>
       <a href="contact.html" class="cta-band-btn">Start Your Project</a>
     </div>
   </section>
+
 </main>
+
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -157,16 +401,14 @@
         </ul>
       </div>
       <div class="footer-col"><h5>Products</h5><ul><li><a href="fiberglass-pools.html">Fiberglass Pools</a></li><li><a href="above-ground-pools.html">Above Ground Pools</a></li><li><a href="swim-spas.html">Swim Spas</a></li><li><a href="hot-tubs.html">Hot Tubs</a></li><li><a href="cold-tubs.html">Cold / Chill Tubs</a></li><li><a href="saunas.html">Saunas</a></li><li><a href="stainless-steel-pools.html">Stainless Steel Pools</a></li><li><a href="hydrotherapy-pools.html">Hydrotherapy Pools</a></li></ul></div>
-      <div class="footer-col"><h5>Brands</h5><ul><li><a href="brands.html#platinum-spas">Platinum Spas (UK)</a></li><li><a href="brands.html#master-spas">Master Spas (USA)</a></li><li><a href="brands.html#michael-phelps">Michael Phelps Swim Spas</a></li><li><a href="brands.html#chilly-goat">Chilly Goat (USA)</a></li><li><a href="brands.html#sweaty-goat">Sweaty Goat Saunas</a></li><li><a href="brands.html#natare">Natare Systems</a></li></ul></div>
+      <div class="footer-col"><h5>Brands</h5><ul><li><a href="brands.html#platinum-spas">Platinum Spas (UK)</a></li><li><a href="brands.html#master-spas">Master Spas (USA)</a></li><li><a href="brands.html#michael-phelps">Michael Phelps Swim Spas</a></li><li><a href="brands.html#chilly-goat">Chilly Goat (USA)</a></li><li><a href="brands.html#sweaty-goat">Sweaty Goat Saunas</a></li><li><a href="brands.html#portcril">Portcril (Portugal)</a></li><li><a href="brands.html#natare">Natare Systems</a></li></ul></div>
       <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#awards">Awards &amp; Accolades</a></li><li><a href="projects.html">Our Projects</a></li><li><a href="contact.html">Dealer Network</a></li><li><a href="resources.html#blog">Blog / Insights</a></li><li><a href="resources.html#faq">FAQs</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
       <div class="footer-col"><h5>Follow Us</h5><div class="social-links" style="flex-wrap:wrap;gap:8px;justify-content:flex-start;margin-bottom:20px;"><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a><a href="#" title="YouTube"><i class="fab fa-youtube"></i></a><a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a></div><h5 style="margin-top:4px;">Offices</h5><p style="font-size:12px;color:#556677;line-height:1.7;">🏙️ Pune, Maharashtra<br>🌍 Dubai, UAE</p></div>
     </div>
     <div class="footer-bottom"><span>© 2026 Aquashark Pools &amp; Spas. All rights reserved.</span><div style="display:flex;gap:16px;"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Sitemap</a></div></div>
   </div>
 </footer>
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
-<div class="cart-drawer" id="cartDrawer"><div class="cart-header"><h3><i class="fa fa-shopping-cart" style="margin-right:8px;color:var(--primary);"></i>Enquiry Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa fa-times"></i></button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer" id="cartFooter" style="display:none;"><div class="cart-subtotal"><span>Items in enquiry</span><span id="cartTotal"></span></div><p class="cart-note">Our team will contact you with a personalised quote.</p><div class="cart-actions"><button class="cart-btn-view" onclick="closeCart()">Continue Browsing</button><button class="cart-btn-checkout" onclick="sendEnquiry()"><i class="fa fa-paper-plane" style="margin-right:6px;"></i>Send Enquiry</button></div></div></div>
-<div id="toast-container"></div>
-<script src="script.js"></script>
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div><div class="cart-drawer" id="cartDrawer"><div class="cart-header"><h3><i class="fa fa-shopping-cart" style="margin-right:8px;color:var(--primary);"></i>Enquiry Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa fa-times"></i></button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer" id="cartFooter" style="display:none;"><div class="cart-subtotal"><span>Items in enquiry</span><span id="cartTotal"></span></div><p class="cart-note">Our team will contact you with a personalised quote.</p><div class="cart-actions"><button class="cart-btn-view" onclick="closeCart()">Continue Browsing</button><button class="cart-btn-checkout" onclick="sendEnquiry()"><i class="fa fa-paper-plane" style="margin-right:6px;"></i>Send Enquiry</button></div></div></div>
+<div id="toast-container"></div><script src="script.js"></script>
 </body>
 </html>
