@@ -14,6 +14,171 @@
 </head>
 <body>
 
+<style>
+/* ══════════════════════════════════════
+   PRODUCT SECTION (FINAL)
+══════════════════════════════════════ */
+
+/* BASE */
+.product-block {
+  padding: 90px 20px;
+}
+
+/* GRID */
+.product-block-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* ALTERNATE LAYOUT */
+.product-block.alt .product-block-inner {
+  direction: rtl;
+}
+.product-block.alt .product-block-inner > * {
+  direction: ltr;
+}
+
+/* IMAGE */
+.product-block-img {
+  width: 100%;
+  height: clamp(220px, 40vw, 420px); /* ✅ responsive height */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+
+.product-block-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-block-img:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.product-block-content {
+  max-width: 520px;
+}
+
+.product-block-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #003459;
+  margin-bottom: 14px;
+}
+
+.product-block-content p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #556677;
+  margin-bottom: 16px;
+}
+
+/* HIGHLIGHTS */
+.product-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.product-highlights span {
+  background: #e6f4fb;
+  color: #0077b6;
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* CTA */
+.product-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.product-cta a {
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* PRIMARY */
+.product-cta .btn-primary {
+  background: #0077b6;
+  color: #fff;
+}
+
+.product-cta .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* SECONDARY */
+.product-cta .btn-secondary {
+  border: 1.5px solid #0077b6;
+  color: #0077b6;
+}
+
+.product-cta .btn-secondary:hover {
+  background: #0077b6;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* TOUCH FEEDBACK (mobile) */
+.product-cta a:active {
+  transform: scale(0.97);
+}
+
+/* ══════════════════════════════════════
+   MOBILE OPTIMIZATION
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* section spacing */
+  .product-block {
+    padding: 60px 16px;
+  }
+
+  /* stack layout */
+  .product-block-inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* FIX: remove rtl hack on mobile */
+  .product-block.alt .product-block-inner {
+    direction: ltr;
+  }
+
+  /* typography */
+  .product-block-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .product-block-content p {
+    font-size: 14px;
+  }
+
+  /* highlights tighter */
+  .product-highlights {
+    gap: 8px;
+  }
+
+  .product-highlights span {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+</style>
+
 <div class="top-bar">
   <div class="top-bar-inner">
     <span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span>
@@ -104,120 +269,283 @@
   </div>
 </section>
 
-<!-- FIBERGLASS POOLS -->
-<section class="product-section" id="fiberglass">
+<!-- fiberglass  -->
+
+<section class="product-block">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">🏊</div>
-      <div class="product-category-body">
-        <h2>Fiberglass Pools</h2>
-        <p>Prefabricated pools for fast installation, low maintenance and 15-year structural warranty. Available in a wide range of shapes and sizes to suit every space and lifestyle.</p>
-        <p><strong>Models:</strong> Ibiza, Cocktail, Manila, Sydney, Toronto, Paris, Mexico.</p>
-        <a href="fiberglass-pools.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <!-- IMAGE -->
+      <div class="product-block-img">
+        <img src="images/products/fiberglass/fuverglas8m.jpg" alt="Fiberglass Pools">
       </div>
+
+      <!-- CONTENT -->
+      <div class="product-block-content">
+        <h2>Fiberglass Pools</h2>
+
+        <p>
+          Prefabricated pools designed for fast installation, low maintenance and long-term durability.
+          Perfect for modern homes with minimal construction hassle.
+        </p>
+
+        <!-- HIGHLIGHTS -->
+        <div class="product-highlights">
+          <span>1–3 Day Installation</span>
+          <span>15-Year Warranty</span>
+          <span>Low Maintenance</span>
+        </div>
+
+        <p><strong>Popular Models:</strong> Ibiza, Cocktail, Manila, Sydney, Toronto</p>
+
+        <!-- CTA -->
+        <div class="product-cta">
+          <a href="fiberglass-pools.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ABOVE GROUND POOLS -->
-<section class="product-section product-section-alt" id="above-ground">
+<section class="product-block alt">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">⬆️</div>
-      <div class="product-category-body">
-        <h2>Above Ground Pools</h2>
-        <p>Plug &amp; play ACP aluminium skirting pools. Includes filter, pump, LED lighting and plumbing. Ready in a day with no excavation required — ideal for spaces where in-ground installation isn't possible.</p>
-        <a href="above-ground-pools.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/above-ground/abovetheground1.PNG" alt="Above Ground Pools">
       </div>
+
+      <div class="product-block-content">
+        <h2>Above Ground Pools</h2>
+
+        <p>
+          Plug & play pools with ACP aluminium structure — no excavation required.
+          Ideal for terraces, rooftops and compact spaces.
+        </p>
+
+        <div class="product-highlights">
+          <span>1 Day Installation</span>
+          <span>No Civil Work</span>
+          <span>Portable Setup</span>
+        </div>
+
+        <div class="product-cta">
+          <a href="above-ground-pools.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- SWIM SPAS -->
-<section class="product-section" id="swimspas">
+<section class="product-block">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">🌊</div>
-      <div class="product-category-body">
-        <h2>Swim Spas</h2>
-        <p>Combines the benefits of swimming and spa therapy in one compact unit. Powerful counter-current jets for resistance swimming, and hydrotherapy seats for relaxation and recovery.</p>
-        <p><strong>Brands:</strong> Master Spas USA, Michael Phelps, Platinum Spas UK.</p>
-        <a href="swim-spas.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/swimspa2.jpg" alt="Swim Spas">
       </div>
+
+      <div class="product-block-content">
+        <h2>Swim Spas</h2>
+
+        <p>
+          Experience swimming and hydrotherapy in one compact unit.
+          Perfect for fitness, relaxation and recovery at home.
+        </p>
+
+        <div class="product-highlights">
+          <span>Resistance Jets</span>
+          <span>Compact Size</span>
+          <span>All-Season Use</span>
+        </div>
+
+        <p><strong>Brands:</strong> Master Spas, Michael Phelps, Platinum Spas</p>
+
+        <div class="product-cta">
+          <a href="swim-spas.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- HOT TUBS -->
-<section class="product-section product-section-alt" id="hot-tubs">
+<section class="product-block alt">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">🛁</div>
-      <div class="product-category-body">
-        <h2>Hot Tubs</h2>
-        <p>Luxury hydrotherapy seating with precision jet systems for targeted muscle relief, stress reduction and deep relaxation. Designed for year-round use in any climate.</p>
-        <p><strong>Brands:</strong> Platinum Spas UK, Master Spas USA, Michael Phelps Legend Series.</p>
-        <a href="hot-tubs.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/hottubssauna.jpeg" alt="Hot Tubs">
       </div>
+
+      <div class="product-block-content">
+        <h2>Hot Tubs</h2>
+
+        <p>
+          Luxury hydrotherapy systems designed for relaxation, stress relief and recovery.
+          Built for year-round comfort.
+        </p>
+
+        <div class="product-highlights">
+          <span>Hydrotherapy Jets</span>
+          <span>Heated Comfort</span>
+          <span>Luxury Design</span>
+        </div>
+
+        <p><strong>Brands:</strong> Platinum Spas, Master Spas, Michael Phelps</p>
+
+        <div class="product-cta">
+          <a href="hot-tubs.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- COLD / CHILL TUBS -->
-<section class="product-section" id="cold-tubs">
+<section class="product-block">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">🧊</div>
-      <div class="product-category-body">
-        <h2>Cold / Chill Tubs</h2>
-        <p>Cold water immersion therapy for accelerated recovery, reduced inflammation and improved mental clarity. Trusted by elite athletes and wellness enthusiasts worldwide.</p>
-        <p><strong>Brands:</strong> Chilly Goat USA, Master Spas Alpine.</p>
-        <a href="cold-tubs.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/fiberglass/sydney.png" alt="Cold Tubs">
       </div>
+
+      <div class="product-block-content">
+        <h2>Cold / Chill Tubs</h2>
+
+        <p>
+          Cold water immersion systems for faster recovery, reduced inflammation and mental clarity.
+          Trusted by athletes and wellness experts.
+        </p>
+
+        <div class="product-highlights">
+          <span>Ice Bath Therapy</span>
+          <span>Quick Recovery</span>
+          <span>High Performance</span>
+        </div>
+
+        <p><strong>Brands:</strong> Chilly Goat, Master Spas Alpine</p>
+
+        <div class="product-cta">
+          <a href="cold-tubs.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- SAUNAS -->
-<section class="product-section product-section-alt" id="saunas">
+<section class="product-block alt">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">🔥</div>
-      <div class="product-category-body">
-        <h2>Saunas</h2>
-        <p>Infrared and traditional Finnish saunas for deep detoxification, cardiovascular health and total relaxation. Premium timber finishes with advanced heating systems.</p>
-        <p><strong>Brands:</strong> Sweaty Goat (USA), Hekla (Finland).</p>
-        <a href="saunas.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/sauna.jpg" alt="Saunas">
       </div>
+
+      <div class="product-block-content">
+        <h2>Saunas</h2>
+
+        <p>
+          Traditional and infrared saunas designed for detoxification,
+          relaxation and cardiovascular benefits.
+        </p>
+
+        <div class="product-highlights">
+          <span>Infrared & Finnish</span>
+          <span>Detox & Relax</span>
+          <span>Premium Wood Finish</span>
+        </div>
+
+        <p><strong>Brands:</strong> Sweaty Goat, Hekla</p>
+
+        <div class="product-cta">
+          <a href="saunas.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- STAINLESS STEEL POOLS -->
-<section class="product-section" id="stainless">
+<section class="product-block">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">⚙️</div>
-      <div class="product-category-body">
-        <h2>Stainless Steel Pools</h2>
-        <p>Commercial-grade rooftop and infinity pools engineered for structural integrity and aesthetic excellence. Ideal for high-rise buildings, hotels and commercial properties.</p>
-        <p><strong>Partner:</strong> Natare Corporation (USA).</p>
-        <a href="stainless-steel-pools.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-commercial-install.jpeg" alt="Stainless Steel Pools">
       </div>
+
+      <div class="product-block-content">
+        <h2>Stainless Steel Pools</h2>
+
+        <p>
+          High-performance commercial pools engineered for durability,
+          modern aesthetics and structural strength.
+        </p>
+
+        <div class="product-highlights">
+          <span>Rooftop Ready</span>
+          <span>Infinity Design</span>
+          <span>Commercial Grade</span>
+        </div>
+
+        <p><strong>Partner:</strong> Natare Corporation</p>
+
+        <div class="product-cta">
+          <a href="stainless-steel-pools.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+
 <!-- HYDROTHERAPY POOLS -->
-<section class="product-section product-section-alt" id="hydrotherapy">
+<section class="product-block alt">
   <div class="container">
-    <div class="product-category-card">
-      <div class="product-category-icon">💊</div>
-      <div class="product-category-body">
-        <h2>Hydrotherapy Pools</h2>
-        <p>Medical-grade rehabilitation pools featuring underwater treadmills, therapy jets and precise temperature control. Designed for hospitals, physiotherapy centres and sports rehabilitation facilities.</p>
-        <a href="hydrotherapy-pools.html" class="btn-primary" style="margin-top:12px;display:inline-block;">View Products</a>
+    <div class="product-block-inner">
+
+      <div class="product-block-img">
+        <img src="images/products/coldplunghyfro.jpeg" alt="Hydrotherapy Pools">
       </div>
+
+      <div class="product-block-content">
+        <h2>Hydrotherapy Pools</h2>
+
+        <p>
+          Medical-grade therapy pools designed for rehabilitation,
+          physiotherapy and performance recovery.
+        </p>
+
+        <div class="product-highlights">
+          <span>Underwater Treadmill</span>
+          <span>Rehabilitation Focus</span>
+          <span>Precise Temperature Control</span>
+        </div>
+
+        <div class="product-cta">
+          <a href="hydrotherapy-pools.html" class="btn-primary">Explore Models</a>
+          <a href="contact.html" class="btn-secondary">Get Quote</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

@@ -14,6 +14,8 @@
 </head>
 <body>
 
+
+  
 <div class="top-bar">
   <div class="top-bar-inner">
     <span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span>
@@ -25,7 +27,153 @@
     </div>
   </div>
 </div>
+<style>
 
+  /* ══════════════════════════════════════
+   WELLNESS HERO
+══════════════════════════════════════ */
+.well-hero {
+  position: relative;
+  background: #004d3d;
+  overflow: hidden;
+  padding: 120px 20px 100px;
+  text-align: center;
+  color: #fff;
+}
+
+/* layered gradient (better depth) */
+.well-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+      ellipse 80% 60% at 50% 0%,
+      #0a7f6c 0%,
+      #004d3d 60%,
+      #002922 100%
+    );
+}
+
+/* animated rings (same system as other pages) */
+.well-hero__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+  animation: ringPulse 7s ease-in-out infinite;
+}
+
+.well-hero__ring:nth-child(1) {
+  width: 420px;
+  height: 420px;
+  bottom: -140px;
+  left: -100px;
+}
+
+.well-hero__ring:nth-child(2) {
+  width: 600px;
+  height: 600px;
+  bottom: -260px;
+  left: -200px;
+  animation-delay: 2s;
+}
+
+.well-hero__ring:nth-child(3) {
+  width: 280px;
+  height: 280px;
+  top: -80px;
+  right: -80px;
+  animation-delay: 3.5s;
+}
+
+/* animation */
+@keyframes ringPulse {
+  0%,100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.06); opacity: 1; }
+}
+
+/* content */
+.well-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* tag */
+.well-hero__tag {
+  display: inline-block;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.3);
+  backdrop-filter: blur(6px);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+/* heading */
+.well-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.4rem,5vw,3.4rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.well-hero h1 span {
+  color: #7dd3fc;
+  font-style: italic;
+}
+
+/* text */
+.well-hero p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.8);
+  line-height: 1.8;
+  max-width: 620px;
+  margin: 0 auto 36px;
+}
+
+/* buttons */
+.well-hero__btns {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.well-btn-primary,
+.well-btn-secondary {
+  padding: 14px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+/* primary */
+.well-btn-primary {
+  background: #fff;
+  color: #003459;
+}
+
+.well-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+/* secondary */
+.well-btn-secondary {
+  border: 1.5px solid rgba(255,255,255,.5);
+  color: #fff;
+}
+
+.well-btn-secondary:hover {
+  background: rgba(255,255,255,.1);
+  transform: translateY(-3px);
+}
+</style>
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -90,35 +238,42 @@
     </div>
   </div>
 </header>
+<section class="well-hero">
 
-<!-- ══════════════════════════════════════════
-     HERO
-══════════════════════════════════════════ -->
-<section style="background:linear-gradient(135deg,#004d3d 0%,#00796b 60%,#26a69a 100%);padding:100px 20px 80px;text-align:center;position:relative;overflow:hidden;">
-  <!-- subtle decorative rings -->
-  <div style="position:absolute;top:-120px;left:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(255,255,255,.07);pointer-events:none;"></div>
-  <div style="position:absolute;bottom:-80px;right:-80px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(255,255,255,.07);pointer-events:none;"></div>
+  <!-- BG -->
+  <div class="well-hero__bg">
+    <div class="well-hero__ring"></div>
+    <div class="well-hero__ring"></div>
+    <div class="well-hero__ring"></div>
+  </div>
 
-  <div style="max-width:760px;margin:0 auto;position:relative;z-index:1;">
-    <span class="page-hero-tag" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(6px);letter-spacing:.08em;font-size:12px;text-transform:uppercase;padding:6px 18px;border-radius:50px;display:inline-block;margin-bottom:28px;">Wellness Solutions</span>
+  <!-- CONTENT -->
+  <div class="well-hero__inner">
 
-    <h1 style="font-family:'Poppins',sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:#fff;line-height:1.18;margin:0 0 22px;">
-      Design Your Perfect <span style="color:#7dd3fc;">Wellness Ecosystem</span>
+    <span class="well-hero__tag">Wellness Solutions</span>
+
+    <h1>
+      Design Your Perfect <span>Wellness Ecosystem</span>
     </h1>
 
-    <p style="font-size:1.1rem;color:rgba(255,255,255,.85);line-height:1.75;max-width:620px;margin:0 auto 36px;">
-      We combine our world-class products into purpose-built wellness zones for homes, gyms, resorts and healthcare facilities across India.
+    <p>
+      We combine our world-class products into purpose-built wellness zones for homes,
+      gyms, resorts and healthcare facilities across India.
     </p>
 
-    <div class="page-hero-btns" style="justify-content:center;gap:14px;flex-wrap:wrap;">
-      <a href="contact.html" class="btn-primary" style="background:#fff;color:#003459;font-weight:700;padding:14px 32px;border-radius:8px;text-decoration:none;display:inline-block;transition:box-shadow .2s;" onmouseover="this.style.boxShadow='0 8px 28px rgba(0,0,0,.2)'" onmouseout="this.style.boxShadow='none'">
-        <i class="fa fa-calendar-check" style="margin-right:8px;"></i>Get Free Consultation
+    <div class="well-hero__btns">
+      <a href="contact.html" class="well-btn-primary">
+        <i class="fa fa-calendar-check" style="margin-right:8px;"></i>
+        Get Free Consultation
       </a>
-      <a href="products.html" class="btn-secondary" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);font-weight:600;padding:14px 32px;border-radius:8px;text-decoration:none;display:inline-block;transition:border-color .2s,background .2s;" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='transparent'">
+
+      <a href="products.html" class="well-btn-secondary">
         View Products <i class="fa fa-arrow-right" style="margin-left:8px;"></i>
       </a>
     </div>
 
+  </div>
+</section>
     <!-- Stats row -->
     <div style="display:flex;justify-content:center;gap:40px;margin-top:52px;flex-wrap:wrap;">
       <div style="text-align:center;">
@@ -146,10 +301,9 @@
   <div style="max-width:1100px;margin:0 auto;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
 
-      <!-- Image placeholder -->
-      <div style="background:linear-gradient(135deg,#003459,#0077b6);height:340px;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 20px 60px rgba(0,52,89,.25);">
-        <span style="font-size:80px;line-height:1;">🏠</span>
-        <span style="font-family:'Poppins',sans-serif;font-size:1rem;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.04em;">Hot Tub + Sauna</span>
+      <!-- Home Wellness image -->
+      <div style="height:340px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,52,89,.25);background:#e0f2fe;">
+        <img src="images/products/sauna.jpg" alt="Home wellness sauna setup" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       </div>
 
       <!-- Content -->
@@ -201,9 +355,8 @@
       </div>
 
       <!-- Image placeholder (right) -->
-      <div style="background:linear-gradient(135deg,#0c4a6e,#0369a1);height:340px;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 20px 60px rgba(3,105,161,.25);">
-        <span style="font-size:80px;line-height:1;">💪</span>
-        <span style="font-family:'Poppins',sans-serif;font-size:1rem;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.04em;">Cold Tub + Swim Spa</span>
+        <div style="height:340px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,52,89,.25);background:#e0f2fe;">
+        <img src="images/products/swimspa2.jpg" alt="swimspa + cold tub" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       </div>
     </div>
   </div>
@@ -217,9 +370,8 @@
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
 
       <!-- Image placeholder -->
-      <div style="background:linear-gradient(135deg,#005f73,#0a9396);height:340px;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 20px 60px rgba(0,95,115,.25);">
-        <span style="font-size:80px;line-height:1;">🏨</span>
-        <span style="font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;color:rgba(255,255,255,.9);letter-spacing:.04em;text-align:center;padding:0 20px;">Sauna + Hydrotherapy + Hot Tub</span>
+      <div style="height:340px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,52,89,.25);background:#e0f2fe;">
+        <img src="images/Aquashark Images for Developer/08_hydrotherapy/hydrotherapy-equipment-install.png" alt="swimspa + cold tub" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;">
       </div>
 
       <!-- Content -->

@@ -13,6 +13,233 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+ <style>
+.cards-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.feat-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  padding: 32px 26px;
+  box-shadow: 0 10px 40px rgba(0,52,89,0.08);
+  transition: all 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.feat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(0,52,89,0.15);
+}
+
+/* ICON UPGRADE */
+.feat-card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.feat-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #003459;
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+.feat-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #556677;
+  flex-grow: 1;
+}
+
+/* subtle top highlight */
+.feat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, #00b4d8, #0077b6);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.feat-card:hover::before {
+  opacity: 1;
+}
+
+
+
+/* ══════════════════════════════════════
+   PAGE HERO (UPGRADED)
+══════════════════════════════════════ */
+.page-hero {
+  position: relative;
+  background: var(--navy);
+  overflow: hidden;
+  padding: 120px 20px 130px;
+  text-align: center;
+  color: #fff;
+}
+
+/* background */
+.page-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    #0f4f7a 0%,
+    #002b45 60%,
+    #001525 100%
+  );
+}
+
+/* rings (slightly softer than contact) */
+.page-hero__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0,180,216,0.14);
+  animation: ringPulse 7s ease-in-out infinite;
+}
+
+.page-hero__ring:nth-child(1) {
+  width: 500px;
+  height: 500px;
+  bottom: -180px;
+  left: -120px;
+}
+
+.page-hero__ring:nth-child(2) {
+  width: 700px;
+  height: 700px;
+  bottom: -320px;
+  left: -260px;
+  animation-delay: 2s;
+  border-color: rgba(0,180,216,0.08);
+}
+
+.page-hero__ring:nth-child(3) {
+  width: 280px;
+  height: 280px;
+  top: -60px;
+  right: -60px;
+  animation-delay: 3.5s;
+  border-color: rgba(202,240,248,0.12);
+}
+
+/* reuse animation */
+@keyframes ringPulse {
+  0%,100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* content */
+.page-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.page-hero-tag {
+  display: inline-block;
+  background: rgba(0,180,216,0.15);
+  border: 1px solid rgba(0,180,216,0.4);
+  color: var(--aqua);
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.page-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.page-hero h1 span {
+  color: var(--aqua);
+  font-style: italic;
+}
+
+.page-hero p {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* buttons */
+.page-hero-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.btn-primary {
+  background: #0077b6;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #005f94;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #0077b6;
+  transform: translateY(-2px);
+}
+
+/* wave divider */
+.page-hero__wave {
+ position: absolute; bottom: -1px; left: 0; width: 100%; z-index: 2; line-height: 0;
+}
+</style>
+
 
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -91,43 +318,80 @@
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
+
+  <!-- BACKGROUND -->
+  <div class="page-hero__bg">
+    <div class="page-hero__ring"></div>
+    <div class="page-hero__ring"></div>
+    <div class="page-hero__ring"></div>
+  </div>
+
+  <!-- CONTENT -->
   <div class="page-hero-inner">
     <span class="page-hero-tag">Our Story</span>
-    <h1>Crafting <span>Water Experiences</span> Since 2009</h1>
-    <p>India's leading name in premium swimming pools, spas and wellness solutions. 17+ years of expertise across India, Middle East &amp; Asia-Pacific.</p>
+
+    <h1>
+      Crafting <span>Water Experiences</span> Since 2009
+    </h1>
+
+    <p>
+      India's leading name in premium swimming pools, spas and wellness solutions.
+      17+ years of expertise across India, Middle East &amp; Asia-Pacific.
+    </p>
+
     <div class="page-hero-btns">
       <a href="products.html" class="btn-primary">Our Products</a>
       <a href="contact.html" class="btn-secondary">Contact Us</a>
     </div>
   </div>
-</section>
 
+  <!-- WAVE -->
+  <div class="page-hero__wave">
+    <svg viewBox="0 0 1440 54" preserveAspectRatio="none">
+      <path d="M0,32 C240,54 480,10 720,32 C960,54 1200,10 1440,32 L1440,54 L0,54 Z" fill="#f0f7fc"/>
+    </svg>
+  </div>
+
+</section>
 <!-- ABOUT CARDS -->
 <section class="section-pad">
   <div class="container">
+
+    <!-- Add heading (missing before)
+    <div class="section-head">
+      <h2>Why Choose Aquashark</h2>
+      <p style="color:#667788; max-width:600px; margin:10px auto 40px;">
+        Experience, scale and global partnerships that set us apart.
+      </p>
+    </div> -->
+
     <div class="cards-grid-4">
+
       <div class="feat-card">
-        <div class="feat-card-icon">🏆</div>
+        <div class="feat-card-icon"><i class="fa fa-trophy"></i></div>
         <h3>17+ Years of Excellence</h3>
-        <p>Pioneers in fiberglass pool manufacturing since 2009. Trusted by thousands of homeowners, resorts and healthcare facilities.</p>
+        <p>Pioneers in fiberglass pool manufacturing since 2009. Trusted by homeowners, resorts and healthcare facilities.</p>
       </div>
+
       <div class="feat-card">
-        <div class="feat-card-icon">🌍</div>
-        <h3>Pan-India &amp; Global Reach</h3>
-        <p>Operating across 23 cities in India with offices in Pune and Goa. Serving clients across the Middle East and Asia-Pacific.</p>
+        <div class="feat-card-icon"><i class="fa fa-globe"></i></div>
+        <h3>Pan-India & Global Reach</h3>
+        <p>Operating across 23 cities with offices in Pune and Goa. Serving clients across the Middle East and Asia-Pacific.</p>
       </div>
+
       <div class="feat-card">
-        <div class="feat-card-icon">🤝</div>
-        <h3>Global Brand Partnerships</h3>
-        <p>Exclusive distributor for Master Spas, Platinum Spas, Chilly Goat, Sweaty Goat, Natare and Michael Phelps SwimSpas.</p>
+        <div class="feat-card-icon"><i class="fa fa-handshake"></i></div>
+        <h3>Global Partnerships</h3>
+        <p>Exclusive distributor for Master Spas, Platinum Spas, Chilly Goat, Sweaty Goat and Michael Phelps SwimSpas.</p>
       </div>
+
       <div class="feat-card">
-        <div class="feat-card-icon">🏅</div>
+        <div class="feat-card-icon"><i class="fa fa-award"></i></div>
         <h3>9+ National Awards</h3>
-        <p>Recognised with prestigious awards including Pune Icon Award, Pride India Award, International Glory Award and Asian Iconic Award.</p>
+        <p>Recognised with Pune Icon Award, Pride India Award, International Glory Award and Asian Iconic Award.</p>
       </div>
+
     </div>
   </div>
 </section>
@@ -204,15 +468,7 @@
           <div class="award-year">Most Promising Brand · 2024</div>
         </div>
       </div>
-      <div class="award-img-card">
-        <div class="award-img-wrap award-img-placeholder">
-          <div style="font-size:48px;line-height:1;">🎗️</div>
-        </div>
-        <div class="award-img-caption">
-          <div class="award-name">National Impact Award</div>
-          <div class="award-year">Most Promising Brand · 2024</div>
-        </div>
-      </div>
+     
     </div>
   </div>
 </section>
