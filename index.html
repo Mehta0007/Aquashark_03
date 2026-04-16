@@ -18,6 +18,70 @@
 </head>
 <body>
 
+<style>
+
+  /* BRAND GRID */
+.home-brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.home-brand-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 18px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 8px 30px rgba(0,52,89,0.08);
+  transition: all 0.3s ease;
+}
+
+.home-brand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 50px rgba(0,52,89,0.15);
+}
+
+/* LOGO */
+.brand-logo {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.brand-logo img {
+  max-height: 100%;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.home-brand-card:hover .brand-logo img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* TEXT */
+.home-brand-card strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #003459;
+}
+
+.home-brand-card small {
+  font-size: 12px;
+  color: #667788;
+}
+</style>
+
 <!-- TOP BAR -->
 <div class="top-bar">
   <div class="top-bar-inner">
@@ -481,51 +545,65 @@
   </div>
 </section>
 
-<!-- BRANDS -->
 <section class="home-brand-showcase">
   <div class="home-brand-head">
     <span class="section-kicker">Global Brand Partners</span>
     <h2>Exclusive partner in India &amp; Middle East</h2>
     <p>International pool, spa and wellness brands backed by Aquashark consultation and project support.</p>
   </div>
+
   <div class="home-brand-grid">
+
     <a href="brands.html#master-spas" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Master Spas logo here when available. -->
-      <span class="brand-mark">MS</span>
+      <div class="brand-logo">
+        <img src="images/logo/MasterSpas.png" alt="Master Spas">
+      </div>
       <strong>Master Spas</strong>
       <small>USA · Swim Spas + Hot Tubs</small>
     </a>
+
     <a href="brands.html#platinum-spas" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Platinum Spas logo here when available. -->
-      <span class="brand-mark">PS</span>
+      <div class="brand-logo">
+        <img src="images/logo/PlatinumSpas.png" alt="Platinum Spas">
+      </div>
       <strong>Platinum Spas</strong>
       <small>UK · Hot Tubs + Swim Spas</small>
     </a>
+
     <a href="brands.html#natare" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Natare logo here when available. -->
-      <span class="brand-mark">NC</span>
+      <div class="brand-logo">
+        <img src="images/logo/NatarePools.png" alt="Natare">
+      </div>
       <strong>Natare</strong>
       <small>USA · Stainless Steel Pools</small>
     </a>
+
     <a href="brands.html#portcril" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Portcril logo here when available. -->
-      <span class="brand-mark">PT</span>
+      <div class="brand-logo">
+        <img src="images/logo/PostCril.png" alt="Portcril">
+      </div>
       <strong>Portcril</strong>
       <small>Portugal · Pool + Spa Systems</small>
     </a>
+
     <a href="brands.html#superior-wellness" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Superior Wellness logo here when available. -->
-      <span class="brand-mark">SW</span>
+      <div class="brand-logo">
+        <img src="images/logo/Superior wellness.png" alt="Superior Wellness">
+      </div>
       <strong>Superior Wellness</strong>
       <small>UK · Wellness Range</small>
     </a>
+
     <a href="brands.html#hekla" class="home-brand-card">
-      <!-- BRAND LOGO NEEDED: Add Hekla logo here when available. -->
-      <span class="brand-mark">HK</span>
+      <div class="brand-logo">
+        <img src="images/logo/Hekla.png" alt="Hekla">
+      </div>
       <strong>Hekla</strong>
       <small>Finland · Saunas</small>
     </a>
+
   </div>
+
   <div class="home-brand-link">
     <a href="brands.html">View All Brand Partners <i class="fa fa-arrow-right"></i></a>
   </div>
