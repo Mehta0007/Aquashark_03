@@ -20,6 +20,131 @@
 
 <style>
 
+  /* MOBILE NAV FIX */
+.mobile-nav-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  height: 100%;
+  background: #fff;
+  z-index: 1000;
+  transition: right 0.3s ease;
+}
+
+.mobile-nav-drawer.open {
+  right: 0;
+}
+
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.mobile-nav-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* SUB MENU */
+.mnav-group .mnav-sub {
+  display: none;
+}
+
+.mnav-group.open .mnav-sub {
+  display: block;
+}
+@media (max-width: 768px) {
+
+  /* GENERAL */
+  body {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 40px 16px !important;
+  }
+
+  /* HEADER */
+.header-inner {
+  padding: 10px 12px;
+}
+
+  .header-actions {
+    display: none; /* hide clutter */
+  }
+
+  /* HERO */
+  .slide-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .slide-desc {
+    font-size: 14px;
+  }
+
+  /* CATEGORY PILLS */
+  .cat-track {
+    gap: 10px;
+  }
+
+  .cat-pill {
+    padding: 10px;
+    min-width: auto;
+  }
+
+  /* PRODUCTS GRID */
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* DEAL CARDS (IMPORTANT FIX) */
+.deal-card {
+  min-width: 85% !important;
+  max-width: 85% !important;
+  height: 320px !important;
+}
+  .deals-track {
+    gap: 16px;
+    padding: 0 16px 20px;
+  }
+
+  /* BRAND GRID */
+  .home-brand-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  /* AWARDS */
+  .awards-img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* SOLUTIONS */.header-inner {
+  padding: 10px 12px;
+}
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIALS */
+  .testi-cards {
+    flex-direction: column;
+  }
+
+  /* FOOTER */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+}
   /* BRAND GRID */
 .home-brand-grid {
   display: grid;
@@ -243,7 +368,111 @@
     transform: translateY(0);
   }
 }
+@media (max-width: 768px) {
 
+  .deals-cinematic {
+    padding: 40px 0;
+  }
+
+  .deals-head {
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+
+  .deals-head h2 {
+    font-size: 24px;
+  }
+
+  /* TRACK */
+  .deals-track {
+    gap: 16px;
+    padding: 0 16px 20px;
+  }
+
+  /* CARD FIX */
+  .deal-card {
+    min-width: 85%;
+    max-width: 85%;
+    height: 320px;
+  }
+
+  /* REMOVE HOVER DEPENDENCY */
+  .deal-content {
+    transform: translateY(0);
+  }
+
+  .deal-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* TEXT SCALE */
+  .deal-title {
+    font-size: 20px;
+  }
+
+  .deal-reveal p {
+    font-size: 13px;
+  }
+
+  .deal-overlay {
+    padding: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .deals-cinematic {
+    padding: 40px 0;
+  }
+
+  .deals-head {
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+
+  .deals-head h2 {
+    font-size: 24px;
+  }
+
+  /* TRACK */
+  .deals-track {
+    gap: 16px;
+    padding: 0 16px 20px;
+  }
+
+  /* CARD FIX */
+  .deal-card {
+    min-width: 85%;
+    max-width: 85%;
+    height: 320px;
+  }
+
+  /* REMOVE HOVER DEPENDENCY */
+  .deal-content {
+    transform: translateY(0);
+  }
+
+  .deal-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* TEXT SCALE */
+  .deal-title {
+    font-size: 20px;
+  }
+
+  .deal-reveal p {
+    font-size: 13px;
+  }
+
+  .deal-overlay {
+    padding: 16px;
+  }
+
+}
 /* MOBILE FALLBACK */
 @media (hover: none) {
   .deal-content, 
@@ -303,6 +532,8 @@
           <a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
           <a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
           <a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+          <a href="brands.html#hekla"><i class="fa fa-temperature-high"></i> Hekla (Finland)</a>
+          <a href="brands.html#portcril"><i class="fa fa-globe"></i> Portcril (Portugal)</a>
           <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
         </div>
       </div>
@@ -333,8 +564,70 @@
       </button>
       <a href="tel:+917756999108" class="enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a>
     </div>
+    <!-- HAMBURGER (visible on mobile only) -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- MOBILE NAV OVERLAY & DRAWER -->
+<div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileMenu()"></div>
+<div class="mobile-nav-drawer" id="mobileNavDrawer">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="logo" style="text-decoration:none;">
+      <img src="images/logo/Aqua Shark Logo.png" alt="Aquashark" class="logo-icon" style="width:44px;height:44px;">
+      <div class="logo-text"><span class="brand">Aqua<span>shark</span></span></div>
+    </a>
+    <button class="mobile-nav-close" onclick="closeMobileMenu()"><i class="fa fa-times"></i></button>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html" class="mnav-link">Home</a>
+    <div class="mnav-group">
+      <button class="mnav-toggle" onclick="toggleMobileSubMenu(this)">Products <i class="fa fa-chevron-down"></i></button>
+      <div class="mnav-sub">
+        <a href="fiberglass-pools.html">Fiberglass Pools</a>
+        <a href="above-ground-pools.html">Above Ground Pools</a>
+        <a href="swim-spas.html">Swim Spas</a>
+        <a href="hot-tubs.html">Hot Tubs</a>
+        <a href="cold-tubs.html">Cold / Chill Tubs</a>
+        <a href="saunas.html">Saunas</a>
+        <a href="stainless-steel-pools.html">Stainless Steel Pools</a>
+        <a href="hydrotherapy-pools.html">Hydrotherapy Pools</a>
+      </div>
+    </div>
+    <div class="mnav-group">
+      <button class="mnav-toggle" onclick="toggleMobileSubMenu(this)">Brands <i class="fa fa-chevron-down"></i></button>
+      <div class="mnav-sub">
+        <a href="brands.html#platinum-spas">Platinum Spas (UK)</a>
+        <a href="brands.html#master-spas">Master Spas (USA)</a>
+        <a href="brands.html#michael-phelps">Michael Phelps Swim Spas</a>
+        <a href="brands.html#chilly-goat">Chilly Goat (USA)</a>
+        <a href="brands.html#sweaty-goat">Sweaty Goat Saunas</a>
+        <a href="brands.html#hekla">Hekla (Finland)</a>
+        <a href="brands.html#portcril">Portcril (Portugal)</a>
+        <a href="brands.html#natare">Natare Systems</a>
+      </div>
+    </div>
+    <div class="mnav-group">
+      <button class="mnav-toggle" onclick="toggleMobileSubMenu(this)">Company <i class="fa fa-chevron-down"></i></button>
+      <div class="mnav-sub">
+        <a href="about.html">About Aquashark</a>
+        <a href="about.html#awards">Awards &amp; Accolades</a>
+        <a href="about.html#team">Our Team</a>
+        <a href="brands.html">Global Partners</a>
+        <a href="resources.html#blog">Blog</a>
+      </div>
+    </div>
+    <a href="wellness.html" class="mnav-link">Wellness</a>
+    <a href="projects.html" class="mnav-link">Projects</a>
+    <a href="resources.html" class="mnav-link">Resources</a>
+    <a href="contact.html" class="mnav-link">Contact</a>
+  </nav>
+  <div class="mobile-nav-footer">
+    <a href="tel:+917756999108" class="enquire-btn" style="width:100%;justify-content:center;border-radius:8px;"><i class="fa fa-phone"></i> +91 77569 99108</a>
+  </div>
+</div>
 
 <!-- HERO SLIDER -->
 <section class="hero">
@@ -397,8 +690,8 @@
       </div>
     </div>
   </div>
-  <button class="slider-arrow slider-prev" onclick="slide(-1)"><i class="fa fa-chevron-left"></i></button>
-  <button class="slider-arrow slider-next" onclick="slide(1)"><i class="fa fa-chevron-right"></i></button>
+  <button class="slider-arrow slider-prev" onclick="slide(-1)"><i class="fa fa-chevron-left"></i><span class="arrow-label">Prev</span></button>
+  <button class="slider-arrow slider-next" onclick="slide(1)"><span class="arrow-label">Next</span><i class="fa fa-chevron-right"></i></button>
   <div class="slider-dots">
     <div class="dot active" onclick="goSlide(0)"></div>
     <div class="dot" onclick="goSlide(1)"></div>

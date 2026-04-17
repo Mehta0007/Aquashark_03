@@ -202,7 +202,28 @@ function addToCart(id, qty){
   saveCart(); updateCartBadge();
   showToast(`${p.emoji} <strong>${p.name}</strong> added to enquiry`, 'cart');
 }
+// MOBILE MENU
+function toggleMobileMenu() {
+  const drawer = document.getElementById("mobileNavDrawer");
+  const overlay = document.getElementById("mobileNavOverlay");
 
+  drawer.classList.toggle("open");
+  overlay.classList.toggle("active");
+}
+
+function closeMobileMenu() {
+  const drawer = document.getElementById("mobileNavDrawer");
+  const overlay = document.getElementById("mobileNavOverlay");
+
+  drawer.classList.remove("open");
+  overlay.classList.remove("active");
+}
+
+// SUB MENU
+function toggleMobileSubMenu(btn) {
+  const parent = btn.parentElement;
+  parent.classList.toggle("open");
+}
 // ============================================================
 // CART DRAWER
 // ============================================================
@@ -485,6 +506,30 @@ function selectDetailModel(btn, image, imageId, name, nameId, meta, metaId, desc
   if(modelDesc) modelDesc.textContent = desc;
   document.querySelectorAll('.detail-thumbs button').forEach(item=>item.classList.remove('active'));
   if(btn) btn.classList.add('active');
+}
+
+
+function closeMobileMenu(){
+  const btn     = document.getElementById('mobileMenuBtn');
+  const drawer  = document.getElementById('mobileNavDrawer');
+  const overlay = document.getElementById('mobileNavOverlay');
+  if(btn)     btn.classList.remove('open');
+  if(drawer)  drawer.classList.remove('open');
+  if(overlay) overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+function toggleMobileSubMenu(btn){
+  const sub    = btn.nextElementSibling;
+  const isOpen = sub.classList.contains('open');
+  // close all open sub-menus first
+  document.querySelectorAll('.mnav-sub.open').forEach(s=>{
+    s.classList.remove('open');
+    if(s.previousElementSibling) s.previousElementSibling.classList.remove('open');
+  });
+  if(!isOpen){
+    sub.classList.add('open');
+    btn.classList.add('open');
+  }
 }
 
 // ============================================================
