@@ -12,7 +12,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="hotubs.css">
 <style>
+  
   :root {
   --text-main: #1e293b;
   --text-muted: #64748b;
@@ -30,6 +32,24 @@
   margin: 0 auto;
 }
 
+.ht-grid {
+  display: grid;
+  /* Automatically creates columns based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 70px; /* Space between the cards */
+  padding: 40px 5%; /* Space around the edges of the page */
+  max-width: 1400px; /* Prevents it from getting too wide on huge monitors */
+  margin: 0 auto; /* Centers the grid on the page */
+  align-items: start; /* Prevents cards from stretching vertically to match taller neighbors */
+}
+
+/* Optional: Make sure the cards themselves fill the grid tracks properly */
+.ht-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* Add your existing background, border-radius, etc. here if not already applied */
+}
 .product-container {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -341,34 +361,458 @@
       <span class="detail-kicker">Premium Saunas</span>
       <h1 class="product-title">Relax. Detox. Revive.</h1>
       <p class="product-desc">World-class infrared and traditional Finnish saunas for deep detoxification, cardiovascular health and total relaxation. Exclusively distributed by Aquashark across India and the Middle East.</p>
+      <div class="ht-grid">
+
+        <article class="ht-card" data-brand="hekla" data-range="traditional" data-capacity="6">
+          <div class="ht-card-top">
+            <div class="ht-card-img">
+              <span class="ht-range-chip" style="background: #eab308; color: #fff;">Traditional</span>
+      <img src="images/sauna/barrel-250.jpg" alt="Barrel 250 Sauna by Hekla" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Hekla · Finland</div>
+      <h3 class="ht-card-name">Barrel 250</h3>
+      <p class="ht-card-tagline">Classic 6-person outdoor barrel sauna featuring a stunning half-panoramic window.</p>
       
-      <div class="main-image-wrapper">
-        <img id="saunaMainImg" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop" alt="Premium MP3 Infrared Sauna installation">
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.5m</div><div class="ht-hs-k">Length</div></div>
+        <div><div class="ht-hs-v">Wood</div><div class="ht-hs-k">Frame</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Pan Window</span>
+        <span class="ht-chip">Thermo Spruce</span>
+        <span class="ht-chip">LED Lights</span>
+        <span class="ht-chip">Roof Shingles</span>
       </div>
       
-      <div class="thumbnail-track" aria-label="Sauna models">
-        <button type="button" class="thumb-btn active" data-image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop" data-alt="MP3 Infrared Sauna">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=400&auto=format&fit=crop" alt="MP3 Infrared Thumbnail" loading="lazy">
-          <span>MP3 Infrared</span>
-        </button>
-        
-        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1620242200230-67c26dfd9ea0?q=80&w=1200&auto=format&fit=crop" data-alt="Barrel 250 Sauna">
-          <img src="https://images.unsplash.com/photo-1620242200230-67c26dfd9ea0?q=80&w=400&auto=format&fit=crop" alt="Barrel 250 Thumbnail" loading="lazy">
-          <span>Barrel 250</span>
-        </button>
-        
-        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1515362778563-6a8d0e44bc0b?q=80&w=1200&auto=format&fit=crop" data-alt="Indoor Sauna Setup">
-          <img src="https://images.unsplash.com/photo-1515362778563-6a8d0e44bc0b?q=80&w=400&auto=format&fit=crop" alt="Indoor Setup Thumbnail" loading="lazy">
-          <span>Indoor Setup</span>
-        </button>
-        
-        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1583417646197-094d40228d73?q=80&w=1200&auto=format&fit=crop" data-alt="Traditional Finnish Sauna">
-          <img src="https://images.unsplash.com/photo-1583417646197-094d40228d73?q=80&w=400&auto=format&fit=crop" alt="Traditional Thumbnail" loading="lazy">
-          <span>Traditional</span>
-        </button>
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Barrel%20250%20Sauna.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Barrel250"> Compare</label>
       </div>
     </div>
+  </div>
 
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Build & Dimensions</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>2.5 × 2.4 × 2.25 m</strong></div>
+        <div class="ht-spec-row"><span>Frame</span><strong>40mm Thermo Nordic Spruce</strong></div>
+        <div class="ht-spec-row"><span>Flooring</span><strong>Thermo Aspen duckboard</strong></div>
+        <div class="ht-spec-row"><span>Door</span><strong>8mm tempered glass</strong></div>
+        <div class="ht-spec-row"><span>Windows</span><strong>1/2 Panoramic window</strong></div>
+        <div class="ht-spec-row"><span>Roof</span><strong>Shingles included</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Interior & Features</h5>
+        <div class="ht-spec-row"><span>Capacity</span><strong>6 People</strong></div>
+        <div class="ht-spec-row"><span>Sauna Seating</span><strong>2x Aspen benches</strong></div>
+        <div class="ht-spec-row"><span>Terrace Seating</span><strong>2x 50cm wide benches</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>2x LED lights with switch</strong></div>
+        <div class="ht-spec-row"><span>Ventilation</span><strong>Sauna ventilation valve</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="sweaty-goat" data-range="infrared" data-capacity="2">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #ef4444; color: #fff;">Infrared</span>
+      <img src="images/sauna/infrare160.png" alt="Infrared 160 Sauna by Sweaty Goat" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Sweaty Goat · USA</div>
+      <h3 class="ht-card-name">Infrared 160</h3>
+      <p class="ht-card-tagline">Luxury 2-person infrared cabin featuring chromotherapy, Bluetooth audio, and black veneer.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">2</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.3k</div><div class="ht-hs-k">Watts</div></div>
+        <div><div class="ht-hs-v">Audio</div><div class="ht-hs-k">Built-in</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Bluetooth</span>
+        <span class="ht-chip">Chromotherapy</span>
+        <span class="ht-chip">Halogen</span>
+        <span class="ht-chip">Carbon</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Infrared%20160%20Sauna.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Infrared160"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Technical & Build</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>160 × 120 × 200 cm</strong></div>
+        <div class="ht-spec-row"><span>Power Output</span><strong>2390W</strong></div>
+        <div class="ht-spec-row"><span>Interior</span><strong>48mm Thermo Aspen Wood</strong></div>
+        <div class="ht-spec-row"><span>Exterior</span><strong>Black Veneer</strong></div>
+        <div class="ht-spec-row"><span>Glass</span><strong>8mm Grey Safety Glass</strong></div>
+        <div class="ht-spec-row"><span>Controls</span><strong>Internal Control Panel</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Heaters & Entertainment</h5>
+        <div class="ht-spec-row"><span>Seating</span><strong>Terrace bench w/ 2x back rests</strong></div>
+        <div class="ht-spec-row"><span>Halogen Heaters</span><strong>2x 400W & 2x 600W (Red glass)</strong></div>
+        <div class="ht-spec-row"><span>Carbon Heater</span><strong>1x 195W</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>Chromotherapy LED Lights</strong></div>
+        <div class="ht-spec-row"><span>Audio</span><strong>Two Internal Speakers</strong></div>
+        <div class="ht-spec-row"><span>Connectivity</span><strong>USB and Bluetooth</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="hekla" data-range="traditional" data-capacity="4">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #eab308; color: #fff;">Traditional</span>
+      <img src="images/sauna/barrel210.jpg" alt="Barrel 210 Sauna by Hekla" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Hekla · Finland</div>
+      <h3 class="ht-card-name">Barrel 210</h3>
+      <p class="ht-card-tagline">Classic 4-person outdoor barrel sauna featuring a stunning half-panoramic window.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">4</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.1m</div><div class="ht-hs-k">Length</div></div>
+        <div><div class="ht-hs-v">Wood</div><div class="ht-hs-k">Frame</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Pan Window</span>
+        <span class="ht-chip">Thermo Spruce</span>
+        <span class="ht-chip">LED Lights</span>
+        <span class="ht-chip">Roof Shingles</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Barrel%20210%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Barrel210"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Build & Dimensions</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>2.1 × 2.4 × 2.25 m</strong></div>
+        <div class="ht-spec-row"><span>Frame</span><strong>40mm Thermo Nordic Spruce</strong></div>
+        <div class="ht-spec-row"><span>Flooring</span><strong>Thermo Aspen duckboard</strong></div>
+        <div class="ht-spec-row"><span>Door</span><strong>8mm tempered glass</strong></div>
+        <div class="ht-spec-row"><span>Windows</span><strong>1/2 Panoramic window</strong></div>
+        <div class="ht-spec-row"><span>Roof</span><strong>Shingles included</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Interior & Features</h5>
+        <div class="ht-spec-row"><span>Capacity</span><strong>4 People</strong></div>
+        <div class="ht-spec-row"><span>Sauna Seating</span><strong>2x Aspen benches</strong></div>
+        <div class="ht-spec-row"><span>Terrace Seating</span><strong>2x 50cm wide benches</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>2x LED lights with switch</strong></div>
+        <div class="ht-spec-row"><span>Ventilation</span><strong>Sauna ventilation valve</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="hekla" data-range="traditional" data-capacity="2">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #eab308; color: #fff;">Traditional</span>
+      <img src="images/sauna/cube 130.png" alt="Cube 160 Sauna by Hekla" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Hekla · Finland</div>
+      <h3 class="ht-card-name">Cube 160</h3>
+      <p class="ht-card-tagline">Compact 2-person traditional cube sauna with a stunning full glass front panel.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">2</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">1.6m</div><div class="ht-hs-k">Length</div></div>
+        <div><div class="ht-hs-v">Glass</div><div class="ht-hs-k">Front</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Full Glass Front</span>
+        <span class="ht-chip">Thermo Spruce</span>
+        <span class="ht-chip">Double Glazed</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Cube%20160%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Cube160"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Build & Dimensions</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>160 × 235 × 225 cm</strong></div>
+        <div class="ht-spec-row"><span>Frame</span><strong>40mm Thermo Spruce</strong></div>
+        <div class="ht-spec-row"><span>Front Panel</span><strong>Full glass, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Windows</span><strong>1/2 panoramic, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Flooring</span><strong>Thermo Aspen duckboard</strong></div>
+        <div class="ht-spec-row"><span>Foundation</span><strong>2 foundation beams</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Interior & Features</h5>
+        <div class="ht-spec-row"><span>Capacity</span><strong>2 People</strong></div>
+        <div class="ht-spec-row"><span>Sauna Seating</span><strong>2x Aspen benches</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>2x LED lights with switch</strong></div>
+        <div class="ht-spec-row"><span>Ventilation</span><strong>Sauna ventilation valve</strong></div>
+        <div class="ht-spec-row"><span>Roof</span><strong>Roof shingles included</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="hekla" data-range="traditional" data-capacity="4">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #eab308; color: #fff;">Traditional</span>
+      <img src="images/sauna/cube 210.png" alt="Cube 210 Sauna by Hekla" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Hekla · Finland</div>
+      <h3 class="ht-card-name">Cube 210</h3>
+      <p class="ht-card-tagline">Spacious 4-person traditional cube sauna with a stunning full glass front panel.</p>
+      
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">4</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.1m</div><div class="ht-hs-k">Length</div></div>
+        <div><div class="ht-hs-v">Glass</div><div class="ht-hs-k">Front</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Full Glass Front</span>
+        <span class="ht-chip">Thermo Spruce</span>
+        <span class="ht-chip">Double Glazed</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Cube%20210%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Cube210"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Build & Dimensions</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>210 × 235 × 225 cm</strong></div>
+        <div class="ht-spec-row"><span>Frame</span><strong>40mm Thermo Spruce</strong></div>
+        <div class="ht-spec-row"><span>Front Panel</span><strong>Full glass, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Windows</span><strong>1/2 panoramic, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Flooring</span><strong>Thermo Aspen duckboard</strong></div>
+        <div class="ht-spec-row"><span>Foundation</span><strong>3 foundation beams</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Interior & Features</h5>
+        <div class="ht-spec-row"><span>Capacity</span><strong>4 People</strong></div>
+        <div class="ht-spec-row"><span>Sauna Seating</span><strong>2x Aspen benches</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>2x LED lights with switch</strong></div>
+        <div class="ht-spec-row"><span>Ventilation</span><strong>Sauna ventilation valve</strong></div>
+        <div class="ht-spec-row"><span>Roof</span><strong>Roof shingles included</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="hekla" data-range="traditional" data-capacity="6">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #eab308; color: #fff;">Traditional</span>
+      <img src="images/sauna/sube 250.png" alt="Cube 250 Sauna by Hekla" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Hekla · Finland</div>
+      <h3 class="ht-card-name">Cube 250</h3>
+      <p class="ht-card-tagline">Premium 6-person traditional cube sauna with an expansive full glass front panel.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.5m</div><div class="ht-hs-k">Length</div></div>
+        <div><div class="ht-hs-v">Glass</div><div class="ht-hs-k">Front</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Full Glass Front</span>
+        <span class="ht-chip">Thermo Spruce</span>
+        <span class="ht-chip">Double Glazed</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Cube%20250%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Cube250"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Build & Dimensions</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>250 × 235 × 225 cm</strong></div>
+        <div class="ht-spec-row"><span>Frame</span><strong>40mm Thermo Spruce</strong></div>
+        <div class="ht-spec-row"><span>Front Panel</span><strong>Full glass, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Windows</span><strong>1/2 panoramic, double glazed</strong></div>
+        <div class="ht-spec-row"><span>Flooring</span><strong>Thermo Aspen duckboard</strong></div>
+        <div class="ht-spec-row"><span>Foundation</span><strong>3 foundation beams</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Interior & Features</h5>
+        <div class="ht-spec-row"><span>Capacity</span><strong>6 People</strong></div>
+        <div class="ht-spec-row"><span>Sauna Seating</span><strong>2x Aspen benches</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>2x LED lights with switch</strong></div>
+        <div class="ht-spec-row"><span>Ventilation</span><strong>Sauna ventilation valve</strong></div>
+        <div class="ht-spec-row"><span>Roof</span><strong>Roof shingles included</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="sweaty-goat" data-range="infrared" data-capacity="2">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #ef4444; color: #fff;">Infrared</span>
+      <img src="images/sauna/infra130.jpg" alt="Infrared 130 Sauna by Sweaty Goat" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Sweaty Goat · USA</div>
+      <h3 class="ht-card-name">Infrared 130</h3>
+      <p class="ht-card-tagline">Comfortable 2-person infrared cabin featuring chromotherapy, Bluetooth audio, and black veneer.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">2</div><div class="ht-hs-k">People</div></div>
+        <div><div class="ht-hs-v">2.26k</div><div class="ht-hs-k">Watts</div></div>
+        <div><div class="ht-hs-v">Audio</div><div class="ht-hs-k">Built-in</div></div>
+      </div>
+
+      <div class="ht-chips">
+        <span class="ht-chip">Bluetooth</span>
+        <span class="ht-chip">Chromotherapy</span>
+        <span class="ht-chip">Halogen</span>
+        <span class="ht-chip">Carbon</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Infrared%20130%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Infrared130"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Technical & Build</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>130 × 120 × 200 cm</strong></div>
+        <div class="ht-spec-row"><span>Power Output</span><strong>2260W</strong></div>
+        <div class="ht-spec-row"><span>Interior</span><strong>48mm Thermo Aspen Wood</strong></div>
+        <div class="ht-spec-row"><span>Exterior</span><strong>Black Veneer</strong></div>
+        <div class="ht-spec-row"><span>Glass</span><strong>8mm Grey Safety Glass</strong></div>
+        <div class="ht-spec-row"><span>Controls</span><strong>Internal Control Panel</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Heaters & Entertainment</h5>
+        <div class="ht-spec-row"><span>Seating</span><strong>Terrace bench w/ 2x back rests</strong></div>
+        <div class="ht-spec-row"><span>Halogen Heaters</span><strong>2x 400W & 2x 600W (Red glass)</strong></div>
+        <div class="ht-spec-row"><span>Carbon Heater</span><strong>1x 260W</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>Chromotherapy LED Lights</strong></div>
+        <div class="ht-spec-row"><span>Audio</span><strong>Two Internal Speakers</strong></div>
+        <div class="ht-spec-row"><span>Connectivity</span><strong>USB and Bluetooth</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+
+<article class="ht-card" data-brand="sweaty-goat" data-range="infrared" data-capacity="1">
+  <div class="ht-card-top">
+    <div class="ht-card-img">
+      <span class="ht-range-chip" style="background: #ef4444; color: #fff;">Infrared</span>
+      <img src="images/sauna/infra 100.png" alt="Infrared 100 Sauna by Sweaty Goat" loading="lazy">
+    </div>
+    <div class="ht-card-info">
+      <div class="ht-card-brand">Sweaty Goat · USA</div>
+      <h3 class="ht-card-name">Infrared 100</h3>
+      <p class="ht-card-tagline">Personal 1-person luxury infrared cabin featuring chromotherapy and an ergonomic backrest.</p>
+
+      <div class="ht-herospecs">
+        <div><div class="ht-hs-v">1</div><div class="ht-hs-k">Person</div></div>
+        <div><div class="ht-hs-v">1.19k</div><div class="ht-hs-k">Watts</div></div>
+        <div><div class="ht-hs-v">Audio</div><div class="ht-hs-k">Built-in</div></div>
+      </div>
+      
+      <div class="ht-chips">
+        <span class="ht-chip">Bluetooth</span>
+        <span class="ht-chip">Chromotherapy</span>
+        <span class="ht-chip">Halogen</span>
+        <span class="ht-chip">Carbon</span>
+      </div>
+
+      <div class="ht-card-cta">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Infrared%20100%20Sauna." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price</a>
+        <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+        <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Infrared100"> Compare</label>
+      </div>
+    </div>
+  </div>
+
+  <details class="ht-card-details">
+    <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+    <div class="ht-specs-grid">
+      <div class="ht-specs-block">
+        <h5>Technical & Build</h5>
+        <div class="ht-spec-row"><span>Dimensions</span><strong>100 × 120 × 200 cm</strong></div>
+        <div class="ht-spec-row"><span>Power Output</span><strong>1195W</strong></div>
+        <div class="ht-spec-row"><span>Interior</span><strong>48mm Thermo Aspen Wood</strong></div>
+        <div class="ht-spec-row"><span>Exterior</span><strong>Black Veneer</strong></div>
+        <div class="ht-spec-row"><span>Glass</span><strong>8mm Grey Safety Glass</strong></div>
+        <div class="ht-spec-row"><span>Controls</span><strong>Internal Control Panel</strong></div>
+      </div>
+      <div class="ht-specs-block">
+        <h5>Heaters & Entertainment</h5>
+        <div class="ht-spec-row"><span>Seating</span><strong>Terrace bench w/ 1x back rest</strong></div>
+        <div class="ht-spec-row"><span>Halogen Heaters</span><strong>1x 400W & 1x 600W (Red glass)</strong></div>
+        <div class="ht-spec-row"><span>Carbon Heater</span><strong>1x 195W</strong></div>
+        <div class="ht-spec-row"><span>Lighting</span><strong>Chromotherapy LED Lights</strong></div>
+        <div class="ht-spec-row"><span>Audio</span><strong>Two Internal Speakers</strong></div>
+        <div class="ht-spec-row"><span>Connectivity</span><strong>USB and Bluetooth</strong></div>
+      </div>
+    </div>
+  </details>
+</article>
+</div>
+</div>
+<!-- 
     <aside class="product-sidebar">
       <div class="enquiry-card">
         <div class="availability">
@@ -400,7 +844,7 @@
         
         <p class="enquiry-note">Installation support and commissioning included. Tell us your space and preferred sauna type.</p>
       </div>
-    </aside>
+    </aside> -->
 
   </div>
 </section>
@@ -438,7 +882,7 @@
     </div>
   </section>
 
-  <!-- ── SWEATY GOAT BRAND SECTION ── -->
+  <!-- ── SWEATY GOAT BRAND SECTION ──
   <section id="sweaty-goat" class="sauna-brand-section dark">
     <div class="sauna-brand-inner">
       <div class="sauna-brand-visual">
@@ -470,9 +914,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- ── HEKLA BRAND SECTION ── -->
+  <!-- ── HEKLA BRAND SECTION ──
   <section id="hekla" class="sauna-brand-section warm">
     <div class="sauna-brand-inner reverse">
       <div class="sauna-brand-visual">
@@ -504,10 +948,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- ── FEATURED PRODUCTS ── -->
-  <section class="sauna-products-section">
+  ── FEATURED PRODUCTS ──
+  <!-- <section class="sauna-products-section">
     <div class="sauna-products-inner">
       <div class="detail-section-head">
         <span class="section-kicker">Featured Models</span>
@@ -561,7 +1005,9 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+
+  
 
   <!-- ── APPLICATIONS ── -->
   <section class="detail-section detail-section-alt">
@@ -625,6 +1071,48 @@
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer"><div class="cart-header"><h3><i class="fa fa-shopping-cart" style="margin-right:8px;color:var(--primary);"></i>Enquiry Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa fa-times"></i></button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer" id="cartFooter" style="display:none;"><div class="cart-subtotal"><span>Items in enquiry</span><span id="cartTotal"></span></div><p class="cart-note">Our team will contact you with a personalised quote.</p><div class="cart-actions"><button class="cart-btn-view" onclick="closeCart()">Continue Browsing</button><button class="cart-btn-checkout" onclick="sendEnquiry()"><i class="fa fa-paper-plane" style="margin-right:6px;"></i>Send Enquiry</button></div></div></div>
 <div id="toast-container"></div>
-<script src="script.js"></script>
+<script >
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. Grab the elements
+  const mainImage = document.getElementById('saunaMainImg');
+  const thumbnails = document.querySelectorAll('.thumb-btn');
+
+  // 2. Safety check - warns you in the console if the IDs/classes don't match the HTML
+  if (!mainImage) {
+    console.error("Image Switcher Error: Could not find an element with id='saunaMainImg'");
+    return;
+  }
+  if (thumbnails.length === 0) {
+    console.error("Image Switcher Error: Could not find any elements with class='thumb-btn'");
+    return;
+  }
+
+  // 3. Attach the click events
+  thumbnails.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      // Use currentTarget to ensure we get the button, even if they clicked the <span> or <img> inside it
+      const clickedBtn = e.currentTarget;
+
+      // Remove active state from all
+      thumbnails.forEach(b => b.classList.remove('active'));
+      
+      // Add active state to clicked
+      clickedBtn.classList.add('active');
+      
+      // Fade out the main image
+      mainImage.style.opacity = 0.4;
+      
+      // Swap the source and fade back in after a short delay
+      setTimeout(() => {
+        mainImage.src = clickedBtn.getAttribute('data-image');
+        mainImage.alt = clickedBtn.getAttribute('data-alt');
+        
+        mainImage.style.opacity = 1;
+      }, 150); 
+    });
+  });
+});
+
+</script>
 </body>
 </html>
