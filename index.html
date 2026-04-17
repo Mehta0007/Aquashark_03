@@ -80,6 +80,178 @@
   font-size: 12px;
   color: #667788;
 }
+
+
+:root {
+  --bg-color: #0f172a;
+  --accent-color: #38bdf8;
+  --text-main: #ffffff;
+  --text-muted: #cbd5e1;
+  --card-radius: 20px;
+  --transition-smooth: 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.deals-cinematic {
+  padding: 80px 0;
+  background: var(--bg-color);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.deals-head {
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
+.deals-head .eyebrow {
+  display: block;
+  font-size: 12px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.deals-head h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* HORIZONTAL SCROLL TRACK */
+.deals-track {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 5% 40px 5%;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; 
+}
+.deals-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD CONTAINER */
+.deal-card {
+  min-width: 340px;
+  max-width: 420px;
+  flex: 1 0 auto;
+  height: 480px;
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  scroll-snap-align: start;
+  cursor: grab;
+  user-select: none; 
+  background-color: #1e293b; /* Fallback color if image is broken */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle glass border */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.deal-card:active {
+  cursor: grabbing;
+}
+
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+  pointer-events: none;
+}
+
+/* OVERLAY & GRADIENT */
+.deal-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.98) 0%,
+    rgba(15, 23, 42, 0.7) 40%,
+    rgba(15, 23, 42, 0) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 32px;
+  transition: background var(--transition-smooth);
+}
+
+/* CONTENT ANIMATION LOGIC */
+.deal-content {
+  width: 100%;
+  transform: translateY(50px);
+  transition: transform var(--transition-smooth);
+}
+
+.deal-category {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.deal-title {
+  margin: 10px 0 0 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Hidden by default, revealed on hover */
+.deal-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-smooth);
+}
+
+.deal-reveal p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 12px 0 0 0;
+  line-height: 1.5;
+}
+
+.deal-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.deal-cta:hover {
+  color: var(--accent-color);
+}
+
+/* HOVER STATES */
+@media (hover: hover) {
+  .deal-card:hover img {
+    transform: scale(1.08);
+  }
+  
+  .deal-card:hover .deal-content {
+    transform: translateY(0);
+  }
+
+  .deal-card:hover .deal-reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE FALLBACK */
+@media (hover: none) {
+  .deal-content, 
+  .deal-reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 </style>
 
 <!-- TOP BAR -->
@@ -170,7 +342,7 @@
     <!-- SLIDE 1: Fiberglass Pool -->
     <div class="slide">
       <div class="slide-bg">
-        <img src="images/hero/pexels-artbovich-7722162.jpg.jpeg" alt="Aquashark Fiberglass Pool" fetchpriority="high">
+        <img src="images/hero/Aquashark Pools website banner (1).png" alt="Aquashark Fiberglass Pool" fetchpriority="high">
       </div>
       <div class="slide-overlay"></div>
       <div class="slide-content">
@@ -190,7 +362,7 @@
     <!-- SLIDE 2: Swim Spa -->
     <div class="slide">
       <div class="slide-bg">
-        <img src="images/hero/pexels-albeg-24461272.jpg.jpeg" alt="Aquashark Swim Spa" loading="lazy">
+        <img src="images/hero/Aquashark Pools website banner (2).png" alt="Aquashark Swim Spa" loading="lazy">
       </div>
       <div class="slide-overlay"></div>
       <div class="slide-content">
@@ -377,60 +549,59 @@
   </div>
 </section>
 
-<!-- DEALS OF THE WEEK -->
-<div class="deals-wrap">
-  <div class="deals-sidebar">
-    <div>
-      <div class="tag">Limited Time Offer</div>
-      <h2>Summer Sale</h2>
-      <div class="sub">Save up to</div>
-      <div class="pct">30%</div>
-      <div class="sub">On selected pools &amp; spas</div>
-      <div class="countdown" id="dealCountdown">
-        <div class="cd-unit"><div class="num" id="cdH">00</div><div class="lbl">Hours</div></div>
-        <div class="cd-unit"><div class="num" id="cdM">00</div><div class="lbl">Mins</div></div>
-        <div class="cd-unit"><div class="num" id="cdS">00</div><div class="lbl">Secs</div></div>
-      </div>
-    </div>
-    <a href="tel:+917756999108" class="view-all"><i class="fa fa-phone" style="margin-right:6px;"></i>ENQUIRE NOW</a>
-  </div>
-  <div class="deals-list">
-    <div class="deal-card">
-      <div class="deal-emoji">🏊</div>
-      <div class="deal-info">
-        <div class="deal-cat">Fiberglass Pool</div>
-        <div class="deal-name">Sydney Pool — 18×8×4.4ft Family Pool</div>
-        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(28 installs)</span></div>
-        <div class="deal-price">Get Best Price Quote</div>
-        <div class="deal-stock">🔥 High demand this season</div>
-        <div class="stock-bar"><div class="stock-fill" style="width:75%;"></div></div>
-      </div>
-    </div>
-    <div class="deal-card">
-      <div class="deal-emoji">🛁</div>
-      <div class="deal-info">
-        <div class="deal-cat">Hot Tub — Platinum Spas UK</div>
-        <div class="deal-name">Santorini — 6 Person, 52 Jets, Bluetooth</div>
-        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(15 sold)</span></div>
-        <div class="deal-price">Get Best Price Quote</div>
-        <div class="deal-stock">⚡ Limited stock available</div>
-        <div class="stock-bar"><div class="stock-fill" style="width:40%;"></div></div>
-      </div>
-    </div>
-    <div class="deal-card">
-      <div class="deal-emoji">🧊</div>
-      <div class="deal-info">
-        <div class="deal-cat">Cold Tub — Chilly Goat USA</div>
-        <div class="deal-name">Chill Tubs Pro — Touchscreen WiFi, 700L</div>
-        <div class="deal-rating"><span class="stars">★★★★★</span><span style="font-size:12px;color:#999;">(9 sold)</span></div>
-        <div class="deal-price">Get Best Price Quote</div>
-        <div class="deal-stock">✅ In stock — ships in 2 weeks</div>
-        <div class="stock-bar"><div class="stock-fill" style="width:60%;"></div></div>
-      </div>
-    </div>
-  </div>
-</div>
 
+<section class="deals-cinematic">
+  <div class="deals-head">
+    <span class="eyebrow">Curated Selection</span>
+    <h2>Featured Wellness Systems</h2>
+  </div>
+
+  <div class="deals-track" id="deals-track">
+    
+    <article class="deal-card">
+      <img src="images/products/fiberglass/sydney.png" alt="Sydney Fiberglass Pool">
+      <div class="deal-overlay">
+        <div class="deal-content">
+          <span class="deal-category">Fiberglass Pool</span>
+          <h3 class="deal-title">Sydney Pool</h3>
+          <div class="deal-reveal">
+            <p>Family outdoor pool · 18×8 ft</p>
+            <a href="#" class="deal-cta" tabindex="0">Get Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <img src="images/hottub/Santorini-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Santorini Hot Tub">
+      <div class="deal-overlay">
+        <div class="deal-content">
+          <span class="deal-category">Hot Tub · Platinum Spas</span>
+          <h3 class="deal-title">Santorini</h3>
+          <div class="deal-reveal">
+            <p>6 Person · 52 Jets</p>
+            <a href="#" class="deal-cta" tabindex="0">Get Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="deal-card">
+      <img src="images/sauna/Chill-Tub-Pro.jpg" alt="Chill Tubs Pro Cold Tub">
+      <div class="deal-overlay">
+        <div class="deal-content">
+          <span class="deal-category">Cold Tub · Chilly Goat</span>
+          <h3 class="deal-title">Chill Tubs Pro</h3>
+          <div class="deal-reveal">
+            <p>700L · Smart Control</p>
+            <a href="#" class="deal-cta" tabindex="0">Get Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 <!-- AWARDS -->
 <section class="awards-section">
   <div class="awards-inner">
@@ -499,7 +670,7 @@
           <div class="award-year">Most Promising Brand · 2024</div>
         </div>
       </div>
-      <div class="award-img-card">
+      <!-- <div class="award-img-card">
         <div class="award-img-wrap award-img-placeholder">
           <div style="font-size:48px;line-height:1;">🎗️</div>
         </div>
@@ -507,7 +678,7 @@
           <div class="award-name">National Impact Award</div>
           <div class="award-year">Most Promising Brand · 2024</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -609,7 +780,7 @@
   </div>
 </section>
 
-<!-- BLOG -->
+BLOG
 <section class="blog">
   <div class="section-header">
     <div class="section-title-wrap">

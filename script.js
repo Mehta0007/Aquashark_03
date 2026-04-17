@@ -11,29 +11,29 @@ const PRODUCTS = {
     {id:5,  emoji:'🏊', image:'images/products/fiberglass/toronto.png',  cat:'Fiberglass Pool', name:'Toronto Pool — 20×10×4.4ft',             price:'Get Quote', rating:'★★★★★', reviews:19, badge:null,      desc:'Roomy, stylish pool for premium outdoor lifestyles. Generous width for group use and aquatic games.',                             specs:'Size: 20×10×4.4ft · Heating option · Lap-friendly · Multiple finishes'},
     {id:6,  emoji:'🏊', image:'images/products/fiberglass/paris.png',    cat:'Fiberglass Pool', name:'Paris Pool — 30×12×4.4ft',               price:'Get Quote', rating:'★★★★★', reviews:12, badge:null,      desc:'A generous family pool with premium styling for large backyards and villas. Excellent for floating, swimming and kids\' play.',  specs:'Size: 30×12×4.4ft · Heating option · Lap-friendly · Designer finishes'},
     {id:7,  emoji:'🏊', image:'images/products/fiberglass/mexico.png',   cat:'Fiberglass Pool', name:'Mexico Pool — 32×14ft + Kids Pool',       price:'Get Quote', rating:'★★★★★', reviews:8,  badge:'PREMIUM', desc:'Grand pool for resorts, villas and estates. Exceptional length for serious swimmers with optional kids\' pool attachment.',      specs:'Size: 32×14×4.4ft · Kids pool optional · Jacuzzi attached (optional) · Resort-grade'},
-    // {id:8,  emoji:'⬆️', image:'images/products/above-ground/bombay.png',   cat:'Above Ground Pool', name:'Bombay Pool — 14×8×4.4ft',             price:'Get Quote', rating:'★★★★☆', reviews:17, badge:'NEW',     desc:'Premium plug & play above-ground pool with ACP aluminium skirting. Includes filter, pump, LED light and plumbing.',            specs:'ACP Skirting · LED fitted · Sand filter · Circulation pump included · Plug & Play'},
+    // {id:8,  emoji:'⬆️', image:'images/products/above-ground/bombay.png', name:'Bombay Pool — 14×8×4.4ft',             price:'Get Quote', rating:'★★★★☆', reviews:17, badge:'NEW',     desc:'Premium plug & play above-ground pool with ACP aluminium skirting. Includes filter, pump, LED light and plumbing.',            specs:'ACP Skirting · LED fitted · Sand filter · Circulation pump included · Plug & Play'},
   ],
   bestsellers: [
-    {id:9,  emoji:'🛁', cat:'Hot Tub — Platinum Spas UK',  name:'Happy — 5 Person, 47 Jets',          price:'Get Quote', rating:'★★★★★', reviews:41, badge:null,        desc:'2000×2000×900mm. 5 seats with 2 loungers. Bluetooth, LED, ozone. 32 Amp supply.',                                   specs:'Jets: 47 · Seats: 3+2 lounger · Water: 1000L · Pumps: 2×2HP · Bluetooth'},
-    {id:10, emoji:'🛁', cat:'Hot Tub — Platinum Spas UK',  name:'Palma — 5 Person, 83 Jets',          price:'Get Quote', rating:'★★★★★', reviews:36, badge:'TOP PICK',   desc:'2000×2000×900mm. Maximum jet count for deep hydrotherapy. 5 seats + 1 lounger. Bluetooth music system included.',         specs:'Jets: 83 · Seats: 5+1 lounger · Water: 1000L · Pumps: 2×3HP · Bluetooth'},
-    {id:11, emoji:'🛁', cat:'Hot Tub — Platinum Spas UK',  name:'Santorini — 6 Person, 52 Jets',      price:'Get Quote', rating:'★★★★★', reviews:29, badge:null,        desc:'2100×2100×940mm. 6-person premium range. 5 seats + 1 lounger, Bluetooth, LED lighting, SW ozone.',                    specs:'Jets: 52 · Seats: 5+1 lounger · Water: 1100L · Pumps: 2×3HP · Bluetooth'},
-    {id:12, emoji:'🛁', cat:'Hot Tub — Platinum Spas UK',  name:'Maximus — 6 Person, 52 Jets',        price:'Get Quote', rating:'★★★★★', reviews:24, badge:null,        desc:'2600×2200×940mm. Largest Platinum Spas model. 5 seats + 1 lounger, perfect for large gatherings.',                      specs:'Jets: 52 · Seats: 5+1 lounger · Pumps: 3×2HP · Bluetooth · 32 Amp'},
-    {id:13, emoji:'🛁', cat:'Hot Tub — Master Spas USA',   name:'LSX 900 — 8 Person, 72 Jets',        price:'Get Quote', rating:'★★★★★', reviews:18, badge:'LUXURY',    desc:'Michael Phelps Legend Series. 8 seats, 72 stainless jets, WiFi, 3 water features, EcoPur filtration. The best of Master Spas.',  specs:'Jets: 72 · Seats: 8 · Weight: 1485lb dry · Power: 240V/50A · WiFi module'},
-    {id:14, emoji:'🛁', cat:'Hot Tub — Master Spas USA',   name:'LSX 700 — 5 Person, 62 Jets',        price:'Get Quote', rating:'★★★★★', reviews:15, badge:null,        desc:'Legend Series. StressRelief Neck & Shoulder Seat, contoured lounge, 62 jets. A perennial best-seller.',                    specs:'Jets: 62 · Seats: 5 · Water: 1155L · Power: 240V/50A · WiFi module'},
-    {id:15, emoji:'🔥', cat:'Sauna — Sweaty Goat',         name:'MP3 Sauna — 3 Person Infrared',      price:'Get Quote', rating:'★★★★★', reviews:11, badge:null,        desc:'3-person infrared sauna. Canadian Hemlock wood, chromotherapy LED, wireless audio. 80°F–160°F. Ships in 2 weeks.',           specs:'Capacity: 3 · Size: 60×49×75in · 110V/20A · Chromotherapy LED · Wireless audio'},
-    {id:16, emoji:'🔥', cat:'Sauna — Outdoor',              name:'Barrel 250 Sauna — 6 Person',        price:'Get Quote', rating:'★★★★★', reviews:9,  badge:null,        desc:'Outdoor barrel sauna. 40mm Thermo Nordic spruce, panoramic window, 2×LED, Thermo Aspen flooring. 2.5×2.4×2.25m.',          specs:'Capacity: 6 · 2 terrace + 2 sauna benches · Panoramic window · Nordic spruce'},
+    {id:9,  emoji:'🛁', image: "images/hottub/Happy-1-900x900.webp", name:'Happy — 5 Person, 47 Jets',          price:'Get Quote', rating:'★★★★★', reviews:41, badge:null,        desc:'2000×2000×900mm. 5 seats with 2 loungers. Bluetooth, LED, ozone. 32 Amp supply.',                                   specs:'Jets: 47 · Seats: 3+2 lounger · Water: 1000L · Pumps: 2×2HP · Bluetooth'},
+    {id:10, emoji:'🛁', image: "images/hottub/Palma-edited-900x900.webp", name:'Palma — 5 Person, 83 Jets',          price:'Get Quote', rating:'★★★★★', reviews:36, badge:'TOP PICK',   desc:'2000×2000×900mm. Maximum jet count for deep hydrotherapy. 5 seats + 1 lounger. Bluetooth music system included.',         specs:'Jets: 83 · Seats: 5+1 lounger · Water: 1000L · Pumps: 2×3HP · Bluetooth'},
+    {id:11, emoji:'🛁', image: "images/hottub/Santorini-Overhead-View-AI-Gen-cropped-900x900.webp", name:'Santorini — 6 Person, 52 Jets',      price:'Get Quote', rating:'★★★★★', reviews:29, badge:null,        desc:'2100×2100×940mm. 6-person premium range. 5 seats + 1 lounger, Bluetooth, LED lighting, SW ozone.',                    specs:'Jets: 52 · Seats: 5+1 lounger · Water: 1100L · Pumps: 2×3HP · Bluetooth'},
+    {id:12, emoji:'🛁', image: "images/hottub/Maximus-Overhead-View-AI-Gen-cropped-900x900.webp", name:'Maximus — 6 Person, 52 Jets',        price:'Get Quote', rating:'★★★★★', reviews:24, badge:null,        desc:'2600×2200×940mm. Largest Platinum Spas model. 5 seats + 1 lounger, perfect for large gatherings.',                      specs:'Jets: 52 · Seats: 5+1 lounger · Pumps: 3×2HP · Bluetooth · 32 Amp'},
+    {id:13, emoji:'🛁', image: "images/hottub/LSX 900.png", name:'LSX 900 — 8 Person, 72 Jets',        price:'Get Quote', rating:'★★★★★', reviews:18, badge:'LUXURY',    desc:'Michael Phelps Legend Series. 8 seats, 72 stainless jets, WiFi, 3 water features, EcoPur filtration. The best of Master Spas.',  specs:'Jets: 72 · Seats: 8 · Weight: 1485lb dry · Power: 240V/50A · WiFi module'},
+    {id:14, emoji:'🛁', image: "images/hottub/lsx700.jpg", name:'LSX 700 — 5 Person, 62 Jets',        price:'Get Quote', rating:'★★★★★', reviews:15, badge:null,        desc:'Legend Series. StressRelief Neck & Shoulder Seat, contoured lounge, 62 jets. A perennial best-seller.',                    specs:'Jets: 62 · Seats: 5 · Water: 1155L · Power: 240V/50A · WiFi module'},
+    {id:15, emoji:'🔥', image: "images/sauna/MP3-sauna.webp", name:'MP3 Sauna — 3 Person Infrared',      price:'Get Quote', rating:'★★★★★', reviews:11, badge:null,        desc:'3-person infrared sauna. Canadian Hemlock wood, chromotherapy LED, wireless audio. 80°F–160°F. Ships in 2 weeks.',           specs:'Capacity: 3 · Size: 60×49×75in · 110V/20A · Chromotherapy LED · Wireless audio'},
+    {id:16, emoji:'🔥', image: "images/sauna/barrel-250.jpg", name:'Barrel 250 Sauna — 6 Person',        price:'Get Quote', rating:'★★★★★', reviews:9,  badge:null,        desc:'Outdoor barrel sauna. 40mm Thermo Nordic spruce, panoramic window, 2×LED, Thermo Aspen flooring. 2.5×2.4×2.25m.',          specs:'Capacity: 6 · 2 terrace + 2 sauna benches · Panoramic window · Nordic spruce'},
   ],
   toprated: [
-    {id:17, emoji:'🌊', cat:'Swim Spa — Master Spas USA',   name:'Trainer 21D Swim Spa',               price:'Get Quote', rating:'★★★★★', reviews:27, badge:'BESTSELLER', desc:'53cm×239cm×153cm. 47 jets, Air-Injected VIP Technology propulsion, 4 pumps, EcoPur filtration, LED lighting.',            specs:'Jets: 47+51 stainless · Water: 6928L · Power: 240V/100A · Pumps: 4 · VIP Technology'},
-    {id:18, emoji:'🌊', cat:'Swim Spa — Master Spas USA',   name:'Challenger 21D Swim Spa',            price:'Get Quote', rating:'★★★★★', reviews:21, badge:null,        desc:'653cm×239cm×153cm. Largest swim spa. 5 pumps, Airless VIP Technology, 53 jets, Master Blasters foot therapy.',             specs:'Jets: 47+53 stainless · Water: 6928L · Power: 240V/100A · Pumps: 5 · Airless VIP'},
-    {id:19, emoji:'🌊', cat:'Swim Spa — Michael Phelps',    name:'MP Signature Pro SwimSpa',           price:'Get Quote', rating:'★★★★★', reviews:16, badge:'PREMIUM',   desc:'587cm×239cm×153cm. Air-Injected VIP Technology. 53 jets, WiFi touch control, EcoPur filtration, waterline LED.',          specs:'Jets: 53 · Water: 9255L · Power: 240V/60A · WiFi · EcoPur Charge filtration'},
-    {id:20, emoji:'🌊', cat:'Swim Spa — Platinum Spas UK',  name:'Helios Swim Spa — 5 Person',         price:'Get Quote', rating:'★★★★★', reviews:13, badge:null,        desc:'5900×2250×1500mm. 53 total jets, 3×3HP swim pumps, Bluetooth, SW ozone. Platinum Premium Shield insulation.',             specs:'Jets: 53 · Seats: 4+1 lounger · Water: 10500L · Pumps: 3×3HP swim · Bluetooth'},
-    {id:21, emoji:'🌊', cat:'Swim Spa — Platinum Spas UK',  name:'Zelus Swim Spa — 3 Person',          price:'Get Quote', rating:'★★★★★', reviews:10, badge:null,        desc:'5900×2250×1500mm. 42 jets, 3 swim pumps, Bluetooth. Compact swim spa perfect for home fitness.',                         specs:'Jets: 42 · Seats: 2+1 lounger · Water: 9800L · Pumps: 3×3HP swim · Bluetooth'},
-    {id:22, emoji:'🧊', cat:'Cold Tub — Chilly Goat USA',   name:'Chill Tubs Original',                price:'Get Quote', rating:'★★★★★', reviews:19, badge:null,        desc:'Stainless steel 316. 400L capacity. Cools to 3°C. Built-in ozone purification system. Antifreeze function included.',     specs:'Material: SS316 · Water: 400L · Min: 3°C · Power: 13A/220V · Ozone filter'},
-    {id:23, emoji:'🧊', cat:'Cold Tub — Chilly Goat USA',   name:'Chill Tubs Pro',                     price:'Get Quote', rating:'★★★★★', reviews:14, badge:'NEW',       desc:'Touchscreen + built-in WiFi. Aristech Acrylic, 700L, 3°C to 40°C range. LED corner lighting. Premium cold therapy.',      specs:'Material: Acrylic · Water: 700L · Temp: 3°C–40°C · WiFi · LED lighting'},
-    {id:24, emoji:'🧊', cat:'Cold Tub — Master Spas USA',   name:'Alpine Cold Tub',                    price:'Get Quote', rating:'★★★★★', reviews:11, badge:null,        desc:'84×42×30in. 120 gallon. 2.1HP, 2 jets, LED lighting. Power: 120V/15A. 1-2 person cold plunge experience.',               specs:'Capacity: 1 · Fill: 455L · Power: 120V/15A · HP: 2.1 · LED lighting'},
-    {id:25, emoji:'⚙️', cat:'Stainless Steel Pool — Natare', name:'Rooftop Stainless Steel Pool',       price:'Get Quote', rating:'★★★★★', reviews:7,  badge:'CUSTOM',     desc:'Lightweight, hygienic stainless steel pool system for rooftop, infinity, competition and commercial aquatic projects.',       specs:'Partner: Natare · Lightweight · Waterproof · Hygienic · Custom engineered'},
-    {id:26, emoji:'💧', cat:'Hydrotherapy Pool',             name:'Rehabilitation Hydrotherapy Pool',   price:'Get Quote', rating:'★★★★★', reviews:6,  badge:'CUSTOM',     desc:'Medical and rehabilitation pool solution with therapy jets, underwater treadmill and variable depth floor options.',          specs:'Therapy jets · Underwater treadmill option · Variable depth option · Hospitals · Sports facilities'},
+    {id:17, emoji:'🌊', image: "images/swimspa/Trainer 21D Swim.png", name:'Trainer 21D Swim Spa',               price:'Get Quote', rating:'★★★★★', reviews:27, badge:'BESTSELLER', desc:'53cm×239cm×153cm. 47 jets, Air-Injected VIP Technology propulsion, 4 pumps, EcoPur filtration, LED lighting.',            specs:'Jets: 47+51 stainless · Water: 6928L · Power: 240V/100A · Pumps: 4 · VIP Technology'},
+    {id:18, emoji:'🌊', image: "images/swimspa/Challenger 21D Swim Spa.png", name:'Challenger 21D Swim Spa',            price:'Get Quote', rating:'★★★★★', reviews:21, badge:null,        desc:'653cm×239cm×153cm. Largest swim spa. 5 pumps, Airless VIP Technology, 53 jets, Master Blasters foot therapy.',             specs:'Jets: 47+53 stainless · Water: 6928L · Power: 240V/100A · Pumps: 5 · Airless VIP'},
+    {id:19, emoji:'🌊', image: "images/swimspa/MP pro.png", name:'MP Signature Pro SwimSpa',           price:'Get Quote', rating:'★★★★★', reviews:16, badge:'PREMIUM',   desc:'587cm×239cm×153cm. Air-Injected VIP Technology. 53 jets, WiFi touch control, EcoPur filtration, waterline LED.',          specs:'Jets: 53 · Water: 9255L · Power: 240V/60A · WiFi · EcoPur Charge filtration'},
+    {id:20, emoji:'🌊', image: "images/swimspa/Helios Swim Spa.png", name:'Helios Swim Spa — 5 Person',         price:'Get Quote', rating:'★★★★★', reviews:13, badge:null,        desc:'5900×2250×1500mm. 53 total jets, 3×3HP swim pumps, Bluetooth, SW ozone. Platinum Premium Shield insulation.',             specs:'Jets: 53 · Seats: 4+1 lounger · Water: 10500L · Pumps: 3×3HP swim · Bluetooth'},
+    {id:21, emoji:'🌊', image: "images/swimspa/Zelus Swimspas (1).png", name:'Zelus Swim Spa — 3 Person',          price:'Get Quote', rating:'★★★★★', reviews:10, badge:null,        desc:'5900×2250×1500mm. 42 jets, 3 swim pumps, Bluetooth. Compact swim spa perfect for home fitness.',                         specs:'Jets: 42 · Seats: 2+1 lounger · Water: 9800L · Pumps: 3×3HP swim · Bluetooth'},
+    {id:22, emoji:'🧊', image: "images/sauna/chill tub origina;.jpg", name:'Chill Tubs Original',                price:'Get Quote', rating:'★★★★★', reviews:19, badge:null,        desc:'Stainless steel 316. 400L capacity. Cools to 3°C. Built-in ozone purification system. Antifreeze function included.',     specs:'Material: SS316 · Water: 400L · Min: 3°C · Power: 13A/220V · Ozone filter'},
+    {id:23, emoji:'🧊', image: "images/sauna/Chill-Tub-Pro.jpg", name:'Chill Tubs Pro',                     price:'Get Quote', rating:'★★★★★', reviews:14, badge:'NEW',       desc:'Touchscreen + built-in WiFi. Aristech Acrylic, 700L, 3°C to 40°C range. LED corner lighting. Premium cold therapy.',      specs:'Material: Acrylic · Water: 700L · Temp: 3°C–40°C · WiFi · LED lighting'},
+    {id:24, emoji:'🧊', image: "images/chill tubs/AlpineTerrain_Lifestyle_DSC4967-web.webp", name:'Alpine Cold Tub',                    price:'Get Quote', rating:'★★★★★', reviews:11, badge:null,        desc:'84×42×30in. 120 gallon. 2.1HP, 2 jets, LED lighting. Power: 120V/15A. 1-2 person cold plunge experience.',               specs:'Capacity: 1 · Fill: 455L · Power: 120V/15A · HP: 2.1 · LED lighting'},
+    {id:25, emoji:'⚙️', image: "images/sauna/rooftop.jpg", name:'Rooftop Stainless Steel Pool',       price:'Get Quote', rating:'★★★★★', reviews:7,  badge:'CUSTOM',     desc:'Lightweight, hygienic stainless steel pool system for rooftop, infinity, competition and commercial aquatic projects.',       specs:'Partner: Natare · Lightweight · Waterproof · Hygienic · Custom engineered'},
+    {id:26, emoji:'💧', image: "images/sauna/hydrotherapy.jpg", name:'Rehabilitation Hydrotherapy Pool',   price:'Get Quote', rating:'★★★★★', reviews:6,  badge:'CUSTOM',     desc:'Medical and rehabilitation pool solution with therapy jets, underwater treadmill and variable depth floor options.',          specs:'Therapy jets · Underwater treadmill option · Variable depth option · Hospitals · Sports facilities'},
   ]
 };
 
@@ -54,9 +54,26 @@ function updateCartBadge(){
 }
 
 // ============================================================
+// CATEGORY HELPER
+// ============================================================
+function getCategoryFromProduct(p) {
+  const name = (p.name || '').toLowerCase();
+  if (name.includes('fiberglass pool') || name.includes('ibiza') || name.includes('cocktail') || name.includes('manila') || name.includes('sydney') || name.includes('toronto') || name.includes('paris') || name.includes('mexico')) return 'Fiberglass Pool';
+  if (name.includes('above ground') || name.includes('bombay')) return 'Above Ground Pool';
+  if (name.includes('swim spa') || name.includes('trainer') || name.includes('challenger') || name.includes('mp signature') || name.includes('helios') || name.includes('zelus')) return 'Swim Spa';
+  if (name.includes('hot tub') || name.includes('happy') || name.includes('palma') || name.includes('santorini') || name.includes('maximus') || name.includes('lsx')) return 'Hot Tub';
+  if (name.includes('cold tub') || name.includes('chill tub') || name.includes('alpine')) return 'Cold Tub';
+  if (name.includes('sauna') || name.includes('barrel')) return 'Sauna';
+  if (name.includes('stainless steel') || name.includes('natare')) return 'Stainless Steel Pool';
+  if (name.includes('hydrotherapy') || name.includes('rehab')) return 'Hydrotherapy Pool';
+  return 'Unknown Category';
+}
+
+// ============================================================
 // PRODUCT CARD HELPERS
 // ============================================================
-function getCatGradient(cat){
+function getCatGradient(product){
+  const cat = getCategoryFromProduct(product);
   if(cat.includes('Hot Tub'))      return 'linear-gradient(135deg,#023e8a 0%,#0077b6 100%)';
   if(cat.includes('Swim Spa'))     return 'linear-gradient(135deg,#005f73 0%,#0a9396 100%)';
   if(cat.includes('Sauna'))        return 'linear-gradient(135deg,#7b2d00 0%,#d4470a 100%)';
@@ -67,6 +84,7 @@ function getCatGradient(cat){
 
 function productCardHTML(p){
   const inWishlist = wishlist.includes(p.id);
+  const category = getCategoryFromProduct(p);
   const imageHtml = p.image
     ? `<img src="${p.image}" alt="${p.name}" class="product-img">`
     : `<div class="product-emoji-card" style="background:${getCatGradient(p.cat)}"><span class="product-emoji-icon">${p.emoji}</span></div>`;
@@ -90,7 +108,7 @@ function productCardHTML(p){
         <div class="product-img-stage">${imageHtml}</div>
       </div>
       <div class="product-info">
-        <div class="product-cat">${p.cat}</div>
+        <div class="product-cat">${category}</div>
         <div class="product-name">${p.name}</div>
         <div class="product-rating"><span class="stars">${p.rating}</span><span style="font-size:11px;color:#999;">(${p.reviews})</span></div>
         <div class="product-specs-preview">${specsPreview}</div>
@@ -138,7 +156,7 @@ function filterByCategory(catName, btn){
   if(!grid) return;
 
   const allProducts = [...PRODUCTS.popular, ...PRODUCTS.bestsellers, ...PRODUCTS.toprated];
-  const filtered = keyword ? allProducts.filter(p=>p.cat.includes(keyword)) : allProducts;
+  const filtered = keyword ? allProducts.filter(p=>getCategoryFromProduct(p).includes(keyword)) : allProducts;
 
   grid.classList.add('fading');
   setTimeout(()=>{
@@ -179,7 +197,8 @@ function addToCart(id, qty){
   const p = getProduct(id);
   if(!p) return;
   const ex = cart.find(i=>i.id===id);
-  if(ex){ ex.qty+=qty; } else { cart.push({id,name:p.name,emoji:p.emoji,cat:p.cat,price:p.price,qty}); }
+  const category = getCategoryFromProduct(p); // Infer category for cart item
+  if(ex){ ex.qty+=qty; } else { cart.push({id,name:p.name,emoji:p.emoji,cat:category,price:p.price,qty}); }
   saveCart(); updateCartBadge();
   showToast(`${p.emoji} <strong>${p.name}</strong> added to enquiry`, 'cart');
 }
@@ -209,7 +228,7 @@ function renderCart(){
   c.innerHTML=cart.map(item=>`
     <div class="cart-item">
       <div class="cart-item-img">${item.emoji}</div>
-      <div class="cart-item-info">
+      <div class="cart-item-info"> 
         <div class="cart-item-cat">${item.cat}</div>
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">${item.price}</div>
@@ -246,10 +265,11 @@ function sendEnquiry(){
 function openQuickView(id){
   const p=getProduct(id); if(!p) return;
   currentModalProduct=p; modalQty=1;
+  const category = getCategoryFromProduct(p); // Infer category for modal
   document.getElementById('modalImg').innerHTML = p.image
     ? `<img src="${p.image}" alt="${p.name}" class="modal-product-img">`
-    : `<div class="product-emoji-card" style="background:${getCatGradient(p.cat)};border-radius:14px;"><span class="product-emoji-icon">${p.emoji}</span></div>`;
-  document.getElementById('modalCat').textContent=p.cat;
+    : `<div class="product-emoji-card" style="background:${getCatGradient(p)};border-radius:14px;"><span class="product-emoji-icon">${p.emoji}</span></div>`;
+  document.getElementById('modalCat').textContent=category; // Display inferred category
   document.getElementById('modalName').textContent=p.name;
   document.getElementById('modalStars').textContent=p.rating;
   document.getElementById('modalReviews').textContent=`(${p.reviews} enquiries)`;
@@ -474,47 +494,4 @@ if(document.getElementById('productGrid')) renderProducts('popular');
 updateCartBadge();
 if(document.getElementById('catTrack')) updateCategoryStrip();
 
-function switchModel(btn, model) {
-
-  // active tab fix
-  document.querySelectorAll('.brand-tab').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-
-  // SAFE element selection
-  const title = document.getElementById('modelTitle');
-  const image = document.getElementById('modelImage');
-  const dim = document.getElementById('dim');
-  const dry = document.getElementById('dry');
-  const jets = document.getElementById('jets');
-  const water = document.getElementById('water');
-  const prop = document.getElementById('prop');
-  const power = document.getElementById('power');
-  const pumps = document.getElementById('pumps');
-  const features = document.getElementById('features');
-
-  if (model === 'trainer') {
-    title.textContent = "Trainer 21D Swim Spa";
-    image.src = "images/swimspa/trainer-21d-top.png";
-    dim.textContent = "533 × 239 × 153 cm";
-    dry.textContent = "1,637 kg";
-    jets.textContent = "47";
-    water.textContent = "6,928 L";
-    prop.textContent = "VIP Technology";
-    power.textContent = "240V / 100 Amp";
-    pumps.textContent = "4";
-    features.textContent = "8";
-  }
-
-  if (model === 'challenger') {
-    title.textContent = "Challenger 21D Swim Spa";
-    image.src = "images/swimspa/Challenger 21D Swim Spa.png";
-    dim.textContent = "653 × 239 × 153 cm";
-    dry.textContent = "1,694 kg";
-    jets.textContent = "47";
-    water.textContent = "6,928 L";
-    prop.textContent = "Airless VIP Technology";
-    power.textContent = "240V / 100 Amp";
-    pumps.textContent = "5";
-    features.textContent = "8";
-  }
-}
+                                                    

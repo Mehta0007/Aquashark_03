@@ -13,6 +13,243 @@
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <link rel="stylesheet" href="style.css">
 <style>
+  :root {
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --accent-blue: #0ea5e9;
+  --accent-green: #22c55e;
+  --bg-card: #f8fafc;
+  --border-color: #e2e8f0;
+}
+
+.product-hero {
+  padding: 60px 5%;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT SIDE: Gallery */
+.detail-kicker {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-blue);
+}
+
+.product-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  margin: 10px 0 20px;
+  line-height: 1.1;
+}
+
+.product-desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+.main-image-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #cbd5e1;
+  aspect-ratio: 16 / 9;
+}
+
+.main-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* THUMBNAILS */
+.thumbnail-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.thumb-btn {
+  background: none;
+  border: 2px solid transparent;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.thumb-btn img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.thumb-btn span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding-bottom: 8px;
+}
+
+.thumb-btn.active {
+  border-color: var(--accent-blue);
+}
+
+.thumb-btn.active span {
+  color: var(--text-main);
+}
+
+/* RIGHT SIDE: Sticky Enquiry Card */
+.product-sidebar {
+  position: sticky;
+  top: 40px; /* Adjust based on your header height */
+}
+
+.enquiry-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-green);
+  background: #dcfce7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.enquiry-card h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.enquiry-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.price-quote {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+/* SPECS LIST */
+.quick-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  border-top: 1px solid var(--border-color);
+}
+
+.quick-specs li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 14px;
+}
+
+.quick-specs span {
+  color: var(--text-muted);
+}
+
+/* BUTTONS */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.btn:hover { opacity: 0.9; }
+
+.btn-primary {
+  background: var(--text-main);
+  color: white;
+}
+
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.btn-ghost {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.enquiry-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .product-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .product-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .thumbnail-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* ── SAUNA BRAND SECTIONS ── */
 .sauna-brand-section{padding:80px 20px;}
 .sauna-brand-section.dark{background:linear-gradient(135deg,#1a0a00 0%,#2d1200 100%);}
@@ -97,56 +334,76 @@
 <main>
 
   <!-- ── HERO ── -->
-  <section class="product-detail-hero">
-    <div class="product-detail-wrap">
-      <div class="product-visual-panel">
-        <span class="detail-kicker">Premium Saunas</span>
-        <h1>Relax. Detox. Revive.</h1>
-        <p>World-class infrared and traditional Finnish saunas for deep detoxification, cardiovascular health and total relaxation. Exclusively distributed by Aquashark across India and the Middle East.</p>
-        <div class="detail-main-image">
-          <img id="saunaMainImg" src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-rooftop.png" alt="Premium sauna installation — Aquashark">
-        </div>
-        <div class="detail-thumbs" aria-label="Sauna brands and models">
-          <button type="button" class="active" onclick="document.getElementById('saunaMainImg').src='images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-rooftop.png';document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
-            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-rooftop.png" alt="MP3 Infrared Sauna by Sweaty Goat" loading="lazy">
-            <span>MP3 Infrared</span>
-          </button>
-          <button type="button" onclick="document.getElementById('saunaMainImg').src='images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-01.png';document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
-            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-01.png" alt="Barrel 250 Sauna by Hekla Finland" loading="lazy">
-            <span>Barrel 250</span>
-          </button>
-          <button type="button" onclick="document.getElementById('saunaMainImg').src='images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-02.png';document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
-            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-02.png" alt="Indoor Sauna Setup" loading="lazy">
-            <span>Indoor Setup</span>
-          </button>
-          <button type="button" onclick="document.getElementById('saunaMainImg').src='images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-03.png';document.querySelectorAll('.detail-thumbs button').forEach(b=>b.classList.remove('active'));this.classList.add('active')">
-            <img src="images/Aquashark Images for Developer/07_stainless-steel-pools/steel-pool-square-03.png" alt="Traditional Finnish Sauna" loading="lazy">
-            <span>Traditional</span>
-          </button>
-        </div>
+  <section class="product-hero">
+  <div class="product-container">
+    
+    <div class="product-gallery">
+      <span class="detail-kicker">Premium Saunas</span>
+      <h1 class="product-title">Relax. Detox. Revive.</h1>
+      <p class="product-desc">World-class infrared and traditional Finnish saunas for deep detoxification, cardiovascular health and total relaxation. Exclusively distributed by Aquashark across India and the Middle East.</p>
+      
+      <div class="main-image-wrapper">
+        <img id="saunaMainImg" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop" alt="Premium MP3 Infrared Sauna installation">
       </div>
-      <aside class="product-enquiry-panel">
-        <div class="enquiry-card">
-          <span class="availability"><i class="fa fa-circle-check"></i> Ships in 2–4 weeks</span>
-          <h2>Premium Sauna Collection</h2>
-          <p>Infrared saunas by Sweaty Goat (USA) and traditional Finnish saunas by Hekla (Finland). For homes, villas, resorts and wellness centres.</p>
-          <div class="detail-price">Get Quote</div>
-          <div class="quick-specs">
-            <div><span>Brands</span><strong>Sweaty Goat · Hekla</strong></div>
-            <div><span>Types</span><strong>Infrared · Finnish · Barrel</strong></div>
-            <div><span>Capacity</span><strong>2 to 6 persons</strong></div>
-            <div><span>Markets</span><strong>India · UAE · Overseas</strong></div>
-          </div>
-          <div class="detail-actions">
-            <button type="button" onclick="addToCart(15,1);openCart();" class="detail-btn primary"><i class="fa fa-paper-plane"></i> Get Enquiry</button>
-            <a class="detail-btn whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20Saunas.%20Please%20share%20details." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a class="detail-btn ghost" href="tel:+917756999108"><i class="fa fa-phone"></i> Call Now</a>
-          </div>
-          <p class="enquiry-note">Installation support and commissioning included. Tell us your space and preferred sauna type.</p>
-        </div>
-      </aside>
+      
+      <div class="thumbnail-track" aria-label="Sauna models">
+        <button type="button" class="thumb-btn active" data-image="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop" data-alt="MP3 Infrared Sauna">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=400&auto=format&fit=crop" alt="MP3 Infrared Thumbnail" loading="lazy">
+          <span>MP3 Infrared</span>
+        </button>
+        
+        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1620242200230-67c26dfd9ea0?q=80&w=1200&auto=format&fit=crop" data-alt="Barrel 250 Sauna">
+          <img src="https://images.unsplash.com/photo-1620242200230-67c26dfd9ea0?q=80&w=400&auto=format&fit=crop" alt="Barrel 250 Thumbnail" loading="lazy">
+          <span>Barrel 250</span>
+        </button>
+        
+        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1515362778563-6a8d0e44bc0b?q=80&w=1200&auto=format&fit=crop" data-alt="Indoor Sauna Setup">
+          <img src="https://images.unsplash.com/photo-1515362778563-6a8d0e44bc0b?q=80&w=400&auto=format&fit=crop" alt="Indoor Setup Thumbnail" loading="lazy">
+          <span>Indoor Setup</span>
+        </button>
+        
+        <button type="button" class="thumb-btn" data-image="https://images.unsplash.com/photo-1583417646197-094d40228d73?q=80&w=1200&auto=format&fit=crop" data-alt="Traditional Finnish Sauna">
+          <img src="https://images.unsplash.com/photo-1583417646197-094d40228d73?q=80&w=400&auto=format&fit=crop" alt="Traditional Thumbnail" loading="lazy">
+          <span>Traditional</span>
+        </button>
+      </div>
     </div>
-  </section>
+
+    <aside class="product-sidebar">
+      <div class="enquiry-card">
+        <div class="availability">
+          <i class="fa fa-circle-check"></i> Ships in 2–4 weeks
+        </div>
+        <h2>Premium Sauna Collection</h2>
+        <p class="enquiry-desc">Infrared saunas by Sweaty Goat (USA) and traditional Finnish saunas by Hekla (Finland). For homes, villas, resorts and wellness centres.</p>
+        
+        <div class="price-quote">Get Quote</div>
+        
+        <ul class="quick-specs">
+          <li><span>Brands</span><strong>Sweaty Goat · Hekla</strong></li>
+          <li><span>Types</span><strong>Infrared · Finnish · Barrel</strong></li>
+          <li><span>Capacity</span><strong>2 to 6 persons</strong></li>
+          <li><span>Markets</span><strong>India · UAE · Overseas</strong></li>
+        </ul>
+        
+        <div class="action-buttons">
+          <button type="button" onclick="addToCart(15,1);openCart();" class="btn btn-primary">
+            <i class="fa fa-paper-plane"></i> Get Enquiry
+          </button>
+          <a class="btn btn-whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark..." target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="tel:+917756999108">
+            <i class="fa fa-phone"></i> Call Now
+          </a>
+        </div>
+        
+        <p class="enquiry-note">Installation support and commissioning included. Tell us your space and preferred sauna type.</p>
+      </div>
+    </aside>
+
+  </div>
+</section>
 
   <!-- ── HEALTH BENEFITS ── -->
   <section class="sauna-benefits-section">
