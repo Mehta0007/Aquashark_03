@@ -25,35 +25,126 @@
 }
 
 .product-hero {
-  padding: 60px 5%;
+  padding: 60px 24px 72px;
   font-family: system-ui, -apple-system, sans-serif;
   color: var(--text-main);
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 .ht-grid {
   display: grid;
-  /* Automatically creates columns based on screen size */
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 70px; /* Space between the cards */
-  padding: 50px 5%; /* Space around the edges of the page */
-  max-width: 1400px; /* Prevents it from getting too wide on huge monitors */
-  margin: 0 auto; /* Centers the grid on the page */
-  align-items: start; /* Prevents cards from stretching vertically to match taller neighbors */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding: 18px 0 0;
+  width: 100%;
+  margin: 0;
+  align-items: start;
 }
 
-/* Optional: Make sure the cards themselves fill the grid tracks properly */
 .ht-card {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* Add your existing background, border-radius, etc. here if not already applied */
+  min-width: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.06);
+}
+
+.ht-card-top {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.ht-card-img {
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  padding: 24px;
+  background: linear-gradient(180deg, #edf8ff 0%, #f8fbff 100%);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ht-card-img img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  aspect-ratio: auto;
+  display: block;
+}
+
+.ht-card-info {
+  padding: 22px;
+  min-height: 304px;
+}
+
+.ht-card-name {
+  font-size: 24px;
+}
+
+.ht-card-tagline {
+  min-height: 44px;
+}
+
+.ht-herospecs {
+  margin-bottom: 16px;
+}
+
+.ht-herospecs > div {
+  padding: 12px 8px;
+  min-width: 0;
+}
+
+.ht-hs-v,
+.ht-hs-k {
+  overflow-wrap: anywhere;
+}
+
+.ht-chips {
+  min-height: 40px;
+  align-content: flex-start;
+}
+
+.ht-card-cta {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.ht-card-cta .ht-btn-wa {
+  min-width: 0;
+  width: 100%;
+}
+
+.ht-btn-call {
+  width: 44px;
+  height: 40px;
+  padding: 0;
+}
+
+.ht-compare {
+  grid-column: 1 / -1;
+}
+
+.ht-card-details summary {
+  padding: 16px 22px;
+}
+
+.ht-specs-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 .product-container {
   display: grid;
-  grid-template-columns: 1fr 420px;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: start;
 }
 
@@ -77,8 +168,8 @@
   font-size: 16px;
   color: var(--text-muted);
   line-height: 1.6;
-  max-width: 800px;
-  margin-bottom: 30px;
+  max-width: 760px;
+  margin-bottom: 26px;
 }
 
 .main-image-wrapper {
@@ -255,10 +346,7 @@
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 992px) {
-  .product-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+  .ht-grid { grid-template-columns: 1fr; }
   
   .product-sidebar {
     position: static;
@@ -266,6 +354,30 @@
 }
 
 @media (max-width: 600px) {
+  .product-hero {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 0;
+    padding: 42px 16px 56px;
+  }
+  .product-hero,
+  .product-container,
+  .product-gallery,
+  .ht-grid,
+  .ht-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .product-title,
+  .product-desc {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .ht-grid { gap: 18px; }
+  .ht-card-img { padding: 18px; }
+  .ht-card-info { min-height: 0; padding: 20px 18px; }
+  .ht-card-tagline,
+  .ht-chips { min-height: 0; }
   .thumbnail-track {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -950,7 +1062,7 @@
     </div>
   </section> -->
 
-  ── FEATURED PRODUCTS ──
+  <!-- ── FEATURED PRODUCTS ── -->
   <!-- <section class="sauna-products-section">
     <div class="sauna-products-inner">
       <div class="detail-section-head">
