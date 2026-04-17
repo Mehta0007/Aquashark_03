@@ -1183,7 +1183,8 @@
 <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 <div class="cart-drawer" id="cartDrawer"><div class="cart-header"><h3><i class="fa fa-shopping-cart" style="margin-right:8px;color:var(--primary);"></i>Enquiry Cart</h3><button class="cart-close" onclick="closeCart()"><i class="fa fa-times"></i></button></div><div class="cart-items" id="cartItems"></div><div class="cart-footer" id="cartFooter" style="display:none;"><div class="cart-subtotal"><span>Items in enquiry</span><span id="cartTotal"></span></div><p class="cart-note">Our team will contact you with a personalised quote.</p><div class="cart-actions"><button class="cart-btn-view" onclick="closeCart()">Continue Browsing</button><button class="cart-btn-checkout" onclick="sendEnquiry()"><i class="fa fa-paper-plane" style="margin-right:6px;"></i>Send Enquiry</button></div></div></div>
 <div id="toast-container"></div>
-<script >
+<script src="script.js"></script>
+<script>
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Grab the elements
   const mainImage = document.getElementById('saunaMainImg');
