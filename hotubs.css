@@ -321,7 +321,7 @@
 /* ============ STICKY BRAND NAV ============ */
 .ht-brandnav {
   position: sticky;
-  top: 0;
+  top: 74px;
   z-index: 30;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(10px);
@@ -1311,6 +1311,7 @@ aspect-ratio: 1/1;
 }
 
 @media (max-width: 680px) {
+  .ht-brandnav { top: 62px; }
   .ht-hero { padding: 40px 5% 40px; }
   .ht-h1 { font-size: 34px; letter-spacing: -1px; }
   .ht-hero-stats { margin-bottom: 24px; }

@@ -390,6 +390,7 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){
     closeModalDirect();
     if(document.getElementById('cartDrawer')) closeCart();
+    closeMobileNav();
   }
 });
 
@@ -493,5 +494,114 @@ function selectDetailModel(btn, image, imageId, name, nameId, meta, metaId, desc
 if(document.getElementById('productGrid')) renderProducts('popular');
 updateCartBadge();
 if(document.getElementById('catTrack')) updateCategoryStrip();
+
+// ============================================================
+// MOBILE NAV — inject hamburger + drawer into every page
+// ============================================================
+(function(){
+  const ha = document.querySelector('.header-actions');
+  if(ha){
+    const btn = document.createElement('button');
+    btn.className = 'nav-toggle';
+    btn.id = 'navToggle';
+    btn.setAttribute('aria-label','Toggle navigation');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.onclick = toggleMobileNav;
+    ha.appendChild(btn);
+  }
+  document.body.insertAdjacentHTML('beforeend',`
+<div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <div class="mobile-nav-head">
+    <a href="index.html" style="text-decoration:none;">
+      <span style="font-family:Poppins,sans-serif;font-size:18px;font-weight:900;color:var(--primary-dark);">Aqua<span style="color:var(--aqua);">shark</span></span>
+      <span style="display:block;font-size:9px;font-weight:600;color:var(--text-light);letter-spacing:1.5px;text-transform:uppercase;">Pools &amp; Spas</span>
+    </a>
+    <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu"><i class="fa fa-times"></i></button>
+  </div>
+  <div class="mob-search">
+    <input type="text" id="mobSearchInput" placeholder="Search pools, spas...">
+    <button onclick="doMobSearch()"><i class="fa fa-search"></i></button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mob-link">Home</a>
+    <details class="mob-accordion">
+      <summary class="mob-link">Products <i class="fa fa-chevron-down"></i></summary>
+      <div class="mob-sub">
+        <a href="fiberglass-pools.html"><i class="fa fa-water"></i> Fiberglass Pools</a>
+        <a href="above-ground-pools.html"><i class="fa fa-person-swimming"></i> Above Ground Pools</a>
+        <a href="swim-spas.html"><i class="fa fa-hot-tub-person"></i> Swim Spas</a>
+        <a href="hot-tubs.html"><i class="fa fa-bath"></i> Hot Tubs</a>
+        <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Cold / Chill Tubs</a>
+        <a href="saunas.html"><i class="fa fa-fire"></i> Saunas</a>
+        <a href="stainless-steel-pools.html"><i class="fa fa-gear"></i> Stainless Steel Pools</a>
+        <a href="hydrotherapy-pools.html"><i class="fa fa-heart-pulse"></i> Hydrotherapy Pools</a>
+      </div>
+    </details>
+    <details class="mob-accordion">
+      <summary class="mob-link">Brands <i class="fa fa-chevron-down"></i></summary>
+      <div class="mob-sub">
+        <a href="brands.html#platinum-spas"><i class="fa fa-star"></i> Platinum Spas (UK)</a>
+        <a href="brands.html#master-spas"><i class="fa fa-star"></i> Master Spas (USA)</a>
+        <a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
+        <a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
+        <a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+        <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
+      </div>
+    </details>
+    <details class="mob-accordion">
+      <summary class="mob-link">Company <i class="fa fa-chevron-down"></i></summary>
+      <div class="mob-sub">
+        <a href="about.html"><i class="fa fa-circle-info"></i> About Aquashark</a>
+        <a href="about.html#awards"><i class="fa fa-trophy"></i> Awards &amp; Accolades</a>
+        <a href="about.html#team"><i class="fa fa-users"></i> Our Team</a>
+        <a href="brands.html"><i class="fa fa-globe"></i> Global Partners</a>
+        <a href="resources.html#blog"><i class="fa fa-newspaper"></i> Blog</a>
+      </div>
+    </details>
+    <a href="wellness.html" class="mob-link">Wellness</a>
+    <a href="projects.html" class="mob-link">Projects</a>
+    <a href="resources.html" class="mob-link">Resources</a>
+    <a href="contact.html" class="mob-link">Contact</a>
+  </div>
+  <div class="mobile-nav-footer">
+    <a href="contact.html" class="mob-enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a>
+    <div class="mob-contact-info">
+      <a href="tel:+917756999108"><i class="fa fa-phone"></i>+91 77569 99108</a>
+      <a href="mailto:info@aquashark.in"><i class="fa fa-envelope"></i>info@aquashark.in</a>
+    </div>
+  </div>
+</nav>`);
+  const ov = document.getElementById('mobileNavOverlay');
+  if(ov) ov.onclick = closeMobileNav;
+})();
+
+function toggleMobileNav(){
+  const nav=document.getElementById('mobileNav');
+  const ov=document.getElementById('mobileNavOverlay');
+  const btn=document.getElementById('navToggle');
+  if(nav&&nav.classList.contains('open')){ closeMobileNav(); return; }
+  if(nav) nav.classList.add('open');
+  if(ov) ov.classList.add('open');
+  if(btn) btn.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMobileNav(){
+  const nav=document.getElementById('mobileNav');
+  const ov=document.getElementById('mobileNavOverlay');
+  const btn=document.getElementById('navToggle');
+  if(nav) nav.classList.remove('open');
+  if(ov) ov.classList.remove('open');
+  if(btn) btn.classList.remove('open');
+  document.body.style.overflow='';
+}
+function doMobSearch(){
+  const inp=document.getElementById('mobSearchInput');
+  if(!inp) return;
+  const si=document.getElementById('searchInput');
+  if(si) si.value=inp.value;
+  closeMobileNav();
+  if(inp.value.trim()) doSearch();
+}
 
                                                     
