@@ -473,3 +473,48 @@ function selectDetailModel(btn, image, imageId, name, nameId, meta, metaId, desc
 if(document.getElementById('productGrid')) renderProducts('popular');
 updateCartBadge();
 if(document.getElementById('catTrack')) updateCategoryStrip();
+
+function switchModel(btn, model) {
+
+  // active tab fix
+  document.querySelectorAll('.brand-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // SAFE element selection
+  const title = document.getElementById('modelTitle');
+  const image = document.getElementById('modelImage');
+  const dim = document.getElementById('dim');
+  const dry = document.getElementById('dry');
+  const jets = document.getElementById('jets');
+  const water = document.getElementById('water');
+  const prop = document.getElementById('prop');
+  const power = document.getElementById('power');
+  const pumps = document.getElementById('pumps');
+  const features = document.getElementById('features');
+
+  if (model === 'trainer') {
+    title.textContent = "Trainer 21D Swim Spa";
+    image.src = "images/swimspa/trainer-21d-top.png";
+    dim.textContent = "533 × 239 × 153 cm";
+    dry.textContent = "1,637 kg";
+    jets.textContent = "47";
+    water.textContent = "6,928 L";
+    prop.textContent = "VIP Technology";
+    power.textContent = "240V / 100 Amp";
+    pumps.textContent = "4";
+    features.textContent = "8";
+  }
+
+  if (model === 'challenger') {
+    title.textContent = "Challenger 21D Swim Spa";
+    image.src = "images/swimspa/Challenger 21D Swim Spa.png";
+    dim.textContent = "653 × 239 × 153 cm";
+    dry.textContent = "1,694 kg";
+    jets.textContent = "47";
+    water.textContent = "6,928 L";
+    prop.textContent = "Airless VIP Technology";
+    power.textContent = "240V / 100 Amp";
+    pumps.textContent = "5";
+    features.textContent = "8";
+  }
+}

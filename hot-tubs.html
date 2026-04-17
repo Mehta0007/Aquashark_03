@@ -26,7 +26,7 @@
     </div>
   </div>
 </div>
-
+<link rel="stylesheet" href="hotubs.css">
 <header>
   <div class="header-inner">
     <a href="index.html" class="logo">
@@ -92,116 +92,1675 @@
   </div>
 </header>
 
+<!-- ============================================================
+     AQUASHARK · HOT TUBS PAGE
+     Drop-in replacement for everything between <main> and </main>
+     Keep your existing <head>, top-bar, header, footer, cart drawer
+     Image paths assume /images/hottub/<Model>.png — rename as needed
+   ============================================================ -->
+
 <main>
-  <section class="product-detail-hero">
-    <div class="product-detail-wrap">
-      <div class="product-visual-panel">
-        <span class="detail-kicker">Hot Tubs India</span>
-        <h1>Luxury. Comfort. Wellness.</h1>
-        <p>Premium hot tubs with precision hydrotherapy jets, ergonomic seating, LED lighting and advanced filtration for homes, resorts and wellness spaces.</p>
-        <div class="detail-main-image">
-          <img id="hotTubMainImage" src="images/hottub/LSX 800.png" alt="Premium hot tub outdoor installation — Aquashark">
-        </div>
-        <div class="detail-thumbs" aria-label="Hot tub models">
-          <button type="button" class="active" onclick="selectHotTubModel(this,'images/hottub/LSX 800.png','lsx 800 Hot Tub','Master Spas USA','Michael Phelps Legend Series hot tub with 8 seats and 72 jets.')">
-            <img src="images/hottub/LSX 800.png" alt="Palma Hot Tub" loading="lazy">
-            <span>LSX 800</span>
-          </button>
-          <button type="button" onclick="selectHotTubModel(this,'images/hottub/Lounge Divine.png','Happy Hot Tub','Platinum Spas UK','5 person hot tub with loungers, LED lighting, ozone and Bluetooth.')">
-            <img src="images/hottub/Lounge Divine.png" alt="Happy Hot Tub" loading="lazy">
-            <span>Happy</span>
-          </button>
-          <button type="button" onclick="selectHotTubModel(this,'images/hottub/Double 320 .png','Double 320 Hot Tub','Postcril','6 person premium hot tub with 52 jets and lounger seating.')">
-            <img src="images/hottub/Double 320 .png" alt="Santorini Hot Tub" loading="lazy">
-            <span>Double 320</span>
-          </button>
-          <button type="button" onclick="selectHotTubModel(this,'images/hottub/LSX 900.png','LSX 900 Hot Tub','Master Spas USA','Michael Phelps Legend Series hot tub with 8 seats and 72 jets.')">
-            <img src="images/hottub/LSX 900.png" alt="LSX 900 Hot Tub" loading="lazy">
-            <span>LSX 900</span>
-          </button>
-        </div>
-      </div>
 
-      <aside class="product-enquiry-panel">
-        <div class="enquiry-card">
-          <span class="availability"><i class="fa fa-circle-check"></i> Premium hydrotherapy collections</span>
-          <h2 id="hotTubModelName">Palma Hot Tub</h2>
-          <p id="hotTubModelDesc">5 person hot tub with 83 jets, Bluetooth and deep hydrotherapy.</p>
-          <div class="detail-price">Get Quote</div>
-          <div class="quick-specs">
-            <div><span>Brand</span><strong id="hotTubModelBrand">Platinum Spas UK</strong></div>
-            <div><span>Benefits</span><strong>Relaxation + muscle recovery</strong></div>
-            <div><span>Features</span><strong>Jets, LED, filtration</strong></div>
-            <div><span>Applications</span><strong>Villa, spa, resort, terrace</strong></div>
+  <!-- ==================== HERO ==================== -->
+  <section class="ht-hero">
+    <div class="ht-hero-container">
+
+      <div class="ht-hero-left">
+        <span class="ht-eyebrow">Hot Tubs · India</span>
+        <h1 class="ht-h1">
+          Built for <span class="ht-italic">rituals.</span><br>
+          Not bathrooms.
+        </h1>
+        <p class="ht-lede">
+          Twenty-plus hydrotherapy models from Platinum Spas UK, Michael Phelps Legend,
+          Portcril, Master Spas and Chilly Goats — delivered and commissioned across 23 cities.
+        </p>
+
+        <div class="ht-hero-stats">
+          <div class="ht-stat">
+            <div class="ht-stat-n">20<sup>+</sup></div>
+            <div class="ht-stat-l">Models</div>
           </div>
-          <div class="detail-actions">
-            <button type="button" onclick="addToCart(10,1);openCart();" class="detail-btn primary"><i class="fa fa-paper-plane"></i> Get Enquiry</button>
-            <a class="detail-btn whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20hot%20tubs.%20Please%20share%20details." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a class="detail-btn ghost" href="tel:+917756999108"><i class="fa fa-phone"></i> Call Now</a>
+          <div class="ht-stat">
+            <div class="ht-stat-n">5</div>
+            <div class="ht-stat-l">Brands</div>
           </div>
-          <p class="enquiry-note">Share your preferred capacity, space size and use case. Our team will suggest the right hot tub model.</p>
+          <div class="ht-stat">
+            <div class="ht-stat-n">90<sup>jets</sup></div>
+            <div class="ht-stat-l">Max config</div>
+          </div>
         </div>
-      </aside>
+
+        <div class="ht-hero-cta">
+          <a href="#ht-finder" class="ht-btn-primary">Find your hot tub <i class="fa fa-arrow-right"></i></a>
+          <a href="#ht-platinum" class="ht-btn-ghost">Browse all models</a>
+        </div>
+
+        <div class="ht-hero-trust">
+          <div class="ht-trust-item">
+            <strong>ISO Certified</strong>
+            <span>Factory-direct</span>
+          </div>
+          <div class="ht-trust-item">
+            <strong>23 Cities</strong>
+            <span>PAN-India service</span>
+          </div>
+          <div class="ht-trust-item">
+            <strong>15 Years</strong>
+            <span>Structural warranty</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ht-hero-right">
+        <div class="ht-hero-image">
+          <!-- TODO: replace with your actual hero lifestyle image -->
+          <img src="images/hottub/hottub.png" alt="Premium hot tub at dusk">
+        </div>
+
+        <div class="ht-hero-stamp">
+          <strong>15</strong>
+          year<br>warranty
+        </div>
+
+        <div class="ht-hero-tag ht-tag-1">
+          <span class="ht-tag-dot"></span>
+          <div>
+            <strong>38°C hydrotherapy</strong>
+            <span>Platinum Premium Shield</span>
+          </div>
+        </div>
+
+        <div class="ht-hero-tag ht-tag-2">
+          <span class="ht-tag-dot"></span>
+          <div>
+            <strong>90 jets max</strong>
+            <span>Onyx Premium</span>
+          </div>
+        </div>
+
+        <div class="ht-hero-brandstrip">
+          <span>Platinum Spas</span>
+          <span>Michael Phelps</span>
+          <span>Portcril</span>
+          <span>Chilly Goats</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section class="detail-section">
-    <div class="detail-section-head">
-      <span class="section-kicker">Overview</span>
-      <h2>Private hydrotherapy for everyday relaxation</h2>
-      <p>Hot tubs create a premium wellness experience with warm water, therapeutic jets and comfortable seating for recovery, stress relief and social relaxation.</p>
-    </div>
-    <div class="detail-feature-grid">
-      <div class="detail-feature"><i class="fa fa-spa"></i><h3>Hydrotherapy</h3><p>Precision jet systems target tired muscles and support full-body relaxation.</p></div>
-      <div class="detail-feature"><i class="fa fa-face-smile"></i><h3>Stress Relief</h3><p>Warm-water immersion helps create a calming daily wellness routine.</p></div>
-      <div class="detail-feature"><i class="fa fa-dumbbell"></i><h3>Muscle Recovery</h3><p>Ideal after workouts, sports activity or long days on your feet.</p></div>
-      <div class="detail-feature"><i class="fa fa-music"></i><h3>Luxury Features</h3><p>Selected models include Bluetooth, LED lighting, ozone and advanced controls.</p></div>
+
+  <!-- ==================== STICKY BRAND NAV ==================== -->
+ <nav class="ht-brandnav" id="ht-brandnav">
+  <div class="ht-brandnav-inner">
+    <span class="ht-brandnav-label">Jump to:</span>
+    <a href="#ht-platinum" class="ht-brandnav-link active">Platinum Spas</a>
+    <a href="#ht-master" class="ht-brandnav-link">Phelps Legend</a>
+    <a href="#ht-portcril" class="ht-brandnav-link">Portcril</a>
+  </div>
+</nav>
+
+
+  <!-- ==================== PRODUCT FINDER ==================== -->
+  <section class="ht-finder" id="ht-finder">
+    <div class="ht-finder-inner">
+      <div class="ht-finder-head">
+        <span class="ht-eyebrow">Product finder</span>
+        <h2>Find your perfect hot tub in 30 seconds</h2>
+        <p>Filter 20+ models by capacity, jets, range and brand. Your shortlist updates live.</p>
+      </div>
+
+      <div class="ht-filters">
+        <div class="ht-fg">
+          <label>Capacity</label>
+          <div class="ht-pills" data-filter="capacity">
+            <span class="ht-pill active" data-val="all">All</span>
+            <span class="ht-pill" data-val="3">3 person</span>
+            <span class="ht-pill" data-val="5">5 person</span>
+            <span class="ht-pill" data-val="6">6 person</span>
+          </div>
+        </div>
+
+        <div class="ht-fg">
+          <label>Jets</label>
+          <div class="ht-pills" data-filter="jets">
+            <span class="ht-pill active" data-val="all">All</span>
+            <span class="ht-pill" data-val="low">Under 50</span>
+            <span class="ht-pill" data-val="mid">50–80</span>
+            <span class="ht-pill" data-val="high">80+</span>
+          </div>
+        </div>
+
+        <div class="ht-fg">
+          <label>Range</label>
+          <div class="ht-pills" data-filter="range">
+            <span class="ht-pill active" data-val="all">All</span>
+            <span class="ht-pill" data-val="deluxe">Deluxe</span>
+            <span class="ht-pill" data-val="premium">Premium</span>
+          </div>
+        </div>
+
+        <div class="ht-fg">
+          <label>Brand</label>
+          <div class="ht-pills" data-filter="brand">
+            <span class="ht-pill active" data-val="all">All</span>
+            <span class="ht-pill" data-val="platinum">Platinum</span>
+            <span class="ht-pill" data-val="phelps">Phelps</span>
+            <span class="ht-pill" data-val="portcril">Portcril</span>
+            <span class="ht-pill" data-val="master">Master</span>
+            <span class="ht-pill" data-val="chilly">Chilly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ht-finder-count">
+        <span id="ht-match-count">10</span> models match your filters
+      </div>
     </div>
   </section>
 
-  <section class="detail-section detail-section-alt">
-    <div class="detail-two-col">
-      <div>
-        <span class="section-kicker">Brands</span>
-        <h2>Global hot tub brands for Indian homes and resorts</h2>
-        <p>Aquashark offers premium hot tubs for compact homes, luxury villas, resorts and professional wellness environments.</p>
+
+  <!-- ==================== PLATINUM SPAS — DELUXE RANGE ==================== -->
+  <section class="ht-brand-section" id="ht-platinum">
+    <div class="ht-brand-header">
+      <div class="ht-brand-header-inner">
+        <div class="ht-brand-flag">
+          <span class="ht-brand-flag-kicker">Official India distributor</span>
+          <h2>Platinum Spas <span class="ht-brand-origin">UK</span></h2>
+          <p>Britain's leading hot tub manufacturer. Every Platinum model ships with Premium Shield insulation, TP500 smart controls, SW Ozone water care, LED mood lighting and Bluetooth audio as standard.</p>
+        </div>
+        <div class="ht-brand-meta">
+          <div class="ht-brand-meta-item"><strong>10</strong><span>Models</span></div>
+          <div class="ht-brand-meta-item"><strong>36–90</strong><span>Jet range</span></div>
+          <div class="ht-brand-meta-item"><strong>3–6</strong><span>Person</span></div>
+        </div>
       </div>
-      <div class="model-list">
-        <div><strong>Platinum Spas UK</strong><span>Happy, Palma, Santorini, Maximus and premium hydrotherapy models</span></div>
-        <div><strong>Master Spas USA</strong><span>Legend Series and luxury spa collections</span></div>
-        <div><strong>Michael Phelps Legend Series</strong><span>High-performance hydrotherapy and comfort seating</span></div>
-        <div><strong>Portcril Spas Portugal</strong><span>European spa design and wellness solutions</span></div>
+    </div>
+
+    <!-- DELUXE SUBRANGE -->
+    <div class="ht-range-divider">
+      <span class="ht-range-badge ht-badge-deluxe">Deluxe Range</span>
+      <span class="ht-range-tag">Everyday luxury · 4 models</span>
+    </div>
+
+    <div class="ht-product-grid">
+
+      <!-- HAPPY -->
+      <article class="ht-card" data-brand="platinum" data-range="deluxe" data-capacity="5" data-jets="47">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-deluxe">Deluxe</span>
+            <img src="images/hottub/Happy-1-900x900.webp" alt="Happy hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Happy</h3>
+            <p class="ht-card-tagline">Family-friendly 5-seater with lounger comfort and classic hydrotherapy.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">47</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,000<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Happy%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Happy"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,000 × 2,000 × 900 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>3 seats + 2 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>304 kg</strong></div>
+              <div class="ht-spec-row"><span>Wet weight</span><strong>1,304 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 2 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.5 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- PALMA -->
+      <article class="ht-card" data-brand="platinum" data-range="deluxe" data-capacity="5" data-jets="83">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-deluxe">Deluxe</span>
+            <span class="ht-feature-badge"><i class="fa fa-bolt"></i> 83 Jets</span>
+            <img src="images/hottub/Palma-edited-900x900.webp" alt="Palma hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Palma</h3>
+            <p class="ht-card-tagline">High-jet Deluxe flagship — 83 precision jets for deep muscle hydrotherapy.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">83</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,000<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Palma%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Palma"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,000 × 2,000 × 900 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>5 seats + 1 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>336 kg</strong></div>
+              <div class="ht-spec-row"><span>Wet weight</span><strong>1,336 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 3 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.35 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- REFRESH -->
+      <article class="ht-card" data-brand="platinum" data-range="deluxe" data-capacity="6" data-jets="49">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-deluxe">Deluxe</span>
+            <img src="images/hottub/Refresh-edited-900x900.webp" alt="Refresh hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Refresh</h3>
+            <p class="ht-card-tagline">Spacious 6-seater with balanced jet performance for family wellness.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">49</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,000<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Refresh%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Refresh"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,000 × 2,000 × 900 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>3 seats + 1 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>306 kg</strong></div>
+              <div class="ht-spec-row"><span>Wet weight</span><strong>1,306 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 2 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.35 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- TAHITI -->
+      <article class="ht-card" data-brand="platinum" data-range="deluxe" data-capacity="3" data-jets="36">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-deluxe">Deluxe</span>
+            <span class="ht-feature-badge ht-badge-compact"><i class="fa fa-house"></i> Compact</span>
+            <img src="images/hottub/Tahiti-edited-900x900.webp" alt="Tahiti hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Tahiti</h3>
+            <p class="ht-card-tagline">Compact 3-seater for apartments and terraces — plug-and-play 13 Amp supply.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">3</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">36</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">900<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">13 Amp</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Tahiti%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Tahiti"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,130 × 1,650 × 870 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>4 seats</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>251 kg</strong></div>
+              <div class="ht-spec-row"><span>Wet weight</span><strong>1,151 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>2 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>1 × 2 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.35 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>13 Amp (plug-and-play)</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+    </div>
+
+    <!-- PREMIUM SUBRANGE -->
+    <div class="ht-range-divider">
+      <span class="ht-range-badge ht-badge-premium">Premium Range</span>
+      <span class="ht-range-tag">Flagship performance · 6 models</span>
+    </div>
+
+    <div class="ht-product-grid">
+
+      <!-- BARCELONA -->
+      <article class="ht-card" data-brand="platinum" data-range="premium" data-capacity="5" data-jets="52">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <img src="images/hottub/Barcelona-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Barcelona hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Barcelona</h3>
+            <p class="ht-card-tagline">Premium 5-seater with deeper 940mm shell and lounger geometry for full-body recovery.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">52</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">940<sup>mm</sup></div><div class="ht-hs-k">Depth</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Barcelona%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Barcelona"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,100 × 2,100 × 940 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>3 seats + 2 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>450 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 3 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.5 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- LOUNGE DIVINE -->
+      <article class="ht-card" data-brand="platinum" data-range="premium" data-capacity="3" data-jets="42">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <span class="ht-feature-badge ht-badge-matte"><i class="fa fa-circle"></i> Matte Black</span>
+            <img src="images/hottub/Lounge Divine.png" alt="Lounge Divine hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Lounge Divine</h3>
+            <p class="ht-card-tagline">Two-lounger flagship in signature matte black — twin recline for premium recovery.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">3</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">42</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,100<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Lounge%20Divine%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Lounge Divine"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,200 × 1,900 × 800 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>1 seat + 2 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>400 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finish</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-matteblack"></div><span>Matte Black</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- MAXIMUS -->
+      <article class="ht-card ht-card-featured" data-brand="platinum" data-range="premium" data-capacity="6" data-jets="52">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <span class="ht-feature-badge ht-badge-xl"><i class="fa fa-ruler-combined"></i> Largest footprint</span>
+            <img src="images/hottub/Maximus-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Maximus hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Maximus</h3>
+            <p class="ht-card-tagline">2.6m flagship 6-seater — three-pump system for maximum hydrotherapy distribution.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">52</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">2.6<sup>m</sup></div><div class="ht-hs-k">Length</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">3× Pumps</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Maximus%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Maximus"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,600 × 2,200 × 940 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>5 seats + 1 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>510 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>3 × 2 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.35 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- SANTORINI -->
+      <article class="ht-card" data-brand="platinum" data-range="premium" data-capacity="6" data-jets="52">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <span class="ht-feature-badge ht-badge-popular"><i class="fa fa-fire"></i> Best seller</span>
+            <img src="images/hottub/Santorini-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Santorini hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Santorini</h3>
+            <p class="ht-card-tagline">India's best-selling Platinum model — 6-person lounger layout with 52 balanced jets.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">52</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,100<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Santorini%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Santorini"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,100 × 2,100 × 940 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>5 seats + 1 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>490 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 3 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- KENYA -->
+      <article class="ht-card" data-brand="platinum" data-range="premium" data-capacity="5" data-jets="52">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <img src="images/hottub/Kenya-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Kenya hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Kenya</h3>
+            <p class="ht-card-tagline">Premium 5-seater with dual lounger configuration and safari-inspired styling.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">52</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">940<sup>mm</sup></div><div class="ht-hs-k">Depth</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">TP500</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Kenya%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Kenya"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,100 × 2,100 × 940 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>3 seats + 2 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>450 kg</strong></div>
+              <div class="ht-spec-row"><span>Heater</span><strong>3 kW</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>2 × 3 HP</strong></div>
+              <div class="ht-spec-row"><span>Circulation pump</span><strong>1 × 0.5 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <!-- ONYX -->
+      <article class="ht-card ht-card-featured" data-brand="platinum" data-range="premium" data-capacity="5" data-jets="90">
+        <div class="ht-card-top">
+          <div class="ht-card-img">
+            <span class="ht-range-chip ht-chip-premium">Premium</span>
+            <span class="ht-feature-badge ht-badge-top"><i class="fa fa-crown"></i> 90 Jets · Flagship</span>
+            <img src="images/hottub/Onyx-Overhead-View-AI-Gen-cropped-900x900.webp" alt="Onyx hot tub by Platinum Spas" loading="lazy">
+          </div>
+          <div class="ht-card-info">
+            <div class="ht-card-brand">Platinum Spas · UK</div>
+            <h3 class="ht-card-name">Onyx</h3>
+            <p class="ht-card-tagline">The jet king — 90 precision jets with four-pump system for uncompromising hydrotherapy.</p>
+
+            <div class="ht-herospecs">
+              <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+              <div><div class="ht-hs-v">90</div><div class="ht-hs-k">Jets</div></div>
+              <div><div class="ht-hs-v">1,100<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+            </div>
+
+            <div class="ht-chips">
+              <span class="ht-chip">Bluetooth</span>
+              <span class="ht-chip">LED</span>
+              <span class="ht-chip">SW Ozone</span>
+              <span class="ht-chip">4× Pumps</span>
+            </div>
+
+            <div class="ht-card-cta">
+              <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Onyx%20hot%20tub%20by%20Platinum%20Spas.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+              <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+              <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Onyx"> Compare</label>
+            </div>
+          </div>
+        </div>
+
+        <details class="ht-card-details">
+          <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+          <div class="ht-specs-grid">
+            <div class="ht-specs-block">
+              <h5>Technical</h5>
+              <div class="ht-spec-row"><span>Dimensions</span><strong>2,200 × 2,200 × 940 mm</strong></div>
+              <div class="ht-spec-row"><span>Seat layout</span><strong>3 seats + 2 lounger</strong></div>
+              <div class="ht-spec-row"><span>Dry weight</span><strong>490 kg</strong></div>
+              <div class="ht-spec-row"><span>Water capacity</span><strong>1,100 L</strong></div>
+              <div class="ht-spec-row"><span>Pumps</span><strong>4 × 2 HP</strong></div>
+              <div class="ht-spec-row"><span>Electrical</span><strong>32 Amp</strong></div>
+              <div class="ht-spec-row"><span>Insulation</span><strong>Platinum Premium Shield</strong></div>
+            </div>
+            <div class="ht-specs-block">
+              <h5>Acrylic finishes</h5>
+              <div class="ht-swatches">
+                <div class="ht-sw"><div class="ht-sw-dot ht-midnight"></div><span>Midnight Canyon</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-sterling"></div><span>Sterling Silver</span></div>
+                <div class="ht-sw"><div class="ht-sw-dot ht-odyssey"></div><span>Odyssey</span></div>
+              </div>
+              <h5 style="margin-top:20px;">What's included</h5>
+              <div class="ht-spec-row"><span>Steps</span><strong>Included</strong></div>
+              <div class="ht-spec-row"><span>Filters</span><strong>SS01 × 2</strong></div>
+              <div class="ht-spec-row"><span>Cabinet</span><strong>Grey</strong></div>
+              <div class="ht-spec-row"><span>Controls</span><strong>TP500</strong></div>
+            </div>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+     REPLACE the existing <section id="ht-phelps"> block
+     (the one with "ht-soon" placeholder) with THIS entire section.
+     The brand ID changes to ht-master since Michael Phelps Legend
+     Series IS the Master Spas co-engineered line — they're the
+     same products. Update your brand nav accordingly.
+   ============================================================ -->
+
+<!-- ==================== MASTER SPAS · MICHAEL PHELPS LEGEND SERIES ==================== -->
+<section class="ht-brand-section" id="ht-master">
+  <div class="ht-brand-header">
+    <div class="ht-brand-header-inner">
+      <div class="ht-brand-flag">
+        <span class="ht-brand-flag-kicker">Signature Series · Made in USA</span>
+        <h2>Michael Phelps Legend Series <span class="ht-brand-origin">by Master Spas</span></h2>
+        <p>Co-engineered with the most decorated Olympian of all time. The Legend Series pairs Master Spas' patented EcoPur® Charge filtration and StressRelief Neck &amp; Shoulder Seat™ with WiFi control, Orion LED lighting and Master Force Bio-Magnetic Therapy — hydrotherapy built for athletes, trusted by champions.</p>
+      </div>
+      <div class="ht-brand-meta">
+        <div class="ht-brand-meta-item"><strong>4</strong><span>Models</span></div>
+        <div class="ht-brand-meta-item"><strong>USA</strong><span>Made</span></div>
+        <div class="ht-brand-meta-item"><strong>WiFi</strong><span>Controlled</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ht-product-grid">
+
+    <!-- LSX 900 -->
+    <article class="ht-card ht-card-featured" data-brand="master" data-range="premium" data-capacity="8" data-jets="72">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Legend Series</span>
+          <span class="ht-feature-badge ht-badge-top"><i class="fa fa-crown"></i> Flagship · 8 seats</span>
+          <img src="images/hottub/LSX 900.png" alt="LSX 900 Michael Phelps Legend Series" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Michael Phelps Legend · USA</div>
+          <h3 class="ht-card-name">LSX 900</h3>
+          <p class="ht-card-tagline">True luxury flagship — 8-seat capacity with lounger and 72 stainless steel jets for the complete hydrotherapy experience.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">8</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">72</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">1,855<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">WiFi</span>
+            <span class="ht-chip">EcoPur® Charge</span>
+            <span class="ht-chip">Orion LED</span>
+            <span class="ht-chip">Bluetooth</span>
+            <span class="ht-chip">3× Pumps</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20LSX%20900%20Michael%20Phelps%20Legend%20Series%20hot%20tub.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="LSX 900"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Technical</h5>
+            <div class="ht-spec-row"><span>Dimensions</span><strong>275 × 239 × 97 cm</strong></div>
+            <div class="ht-spec-row"><span>Seating capacity</span><strong>8 people</strong></div>
+            <div class="ht-spec-row"><span>Dry weight</span><strong>674 kg</strong></div>
+            <div class="ht-spec-row"><span>Full weight</span><strong>3,200 kg</strong></div>
+            <div class="ht-spec-row"><span>Water capacity</span><strong>1,855 L (490 gallons)</strong></div>
+            <div class="ht-spec-row"><span>Stainless jets</span><strong>72 (incl. 2 Master Blasters®)</strong></div>
+            <div class="ht-spec-row"><span>Pumps</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Water features</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Power</span><strong>240 V / 50 Amp</strong></div>
+            <div class="ht-spec-row"><span>Filtration</span><strong>EcoPur® Charge</strong></div>
+            <div class="ht-spec-row"><span>LED lighting</span><strong>Orion Light System™</strong></div>
+            <div class="ht-spec-row"><span>Listing number</span><strong>1310</strong></div>
+          </div>
+          <div class="ht-specs-block">
+            <h5>Exclusive features</h5>
+            <div class="ht-spec-row"><span></span><strong>StressRelief Neck &amp; Shoulder Seat™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Master Force Bio-Magnetic Therapy</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Vac-Formed ABS Pan Bottom</strong></div>
+            <div class="ht-spec-row"><span></span><strong>WiFi Module</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Secondary Remote</strong></div>
+
+            <h5 style="margin-top:20px;">Premium options</h5>
+            <div class="ht-spec-row"><span></span><strong>Master Clear Salt System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>QuietFlo Water Care System™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Fusion Air Sound System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Bluetooth Speaker</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- LSX 850 -->
+    <article class="ht-card" data-brand="master" data-range="premium" data-capacity="7" data-jets="59">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Legend Series</span>
+          <span class="ht-feature-badge ht-badge-open"><i class="fa fa-users"></i> Open seating</span>
+          <img src="images/hottub/LSX 850.jpg" alt="LSX 850 Michael Phelps Legend Series" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Michael Phelps Legend · USA</div>
+          <h3 class="ht-card-name">LSX 850</h3>
+          <p class="ht-card-tagline">Legend Series luxury with open seating — perfect for social hydrotherapy with LED lighting and waterfalls.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">7</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">59</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">1,495<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">WiFi</span>
+            <span class="ht-chip">EcoPur® Charge</span>
+            <span class="ht-chip">Orion LED</span>
+            <span class="ht-chip">Waterfalls</span>
+            <span class="ht-chip">3× Pumps</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20LSX%20850%20Michael%20Phelps%20Legend%20Series%20hot%20tub.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="LSX 850"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Technical</h5>
+            <div class="ht-spec-row"><span>Dimensions</span><strong>239 × 239 × 97 cm</strong></div>
+            <div class="ht-spec-row"><span>Seating capacity</span><strong>7 people</strong></div>
+            <div class="ht-spec-row"><span>Dry weight</span><strong>531 kg</strong></div>
+            <div class="ht-spec-row"><span>Full weight</span><strong>2,613 kg</strong></div>
+            <div class="ht-spec-row"><span>Water capacity</span><strong>1,495 L (395 gallons)</strong></div>
+            <div class="ht-spec-row"><span>Stainless jets</span><strong>59 (incl. 2 Master Blasters®)</strong></div>
+            <div class="ht-spec-row"><span>Pumps</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Water features</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Power</span><strong>240 V / 50 Amp</strong></div>
+            <div class="ht-spec-row"><span>Filtration</span><strong>EcoPur® Charge</strong></div>
+            <div class="ht-spec-row"><span>LED lighting</span><strong>Orion Light System™</strong></div>
+            <div class="ht-spec-row"><span>Listing number</span><strong>9923</strong></div>
+          </div>
+          <div class="ht-specs-block">
+            <h5>Exclusive features</h5>
+            <div class="ht-spec-row"><span></span><strong>StressRelief Neck &amp; Shoulder Seat™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Master Force Bio-Magnetic Therapy</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Vac-Formed ABS Pan Bottom</strong></div>
+            <div class="ht-spec-row"><span></span><strong>WiFi Module</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Secondary Remote</strong></div>
+
+            <h5 style="margin-top:20px;">Premium options</h5>
+            <div class="ht-spec-row"><span></span><strong>Master Clear Salt System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>QuietFlo Water Care System™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Fusion Air Sound System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Bluetooth Speaker</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- LSX 800 -->
+    <article class="ht-card" data-brand="master" data-range="premium" data-capacity="6" data-jets="70">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Legend Series</span>
+          <span class="ht-feature-badge ht-badge-popular"><i class="fa fa-bolt"></i> 70 Orbit jets</span>
+          <img src="images/hottub/LSX 800.png" alt="LSX 800 Michael Phelps Legend Series" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Michael Phelps Legend · USA</div>
+          <h3 class="ht-card-name">LSX 800</h3>
+          <p class="ht-card-tagline">Premium 6-seater with 70 Orbit jets, lounger seating and Master Blaster® Foot Therapy.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">70</div><div class="ht-hs-k">Orbit jets</div></div>
+            <div><div class="ht-hs-v">1,552<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">WiFi</span>
+            <span class="ht-chip">EcoPur® Charge</span>
+            <span class="ht-chip">Orion LED</span>
+            <span class="ht-chip">Foot Therapy</span>
+            <span class="ht-chip">3× Pumps</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20LSX%20800%20Michael%20Phelps%20Legend%20Series%20hot%20tub.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="LSX 800"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Technical</h5>
+            <div class="ht-spec-row"><span>Dimensions</span><strong>239 × 239 × 97 cm</strong></div>
+            <div class="ht-spec-row"><span>Seating capacity</span><strong>6 people</strong></div>
+            <div class="ht-spec-row"><span>Dry weight</span><strong>603 kg</strong></div>
+            <div class="ht-spec-row"><span>Full weight</span><strong>2,658 kg</strong></div>
+            <div class="ht-spec-row"><span>Water capacity</span><strong>1,552 L (410 gallons)</strong></div>
+            <div class="ht-spec-row"><span>Stainless jets</span><strong>70 (incl. 2 Master Blasters®)</strong></div>
+            <div class="ht-spec-row"><span>Pumps</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Water features</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Power</span><strong>240 V / 50 Amp</strong></div>
+            <div class="ht-spec-row"><span>Filtration</span><strong>EcoPur® Charge</strong></div>
+            <div class="ht-spec-row"><span>LED lighting</span><strong>Orion Light System™</strong></div>
+            <div class="ht-spec-row"><span>Listing number</span><strong>1290</strong></div>
+          </div>
+          <div class="ht-specs-block">
+            <h5>Exclusive features</h5>
+            <div class="ht-spec-row"><span></span><strong>StressRelief Neck &amp; Shoulder Seat™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Master Force Bio-Magnetic Therapy</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Vac-Formed ABS Pan Bottom</strong></div>
+            <div class="ht-spec-row"><span></span><strong>WiFi Module</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Secondary Remote</strong></div>
+
+            <h5 style="margin-top:20px;">Premium options</h5>
+            <div class="ht-spec-row"><span></span><strong>Master Clear Salt System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>QuietFlo Water Care System™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Fusion Air Sound System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Bluetooth Speaker</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- LSX 700 -->
+    <article class="ht-card" data-brand="master" data-range="premium" data-capacity="5" data-jets="62">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Legend Series</span>
+          <span class="ht-feature-badge ht-badge-popular"><i class="fa fa-fire"></i> Best seller</span>
+          <img src="images/hottub/lsx700.jpg" alt="LSX 700 Michael Phelps Legend Series" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Michael Phelps Legend · USA</div>
+          <h3 class="ht-card-name">LSX 700</h3>
+          <p class="ht-card-tagline">The perennial best-seller — deep StressRelief Seat™, contoured lounger and 62 powerful jets in a compact 5-seater.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">62</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">1,155<sup>L</sup></div><div class="ht-hs-k">Capacity</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">WiFi</span>
+            <span class="ht-chip">EcoPur® Charge</span>
+            <span class="ht-chip">Orion LED</span>
+            <span class="ht-chip">Lounger</span>
+            <span class="ht-chip">3× Pumps</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20LSX%20700%20Michael%20Phelps%20Legend%20Series%20hot%20tub.%20Please%20share%20price%20and%20details." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Get price on WhatsApp</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="LSX 700"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>View full specifications <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Technical</h5>
+            <div class="ht-spec-row"><span>Dimensions</span><strong>214 × 214 × 97 cm</strong></div>
+            <div class="ht-spec-row"><span>Seating capacity</span><strong>5 people</strong></div>
+            <div class="ht-spec-row"><span>Dry weight</span><strong>497 kg</strong></div>
+            <div class="ht-spec-row"><span>Full weight</span><strong>2,071 kg</strong></div>
+            <div class="ht-spec-row"><span>Water capacity</span><strong>1,155 L (305 gallons)</strong></div>
+            <div class="ht-spec-row"><span>Stainless jets</span><strong>62 (incl. 2 Master Blasters®)</strong></div>
+            <div class="ht-spec-row"><span>Pumps</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Water features</span><strong>3</strong></div>
+            <div class="ht-spec-row"><span>Power</span><strong>240 V / 50 Amp</strong></div>
+            <div class="ht-spec-row"><span>Filtration</span><strong>EcoPur® Charge</strong></div>
+            <div class="ht-spec-row"><span>LED lighting</span><strong>Orion Light System™</strong></div>
+            <div class="ht-spec-row"><span>Listing number</span><strong>1280</strong></div>
+          </div>
+          <div class="ht-specs-block">
+            <h5>Exclusive features</h5>
+            <div class="ht-spec-row"><span></span><strong>StressRelief Neck &amp; Shoulder Seat™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Master Force Bio-Magnetic Therapy</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Vac-Formed ABS Pan Bottom</strong></div>
+            <div class="ht-spec-row"><span></span><strong>WiFi Module</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Secondary Remote</strong></div>
+
+            <h5 style="margin-top:20px;">Premium options</h5>
+            <div class="ht-spec-row"><span></span><strong>Master Clear Salt System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>QuietFlo Water Care System™</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Fusion Air Sound System</strong></div>
+            <div class="ht-spec-row"><span></span><strong>Bluetooth Speaker</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+
+
+
+<!-- ==================== PORTCRIL ==================== -->
+<section class="ht-brand-section" id="ht-portcril">
+  <div class="ht-brand-header">
+    <div class="ht-brand-header-inner">
+      <div class="ht-brand-flag">
+        <span class="ht-brand-flag-kicker">European wellness · Portugal</span>
+        <h2>Portcril <span class="ht-brand-origin">Portugal</span></h2>
+        <p>Portuguese spa design with minimalist European aesthetics. Portcril specialises in architect-led hot tubs with their Essential and Double collections — curated for boutique resorts and design-forward Indian residences.</p>
+      </div>
+      <div class="ht-brand-meta">
+        <div class="ht-brand-meta-item"><strong>5</strong><span>Models</span></div>
+        <div class="ht-brand-meta-item"><strong>EU</strong><span>Standards</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESSENTIAL RANGE -->
+  <div class="ht-range-divider">
+    <span class="ht-range-badge ht-badge-deluxe">Essential Range</span>
+    <span class="ht-range-tag">Minimalist European design · 2 models</span>
+  </div>
+
+  <div class="ht-product-grid">
+
+    <!-- ESSENTIAL 2 -->
+    <article class="ht-card" data-brand="portcril" data-range="deluxe" data-capacity="2" data-jets="0">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-deluxe">Essential</span>
+          <span class="ht-feature-badge ht-badge-compact"><i class="fa fa-house"></i> Compact couple</span>
+          <img src="images/hottub/essential2.png" alt="Portcril Essential 2 hot tub" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Portcril · Portugal</div>
+          <h3 class="ht-card-name">Essential 2</h3>
+          <p class="ht-card-tagline">Intimate 2-seater in signature Portuguese minimalist design — for balconies, terraces and design-led compact spaces.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">2</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">—</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">EU</div><div class="ht-hs-k">Made</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">European design</span>
+            <span class="ht-chip">Compact</span>
+            <span class="ht-chip">Architect-led</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Portcril%20Essential%202%20hot%20tub.%20Please%20share%20full%20specs%20and%20price." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Request full specs</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Essential 2"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>Detailed specifications coming soon <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Specifications</h5>
+            <p style="font-size:12px;color:#64748b;margin:0;line-height:1.6;">The Portcril India catalogue is being finalised. For complete dimensions, jet count, pumps and features, please reach us on WhatsApp — we'll share the full PDF brochure within 24 hours.</p>
+          </div>
+          <div class="ht-specs-block">
+            <h5>What to expect</h5>
+            <div class="ht-spec-row"><span>Origin</span><strong>Portugal · EU</strong></div>
+            <div class="ht-spec-row"><span>Design language</span><strong>Minimalist European</strong></div>
+            <div class="ht-spec-row"><span>Installation</span><strong>Terrace / balcony</strong></div>
+            <div class="ht-spec-row"><span>Best for</span><strong>Couples, compact spaces</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- ESSENTIAL 4 -->
+    <article class="ht-card" data-brand="portcril" data-range="deluxe" data-capacity="4" data-jets="0">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-deluxe">Essential</span>
+          <img src="images/hottub/essential4.png" alt="Portcril Essential 4 hot tub" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Portcril · Portugal</div>
+          <h3 class="ht-card-name">Essential 4</h3>
+          <p class="ht-card-tagline">Family-sized 4-seater with the same Portuguese design DNA — scaled for small families and boutique hospitality.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">4</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">—</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">EU</div><div class="ht-hs-k">Made</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">European design</span>
+            <span class="ht-chip">Family-sized</span>
+            <span class="ht-chip">Architect-led</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Portcril%20Essential%204%20hot%20tub.%20Please%20share%20full%20specs%20and%20price." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Request full specs</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Essential 4"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>Detailed specifications coming soon <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Specifications</h5>
+            <p style="font-size:12px;color:#64748b;margin:0;line-height:1.6;">The Portcril India catalogue is being finalised. For complete dimensions, jet count, pumps and features, please reach us on WhatsApp — we'll share the full PDF brochure within 24 hours.</p>
+          </div>
+          <div class="ht-specs-block">
+            <h5>What to expect</h5>
+            <div class="ht-spec-row"><span>Origin</span><strong>Portugal · EU</strong></div>
+            <div class="ht-spec-row"><span>Design language</span><strong>Minimalist European</strong></div>
+            <div class="ht-spec-row"><span>Installation</span><strong>Villa / terrace / resort</strong></div>
+            <div class="ht-spec-row"><span>Best for</span><strong>Small families, boutique stays</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+  </div>
+
+  <!-- DOUBLE RANGE -->
+  <div class="ht-range-divider">
+    <span class="ht-range-badge ht-badge-premium">Double Range</span>
+    <span class="ht-range-tag">Flagship resort collection · 3 models</span>
+  </div>
+
+  <div class="ht-product-grid">
+
+    <!-- DOUBLE 320 -->
+    <article class="ht-card" data-brand="portcril" data-range="premium" data-capacity="5" data-jets="0">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Double</span>
+          <img src="images/hottub/Double 320 .png" alt="Portcril Double 320 hot tub" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Portcril · Portugal</div>
+          <h3 class="ht-card-name">Double 320</h3>
+          <p class="ht-card-tagline">Entry flagship of the Double collection — premium Portuguese hydrotherapy for mid-sized installations.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">5</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">—</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">3.2<sup>m</sup></div><div class="ht-hs-k">Class</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">European design</span>
+            <span class="ht-chip">Resort-grade</span>
+            <span class="ht-chip">Hydrotherapy</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Portcril%20Double%20320%20hot%20tub.%20Please%20share%20full%20specs%20and%20price." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Request full specs</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Double 320"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>Detailed specifications coming soon <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Specifications</h5>
+            <p style="font-size:12px;color:#64748b;margin:0;line-height:1.6;">The Portcril Double 320 India catalogue is being finalised. For complete dimensions, jet count, pumps and features, please reach us on WhatsApp — we'll share the full PDF brochure within 24 hours.</p>
+          </div>
+          <div class="ht-specs-block">
+            <h5>What to expect</h5>
+            <div class="ht-spec-row"><span>Origin</span><strong>Portugal · EU</strong></div>
+            <div class="ht-spec-row"><span>Collection</span><strong>Double (flagship)</strong></div>
+            <div class="ht-spec-row"><span>Installation</span><strong>Villa / resort / spa</strong></div>
+            <div class="ht-spec-row"><span>Best for</span><strong>Premium residences</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- DOUBLE 520 -->
+    <article class="ht-card" data-brand="portcril" data-range="premium" data-capacity="6" data-jets="0">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Double</span>
+          <img src="images/hottub/double520.png" alt="Portcril Double 520 hot tub" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Portcril · Portugal</div>
+          <h3 class="ht-card-name">Double 520</h3>
+          <p class="ht-card-tagline">Mid-flagship of the Double collection — larger footprint with expanded seating for resort and wellness applications.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">6</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">—</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">5.2<sup>m</sup></div><div class="ht-hs-k">Class</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">European design</span>
+            <span class="ht-chip">Resort-grade</span>
+            <span class="ht-chip">Expanded seating</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Portcril%20Double%20520%20hot%20tub.%20Please%20share%20full%20specs%20and%20price." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Request full specs</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Double 520"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>Detailed specifications coming soon <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Specifications</h5>
+            <p style="font-size:12px;color:#64748b;margin:0;line-height:1.6;">The Portcril Double 520 India catalogue is being finalised. For complete dimensions, jet count, pumps and features, please reach us on WhatsApp — we'll share the full PDF brochure within 24 hours.</p>
+          </div>
+          <div class="ht-specs-block">
+            <h5>What to expect</h5>
+            <div class="ht-spec-row"><span>Origin</span><strong>Portugal · EU</strong></div>
+            <div class="ht-spec-row"><span>Collection</span><strong>Double (flagship)</strong></div>
+            <div class="ht-spec-row"><span>Installation</span><strong>Resort / wellness spa</strong></div>
+            <div class="ht-spec-row"><span>Best for</span><strong>Commercial hospitality</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+    <!-- DOUBLE 620 -->
+    <article class="ht-card ht-card-featured" data-brand="portcril" data-range="premium" data-capacity="6" data-jets="0">
+      <div class="ht-card-top">
+        <div class="ht-card-img">
+          <span class="ht-range-chip ht-chip-premium">Double</span>
+          <span class="ht-feature-badge ht-badge-top"><i class="fa fa-crown"></i> Flagship</span>
+          <img src="images/hottub/double 620.png" alt="Portcril Double 620 hot tub" loading="lazy">
+        </div>
+        <div class="ht-card-info">
+          <div class="ht-card-brand">Portcril · Portugal</div>
+          <h3 class="ht-card-name">Double 620</h3>
+          <p class="ht-card-tagline">Top-of-range Portcril flagship — the largest Double collection model for premium resorts and architect projects.</p>
+
+          <div class="ht-herospecs">
+            <div><div class="ht-hs-v">6+</div><div class="ht-hs-k">People</div></div>
+            <div><div class="ht-hs-v">—</div><div class="ht-hs-k">Jets</div></div>
+            <div><div class="ht-hs-v">6.2<sup>m</sup></div><div class="ht-hs-k">Class</div></div>
+          </div>
+
+          <div class="ht-chips">
+            <span class="ht-chip">European design</span>
+            <span class="ht-chip">Architect projects</span>
+            <span class="ht-chip">Flagship</span>
+          </div>
+
+          <div class="ht-card-cta">
+            <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20the%20Portcril%20Double%20620%20hot%20tub.%20Please%20share%20full%20specs%20and%20price." target="_blank" rel="noopener" class="ht-btn-wa"><i class="fab fa-whatsapp"></i> Request full specs</a>
+            <a href="tel:+917756999108" class="ht-btn-call" aria-label="Call Aquashark"><i class="fa fa-phone"></i></a>
+            <label class="ht-compare"><input type="checkbox" class="ht-compare-check" data-model="Double 620"> Compare</label>
+          </div>
+        </div>
+      </div>
+
+      <details class="ht-card-details">
+        <summary>Detailed specifications coming soon <i class="fa fa-chevron-down"></i></summary>
+        <div class="ht-specs-grid">
+          <div class="ht-specs-block">
+            <h5>Specifications</h5>
+            <p style="font-size:12px;color:#64748b;margin:0;line-height:1.6;">The Portcril Double 620 India catalogue is being finalised. For complete dimensions, jet count, pumps and features, please reach us on WhatsApp — we'll share the full PDF brochure within 24 hours.</p>
+          </div>
+          <div class="ht-specs-block">
+            <h5>What to expect</h5>
+            <div class="ht-spec-row"><span>Origin</span><strong>Portugal · EU</strong></div>
+            <div class="ht-spec-row"><span>Collection</span><strong>Double (top flagship)</strong></div>
+            <div class="ht-spec-row"><span>Installation</span><strong>Luxury resort / architect</strong></div>
+            <div class="ht-spec-row"><span>Best for</span><strong>Premium hospitality, design projects</strong></div>
+          </div>
+        </div>
+      </details>
+    </article>
+
+  </div>
+</section>
+
+
+  
+
+
+  <!-- ==================== WHAT'S INCLUDED ==================== -->
+  <section class="ht-included">
+    <div class="ht-included-inner">
+      <span class="ht-eyebrow">Every hot tub includes</span>
+      <h2>No hidden costs. Everything you need, in the box.</h2>
+      <div class="ht-included-grid">
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-stairs"></i></div>
+          <h4>Matching steps</h4>
+          <p>Safety-textured entry steps finished to match your cabinet colour.</p>
+        </div>
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-filter"></i></div>
+          <h4>SS01 filters × 2</h4>
+          <p>Twin pleated cartridge filters — easy swap, no tools required.</p>
+        </div>
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-shield-halved"></i></div>
+          <h4>Insulated cover</h4>
+          <p>Locking thermal cover to hold temperature and cut running costs.</p>
+        </div>
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-screwdriver-wrench"></i></div>
+          <h4>Installation support</h4>
+          <p>Site survey, delivery coordination and commissioning by authorized technicians.</p>
+        </div>
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-headset"></i></div>
+          <h4>After-sales care</h4>
+          <p>Dedicated service desk across 23 cities plus manufacturer-backed warranty.</p>
+        </div>
+        <div class="ht-inc-item">
+          <div class="ht-inc-icon"><i class="fa fa-graduation-cap"></i></div>
+          <h4>Owner onboarding</h4>
+          <p>Walkthrough of controls, chemistry and routine maintenance at handover.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="detail-section">
-    <div class="detail-two-col">
-      <div>
-        <span class="section-kicker">Applications</span>
-        <h2>Designed for luxury homes, hospitality and spa spaces</h2>
-        <p>Hot tubs can be installed as a standalone wellness feature or as part of a complete pool, sauna and recovery zone.</p>
+
+  <!-- ==================== BUYING GUIDE ==================== -->
+  <section class="ht-guide">
+    <div class="ht-guide-inner">
+      <div class="ht-guide-head">
+        <span class="ht-eyebrow">Buyer's guide</span>
+        <h2>How to choose the right hot tub</h2>
+        <p>Four decisions drive the right fit. Our consultants walk you through each during your site survey — here's the short version.</p>
       </div>
-      <div class="application-grid">
-        <span>Luxury villas</span>
-        <span>Private terraces</span>
-        <span>Boutique resorts</span>
-        <span>Wellness spas</span>
-        <span>Hotels</span>
-        <span>Fitness recovery zones</span>
+      <div class="ht-guide-grid">
+        <div class="ht-guide-item">
+          <div class="ht-guide-num">01</div>
+          <h4>Capacity</h4>
+          <p>Count the adults who'll use it <em>regularly</em>, not occasionally. 3-person tubs suit couples; 5–6 person tubs suit families and entertainers.</p>
+        </div>
+        <div class="ht-guide-item">
+          <div class="ht-guide-num">02</div>
+          <h4>Jets</h4>
+          <p>More jets ≠ better. 40–55 jets is ideal for most. 80+ jet tubs like Onyx or Palma suit serious hydrotherapy and post-workout recovery users.</p>
+        </div>
+        <div class="ht-guide-item">
+          <div class="ht-guide-num">03</div>
+          <h4>Electrical supply</h4>
+          <p>32 Amp hardwired is standard. 13 Amp plug-and-play (Tahiti) fits apartments and existing sockets — lower heating speed is the trade-off.</p>
+        </div>
+        <div class="ht-guide-item">
+          <div class="ht-guide-num">04</div>
+          <h4>Space & access</h4>
+          <p>Measure the delivery path, not just the install spot. A 2.6m Maximus needs clearance through gates, stairs and lifts — our team surveys free of charge.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-band">
-    <div class="cta-band-inner">
-      <div class="cta-band-text">
-        <h2>Choose Your Hot Tub</h2>
-        <p>Tell us your preferred seating capacity and space. We will recommend the right model for your home or project.</p>
+
+  <!-- ==================== APPLICATIONS ==================== -->
+  <section class="ht-apps">
+    <div class="ht-apps-inner">
+      <div class="ht-apps-head">
+        <span class="ht-eyebrow">Applications</span>
+        <h2>Where our hot tubs are installed</h2>
       </div>
-      <a href="contact.html" class="cta-band-btn">Get Quote</a>
+      <div class="ht-apps-grid">
+        <div class="ht-app">
+          <i class="fa fa-house-chimney"></i>
+          <strong>Luxury villas</strong>
+          <span>Private wellness, year-round use</span>
+        </div>
+        <div class="ht-app">
+          <i class="fa fa-hotel"></i>
+          <strong>Boutique resorts</strong>
+          <span>Spa rooms and poolside suites</span>
+        </div>
+        <div class="ht-app">
+          <i class="fa fa-mountain-city"></i>
+          <strong>Private terraces</strong>
+          <span>Rooftops, balconies, penthouses</span>
+        </div>
+        <div class="ht-app">
+          <i class="fa fa-spa"></i>
+          <strong>Wellness spas</strong>
+          <span>Recovery and hydrotherapy lounges</span>
+        </div>
+        <div class="ht-app">
+          <i class="fa fa-dumbbell"></i>
+          <strong>Fitness clubs</strong>
+          <span>Post-workout recovery zones</span>
+        </div>
+        <div class="ht-app">
+          <i class="fa fa-building"></i>
+          <strong>Hotels</strong>
+          <span>Presidential suites and VIP floors</span>
+        </div>
+      </div>
     </div>
   </section>
+
+
+  <!-- ==================== FAQ ==================== -->
+  <section class="ht-faq">
+    <div class="ht-faq-inner">
+      <div class="ht-faq-head">
+        <span class="ht-eyebrow">FAQ</span>
+        <h2>Questions we hear every week</h2>
+      </div>
+
+      <div class="ht-faq-list">
+        <details class="ht-faq-item">
+          <summary>How long does delivery and installation take?<i class="fa fa-plus"></i></summary>
+          <p>Pan-India delivery typically takes 2–4 weeks from order confirmation, depending on model availability and your city. Installation itself is a 1-day job for most models once site prep is complete — our team handles the site survey, electrical coordination and commissioning.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>Do hot tubs work in Indian summers?<i class="fa fa-plus"></i></summary>
+          <p>Yes. All Platinum Spas models have programmable temperature control between roughly 5°C and 40°C, so you can run them cooler during Indian summers as a chill pool, and warmer in winter or monsoon as classic hydrotherapy. Premium Shield insulation also keeps running costs down year-round.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>What electrical supply do I need?<i class="fa fa-plus"></i></summary>
+          <p>Most Platinum hot tubs need a 32 Amp hardwired connection with an RCD-protected dedicated circuit. The Tahiti model runs on a standard 13 Amp plug-and-play socket, which makes it suitable for apartments and retrofits. Our site survey confirms requirements before installation.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>What's the running cost in India?<i class="fa fa-plus"></i></summary>
+          <p>Running costs depend on usage, climate and insulation tier. Platinum Premium Shield insulation (standard on all models) is engineered for thermal efficiency — typical monthly electricity for a well-insulated tub in regular family use runs in a modest band. Exact estimates are provided with your quote based on model and city.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>Is the warranty honoured across India?<i class="fa fa-plus"></i></summary>
+          <p>Yes. Aquashark is the authorized India distributor — warranty claims are handled directly by our service network across 23 cities plus 4 overseas locations. No routing through overseas support.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>Can I install a hot tub on my terrace?<i class="fa fa-plus"></i></summary>
+          <p>Often yes, but terrace installation depends on structural load capacity, drainage, electrical access and access path. A filled tub with people inside can weigh 1,500+ kg — our site survey includes a structural check and will flag if reinforcement is needed.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>What's the difference between Deluxe and Premium ranges?<i class="fa fa-plus"></i></summary>
+          <p>Deluxe models prioritise everyday family use with standard shell depths (870–900mm) and typical jet counts. Premium models feature deeper 940mm shells, more advanced jet distribution, often higher-capacity pumps, and Platinum's top-tier build — suited to serious hydrotherapy and design-led installations.</p>
+        </details>
+
+        <details class="ht-faq-item">
+          <summary>Do you ship to other countries?<i class="fa fa-plus"></i></summary>
+          <p>Yes. In addition to 23 Indian cities, Aquashark serves the UAE, Qatar, Oman and Saudi Arabia. WhatsApp us for international delivery, customs and installation coordination.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="ht-final-cta">
+    <div class="ht-final-inner">
+      <div class="ht-final-text">
+        <span class="ht-eyebrow">Ready when you are</span>
+        <h2>Talk to a hot tub specialist</h2>
+        <p>Share your space, capacity preference and use case. We'll recommend the right model and send a complete quote — usually within 24 hours on WhatsApp.</p>
+      </div>
+      <div class="ht-final-actions">
+        <a href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20want%20to%20discuss%20hot%20tub%20options%20for%20my%20space.%20Please%20share%20catalogue%20and%20pricing." target="_blank" rel="noopener" class="ht-btn-wa ht-btn-lg"><i class="fab fa-whatsapp"></i> WhatsApp now</a>
+        <a href="tel:+917756999108" class="ht-btn-ghost ht-btn-lg"><i class="fa fa-phone"></i> +91 77569 99108</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== COMPARE TRAY (fixed bottom) ==================== -->
+  <div class="ht-compare-tray" id="ht-compare-tray">
+    <div class="ht-compare-tray-inner">
+      <div class="ht-compare-items" id="ht-compare-items"></div>
+      <button type="button" class="ht-btn-primary" id="ht-compare-open" disabled>Compare <span id="ht-compare-count">0</span> models</button>
+      <button type="button" class="ht-compare-close" id="ht-compare-close" aria-label="Clear comparison">×</button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE MODAL ==================== -->
+  <div class="ht-compare-modal" id="ht-compare-modal">
+    <div class="ht-compare-modal-inner">
+      <button type="button" class="ht-compare-modal-close" id="ht-compare-modal-close" aria-label="Close">×</button>
+      <h2>Side-by-side comparison</h2>
+      <div class="ht-compare-table-wrap">
+        <table class="ht-compare-table" id="ht-compare-table"></table>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <footer>
@@ -282,6 +1841,6 @@
 </div>
 
 <div id="toast-container"></div>
-<script src="script.js"></script>
+<script src="hottubs.js"></script>
 </body>
 </html>

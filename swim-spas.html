@@ -15,6 +15,355 @@
 </head>
 <body>
 
+<style>
+  
+/* =========================
+   PREMIUM HERO
+========================= */
+
+.hero-premium {
+  padding: 120px 5%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(14,165,233,0.15), transparent 40%),
+    linear-gradient(180deg, #f8fbff, #ffffff);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.hero-badge {
+  background: #e0f2fe;
+  color: #0284c7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero-left h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin: 14px 0;
+  color: #0f172a;
+}
+
+.hero-left p {
+  color: #475569;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* features */
+.hero-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.hero-features div {
+  background: white;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-weight: 500;
+}
+
+/* buttons */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+
+/* RIGHT SIDE */
+.hero-right {
+  position: relative;
+}
+
+/* main image */
+.hero-image-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+}
+
+.hero-image-wrap img {
+  width: 100%;
+  display: block;
+}
+
+/* floating cards */
+.hero-float {
+  position: absolute;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-float span {
+  font-size: 12px;
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.hero-float strong {
+  display: block;
+  font-size: 14px;
+}
+
+.float-1 {
+  top: -20px;
+  left: -20px;
+}
+
+.float-2 {
+  bottom: -20px;
+  right: -20px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left h1 {
+    font-size: 36px;
+  }
+
+  .hero-features {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+   BRAND BLOCK
+========================= */
+
+.brand-block {
+  padding: 80px 5%;
+  background: #ffffff;
+}
+
+.brand-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.section-kicker {
+  font-size: 12px;
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.brand-head h2 {
+  font-size: 30px;
+  margin: 8px 0;
+  color: #0f172a;
+}
+
+.brand-head p {
+  color: #475569;
+}
+
+/* Tabs */
+.brand-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.brand-tab {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.brand-tab.active {
+  background: #0f172a;
+  color: white;
+}
+
+
+/* Grid */
+.brand-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+}
+
+/* Image */
+.brand-visual img {
+  width: 100%;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+
+/* Spec Card */
+.brand-spec-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.brand-spec-card h3 {
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+
+/* Spec Grid */
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.spec-grid div {
+  border-bottom: 1px dashed #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.spec-grid span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.spec-grid strong {
+  display: block;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+
+/* Buttons */
+.brand-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #0284c7;
+}
+
+.btn-ghost {
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+
+/* Placeholder sections */
+.brand-placeholder {
+  padding: 40px;
+  background: #f8fafc;
+  border-radius: 12px;
+  text-align: center;
+  color: #64748b;
+}
+
+
+/* =========================
+   COMPARISON
+========================= */
+
+.comparison {
+  padding: 80px 5%;
+  background: #f8fafc;
+}
+
+.comparison h2 {
+  margin-bottom: 20px;
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.comparison th,
+.comparison td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.comparison th {
+  background: #f1f5f9;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-band {
+  padding: 80px 5%;
+  text-align: center;
+  background: #0f172a;
+  color: white;
+}
+
+.cta-band h2 {
+  margin-bottom: 10px;
+}
+
+.cta-band p {
+  margin-bottom: 20px;
+  color: #cbd5f5;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .swimspa-hero-inner,
+  .brand-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-head {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+</style>
+
 <div class="top-bar">
   <div class="top-bar-inner">
     <span><i class="fa fa-phone" style="color:var(--aqua-light);margin-right:5px;"></i>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span>
@@ -91,118 +440,266 @@
     </div>
   </div>
 </header>
-
 <main>
-  <section class="product-detail-hero">
-    <div class="product-detail-wrap">
-      <div class="product-visual-panel">
-        <span class="detail-kicker">Swim Spas India</span>
-        <h1>Train Hard. Swim Smart.</h1>
-        <p>A swim spa combines resistance swimming, hydrotherapy seating and temperature control in one compact wellness unit for villas, gyms and recovery zones.</p>
-        <div class="detail-main-image">
-          <img id="swimSpaMainImage" src="images/swimspa/Trainer 21D Swim.png" alt="Premium swim spa installed — Aquashark">
-        </div>
-        <div class="detail-thumbs" aria-label="Swim spa models">
-          <button type="button" class="active" onclick="selectSwimSpaModel(this,'images/swimspa/Trainer 21D Swim.png','Trainer 21D Swim Spa','Master Spas USA','47 jets with VIP swim current and hydrotherapy seating.')">
-            <img src="images/swimspa/Trainer 21D Swim.png" alt="Trainer 21D" loading="lazy">
-            <span>Trainer 21D</span>
-          </button>
-          <button type="button" onclick="selectSwimSpaModel(this,'images/swimspa/Challenger 21D Swim Spa.png','Challenger 21D Swim Spa','Master Spas USA','Largest swim spa profile with powerful propulsion and recovery seating.')">
-            <img src="images/swimspa/Challenger 21D Swim Spa.png" alt="Challenger 21D" loading="lazy">
-            <span>Challenger</span>
-          </button>
-          <button type="button" onclick="selectSwimSpaModel(this,'images/swimspa/Erros Swim Spas.png','MP Signature Pro SwimSpa','Michael Phelps','Elite performance swim spa with WiFi control and EcoPur filtration.')">
-            <img src="images/swimspa/Erros Swim Spas.png" alt="Michael Phelps Signature Pro" loading="lazy">
-            <span>MP Pro</span>
-          </button>
-          <button type="button" onclick="selectSwimSpaModel(this,'images/swimspa/Helios Swim Spa.png','Helios Swim Spa','Platinum Spas UK','Premium swim spa with swim pumps, Bluetooth and ozone sanitation.')">
-            <img src="images/swimspa/Helios Swim Spa.png" alt="Helios Swim Spa" loading="lazy">
-            <span>Helios</span>
-          </button>
-        </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero-premium">
+
+  <div class="hero-container">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+
+      <span class="hero-badge">Swim Spas India</span>
+
+      <h1>
+        Train Hard.<br>
+        Recover Better.
+      </h1>
+
+      <p>
+        Premium swim spas from Master Spas, Michael Phelps and Platinum.
+        Designed for fitness, hydrotherapy and luxury outdoor living.
+      </p>
+
+      <div class="hero-features">
+        <div>✔ Resistance Swim System</div>
+        <div>✔ Hydrotherapy Seating</div>
+        <div>✔ Smart Temperature Control</div>
+        <div>✔ Compact Luxury Installation</div>
       </div>
 
-      <aside class="product-enquiry-panel">
-        <div class="enquiry-card">
-          <span class="availability"><i class="fa fa-circle-check"></i> Global brands for India &amp; Middle East</span>
-          <h2 id="swimSpaModelName">Trainer 21D Swim Spa</h2>
-          <p id="swimSpaModelDesc">47 jets with VIP swim current and hydrotherapy seating.</p>
-          <div class="detail-price">Get Quote</div>
-          <div class="quick-specs">
-            <div><span>Brand</span><strong id="swimSpaModelBrand">Master Spas USA</strong></div>
-            <div><span>Use</span><strong>Swimming + spa therapy</strong></div>
-            <div><span>Controls</span><strong>Temperature and jet control</strong></div>
-            <div><span>Applications</span><strong>Villa, gym, recovery zone</strong></div>
-          </div>
-          <div class="detail-actions">
-            <button type="button" onclick="addToCart(17,1);openCart();" class="detail-btn primary"><i class="fa fa-paper-plane"></i> Get Enquiry</button>
-            <a class="detail-btn whatsapp" href="https://wa.me/917756999108?text=Hi%20Aquashark%2C%20I%20am%20interested%20in%20swim%20spas.%20Please%20share%20details." target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a class="detail-btn ghost" href="tel:+917756999108"><i class="fa fa-phone"></i> Call Now</a>
-          </div>
-          <p class="enquiry-note">Share your space size, training needs and preferred brand. Our team will suggest the right swim spa configuration.</p>
-        </div>
-      </aside>
-    </div>
-  </section>
+      <div class="hero-actions">
+        <a href="#master-spas" class="btn-primary">Explore Models</a>
+        <a href="tel:+917756999108" class="btn-ghost">Call Now</a>
+      </div>
 
-  <section class="detail-section">
-    <div class="detail-section-head">
-      <span class="section-kicker">Overview</span>
-      <h2>Swimming, fitness and recovery in one compact unit</h2>
-      <p>Swim spas are ideal when a full-length pool is not practical but the client wants serious swimming, daily wellness and spa-style recovery.</p>
     </div>
-    <div class="detail-feature-grid">
-      <div class="detail-feature"><i class="fa fa-water"></i><h3>Propulsion Swim System</h3><p>Adjustable current systems support resistance swimming, training and aquatic workouts.</p></div>
-      <div class="detail-feature"><i class="fa fa-hot-tub-person"></i><h3>Hydrotherapy Seats</h3><p>Targeted jets support relaxation, recovery and muscle relief after training.</p></div>
-      <div class="detail-feature"><i class="fa fa-temperature-half"></i><h3>Temperature Control</h3><p>Use the same unit for warm-water wellness, swimming practice and recovery routines.</p></div>
-      <div class="detail-feature"><i class="fa fa-wifi"></i><h3>Smart Controls</h3><p>Selected models include WiFi or touch controls for convenient operation.</p></div>
-    </div>
-  </section>
 
-  <section class="detail-section detail-section-alt">
-    <div class="detail-two-col">
+
+    <!-- RIGHT -->
+    <div class="hero-right">
+
+      <div class="hero-image-wrap">
+        <img src="images/swimspa/Untitled design.png">
+      </div>
+
+      <!-- floating cards -->
+      <div class="hero-float float-1">
+        <span>47 Jets</span>
+        <strong>Hydrotherapy Power</strong>
+      </div>
+
+      <div class="hero-float float-2">
+        <span>VIP Current</span>
+        <strong>Swim Training</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- ================= MASTER SPAS ================= -->
+  <section class="brand-block" id="master-spas">
+
+    <div class="brand-head">
       <div>
-        <span class="section-kicker">Brands</span>
-        <h2>Premium swim spa brands for performance and wellness</h2>
-        <p>Aquashark supplies swim spas from globally recognised partners for home, hospitality and fitness applications.</p>
+        <span class="section-kicker">Master Spas USA</span>
+        <h2>Performance Swim Spas</h2>
+        <p>Built for training, recovery and serious swimming.</p>
       </div>
-      <div class="model-list">
-        <div><strong>Master Spas USA</strong><span>Trainer and Challenger swim spa ranges</span></div>
-        <div><strong>Michael Phelps Swim Spas</strong><span>Performance-led models for serious swimming</span></div>
-        <div><strong>Platinum Swim Spas</strong><span>Premium wellness models with hydrotherapy seating</span></div>
-        <div><strong>Custom Recommendation</strong><span>Model selection based on site size and usage</span></div>
+
+      <div class="brand-tabs">
+        <button class="brand-tab active"
+          onclick="switchModel(this,'trainer')">Trainer 21D</button>
+
+        <button class="brand-tab"
+          onclick="switchModel(this,'challenger')">Challenger 21D</button>
+          
+          <button class="brand-tab"
+            onclick="switchModel(this,'therapool')">Therapool </button>
+      </div>
+      </div>
+
+
+    <div class="brand-grid">
+
+      <!-- IMAGE -->
+      <div class="brand-visual">
+        <img src="images/swimspa/Trainer 21D Swim.png">
+      </div>
+
+      <!-- SPECS -->
+      <div class="brand-spec-card">
+
+        <h3 class="modelTitle">Trainer 21D Swim Spa</h3>
+
+        <div class="spec-grid">
+
+          <div><span>Dimensions</span><strong class="dim">533 × 239 × 153 cm</strong></div>
+          <div><span>Dry Weight</span><strong class="dry">1,637 kg</strong></div>
+
+          <div><span>Jets</span><strong class="jets">47</strong></div>
+          <div><span>Water Capacity</span><strong class="water">6,928 L</strong></div>
+
+          <div><span>Propulsion</span><strong class="prop">VIP Technology</strong></div>
+          <div><span>Power</span><strong class="power">240V / 100 Amp</strong></div>
+
+          <div><span>Pumps</span><strong class="pumps">4</strong></div>
+          <div><span>Features</span><strong class="features">8</strong></div>
+
+        </div>
+
+        <div class="brand-actions">
+          <button class="btn-primary">Get Quote</button>
+          <a class="btn-ghost">WhatsApp</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="detail-section">
-    <div class="detail-two-col">
-      <div>
-        <span class="section-kicker">Applications</span>
-        <h2>For villas, fitness training and compact luxury spaces</h2>
-        <p>A swim spa works well as a premium wellness product where clients want swimming and spa therapy without building a full pool.</p>
-      </div>
-      <div class="application-grid">
-        <span>Luxury villas</span>
-        <span>Fitness training</span>
-        <span>Compact spaces</span>
-        <span>Sports recovery</span>
-        <span>Resort wellness</span>
-        <span>Home hydrotherapy</span>
-      </div>
+
+  <!-- ================= MICHAEL PHELPS ================= -->
+<section class="brand-block">
+
+  <div class="brand-head">
+    <div>
+      <span class="section-kicker">Michael Phelps Swim Spas</span>
+      <h2>Elite Performance Series</h2>
     </div>
+
+    <div class="brand-tabs">
+      <button class="brand-tab active" onclick="switchModel(this,'mp-pro')">MP Pro</button>
+      <button class="brand-tab" onclick="switchModel(this,'mp-momentum')">Momentum</button>
+    </div>
+  </div>
+
+  <div class="brand-grid">
+
+    <div class="brand-visual">
+      <img src="images/swimspa/MP pro.png">
+    </div>
+
+    <div class="brand-spec-card">
+
+      <h3 class="modelTitle">MP Signature Pro</h3>
+
+      <div class="spec-grid">
+        <div><span>Dimensions</span><strong class="dim">579 × 234 × 155 cm</strong></div>
+        <div><span>Dry Weight</span><strong class="dry">1,800 kg</strong></div>
+
+        <div><span>Jets</span><strong class="jets">53</strong></div>
+        <div><span>Water</span><strong class="water">7,000 L</strong></div>
+
+        <div><span>Propulsion</span><strong class="prop">Wave Propulsion</strong></div>
+        <div><span>Power</span><strong class="power">240V</strong></div>
+
+        <div><span>Pumps</span><strong class="pumps">5</strong></div>
+        <div><span>Features</span><strong class="features">Smart Control</strong></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ================= PLATINUM ================= -->
+ <section class="brand-block">
+
+  <div class="brand-head">
+    <div>
+      <span class="section-kicker">Platinum Swim Spas</span>
+      <h2>Luxury Wellness Series</h2>
+    </div>
+
+    <div class="brand-tabs">
+      <button class="brand-tab active" onclick="switchModel(this,'eros')">Eros</button>
+      <button class="brand-tab" onclick="switchModel(this,'helios')">Helios</button>
+      <button class="brand-tab" onclick="switchModel(this,'zelus')">Zelus</button>
+    </div>
+  </div>
+
+  <div class="brand-grid">
+
+    <div class="brand-visual">
+      <img src="images/swimspa/Erros Swim Spas.png">
+    </div>
+
+    <div class="brand-spec-card">
+
+      <h3 class="modelTitle">Eros Swim Spa</h3>
+
+      <div class="spec-grid">
+        <div><span>Dimensions</span><strong class="dim">600 × 230 × 150 cm</strong></div>
+        <div><span>Dry Weight</span><strong class="dry">1,500 kg</strong></div>
+
+        <div><span>Jets</span><strong class="jets">22</strong></div>
+        <div><span>Water</span><strong class="water">6,800 L</strong></div>
+
+        <div><span>Propulsion</span><strong class="prop">Swim Jets</strong></div>
+        <div><span>Power</span><strong class="power">230V</strong></div>
+
+        <div><span>Pumps</span><strong class="pumps">3</strong></div>
+        <div><span>Features</span><strong class="features">Bluetooth + LED</strong></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- ================= COMPARISON ================= -->
+  <section class="comparison">
+
+    <h2>Choose the Right Swim Spa</h2>
+
+    <table>
+      <tr>
+        <th>Model</th>
+        <th>Use</th>
+        <th>Jets</th>
+        <th>Best For</th>
+      </tr>
+
+      <tr>
+        <td>Trainer 21D</td>
+        <td>Training</td>
+        <td>47</td>
+        <td>Fitness</td>
+      </tr>
+
+      <tr>
+        <td>Challenger</td>
+        <td>Luxury</td>
+        <td>47</td>
+        <td>Villas</td>
+      </tr>
+
+      <tr>
+        <td>MP Series</td>
+        <td>Elite</td>
+        <td>50+</td>
+        <td>Athletes</td>
+      </tr>
+
+    </table>
+
   </section>
 
+
+  <!-- ================= CTA ================= -->
   <section class="cta-band">
-    <div class="cta-band-inner">
-      <div class="cta-band-text">
-        <h2>Plan Your Swim Spa Zone</h2>
-        <p>Tell us your available space and intended use. We will recommend the best swim spa model for your project.</p>
-      </div>
-      <a href="contact.html" class="cta-band-btn">Get Quote</a>
-    </div>
+    <h2>Plan Your Swim Spa Setup</h2>
+    <p>Tell us your space and we’ll recommend the perfect model.</p>
+    <a href="contact.html" class="btn-primary">Get Quote</a>
   </section>
+
 </main>
+
 
 <footer>
   <div class="footer-inner">
@@ -282,6 +779,131 @@
 </div>
 
 <div id="toast-container"></div>
-<script src="script.js"></script>
+<script >
+
+  
+function switchModel(btn, model) {
+
+  // 🔒 scope to current section
+  const section = btn.closest('.brand-block');
+
+  // fix active tabs ONLY inside this section
+  section.querySelectorAll('.brand-tab')
+    .forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // scoped elements
+  const title = section.querySelector('.modelTitle');
+  const image = section.querySelector('.brand-visual img');
+  const dim = section.querySelector('.dim');
+  const dry = section.querySelector('.dry');
+  const jets = section.querySelector('.jets');
+  const water = section.querySelector('.water');
+  const prop = section.querySelector('.prop');
+  const power = section.querySelector('.power');
+  const pumps = section.querySelector('.pumps');
+  const features = section.querySelector('.features');
+
+  /* ===== MASTER SPAS ===== */
+  if (model === 'trainer') {
+    title.textContent = "Trainer 21D Swim Spa";
+    image.src = "images/swimspa/Trainer 21D Swim.png";
+    dim.textContent = "533 × 239 × 153 cm";
+    dry.textContent = "1,637 kg";
+    jets.textContent = "47";
+    water.textContent = "6,928 L";
+    prop.textContent = "VIP Technology";
+    power.textContent = "240V / 100 Amp";
+    pumps.textContent = "4";
+    features.textContent = "8";
+  }
+
+  if (model === 'challenger') {
+    title.textContent = "Challenger 21D Swim Spa";
+    image.src = "images/swimspa/Challenger 21D Swim Spa.png";
+    dim.textContent = "653 × 239 × 153 cm";
+    dry.textContent = "1,694 kg";
+    jets.textContent = "47";
+    water.textContent = "6,928 L";
+    prop.textContent = "Airless VIP Technology";
+    power.textContent = "240V / 100 Amp";
+    pumps.textContent = "5";
+    features.textContent = "8";
+  }
+
+  if (model === 'therapool') {
+    title.textContent = "Therapool Swim Spa";
+    image.src = "images/swimspa/Therapool D.png";
+    dim.textContent = "458 × 229 × 130 cm";
+    dry.textContent = "939 kg";
+    jets.textContent = "47";
+    water.textContent = "6,132 L";
+    prop.textContent = "Flow Stream Jets";
+    power.textContent = "240V / 50 Amp";
+    pumps.textContent = "2";
+    features.textContent = "4";
+  }
+
+  /* ===== MICHAEL PHELPS ===== */
+  if (model === 'mp-pro') {
+    title.textContent = "MP Signature Pro";
+    image.src = "images/swimspa/MP pro.png";
+    dim.textContent = "579 × 234 × 155 cm";
+    dry.textContent = "1,800 kg";
+    jets.textContent = "53";
+    water.textContent = "7,000 L";
+  }
+  if (model === 'mp-momentum') {
+    title.textContent = "MP Momentum Deep";
+    image.src = "images/swimspa/MP D.png";
+    dim.textContent = "579 × 234 × 155 cm";
+    dry.textContent = "1,800 kg";
+    jets.textContent = "53";
+    water.textContent = "7,000 L";
+  }
+
+  /* ===== PLATINUM ===== */
+  if (model === 'eros') {
+    title.textContent = "Eros Swim Spa";
+    image.src = "images/swimspa/Erros Swim Spas.png";
+    dim.textContent = "600 × 230 × 150 cm";
+    dry.textContent = "1,500 kg";
+    jets.textContent = "22";
+    water.textContent = "6,800 L";
+    prop.textContent = "Swim Jets";
+    power.textContent = "230V";
+    pumps.textContent = "3";
+    features.textContent = "Bluetooth + LED";
+  }
+
+  if (model === 'helios') {
+    title.textContent = "Helios Swim Spa";
+    image.src = "images/swimspa/Helios Swim Spa.png";
+     dim.textContent = "600 × 230 × 150 cm";
+    dry.textContent = "1,500 kg";
+    jets.textContent = "22";
+    water.textContent = "6,800 L";
+    prop.textContent = "Swim Jets";
+    power.textContent = "230V";
+    pumps.textContent = "3";
+    features.textContent = "Bluetooth + LED";
+  }
+
+  if (model === 'zelus') {
+    title.textContent = "Zelus Swim Spa";
+    image.src = "images/swimspa/Zelus Swimspas (1).png";
+     dim.textContent = "600 × 230 × 150 cm";
+    dry.textContent = "1,500 kg";
+    jets.textContent = "22";
+    water.textContent = "6,800 L";
+    prop.textContent = "Swim Jets";
+    power.textContent = "230V";
+    pumps.textContent = "3";
+    features.textContent = "Bluetooth + LED";
+  }
+
+}
+</script>
+</script>
 </body>
 </html>
