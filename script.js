@@ -202,28 +202,6 @@ function addToCart(id, qty){
   saveCart(); updateCartBadge();
   showToast(`${p.emoji} <strong>${p.name}</strong> added to enquiry`, 'cart');
 }
-// MOBILE MENU
-function toggleMobileMenu() {
-  const drawer = document.getElementById("mobileNavDrawer");
-  const overlay = document.getElementById("mobileNavOverlay");
-
-  drawer.classList.toggle("open");
-  overlay.classList.toggle("active");
-}
-
-function closeMobileMenu() {
-  const drawer = document.getElementById("mobileNavDrawer");
-  const overlay = document.getElementById("mobileNavOverlay");
-
-  drawer.classList.remove("open");
-  overlay.classList.remove("active");
-}
-
-// SUB MENU
-function toggleMobileSubMenu(btn) {
-  const parent = btn.parentElement;
-  parent.classList.toggle("open");
-}
 // ============================================================
 // CART DRAWER
 // ============================================================
@@ -509,16 +487,6 @@ function selectDetailModel(btn, image, imageId, name, nameId, meta, metaId, desc
   if(btn) btn.classList.add('active');
 }
 
-
-function closeMobileMenu(){
-  const btn     = document.getElementById('mobileMenuBtn');
-  const drawer  = document.getElementById('mobileNavDrawer');
-  const overlay = document.getElementById('mobileNavOverlay');
-  if(btn)     btn.classList.remove('open');
-  if(drawer)  drawer.classList.remove('open');
-  if(overlay) overlay.classList.remove('open');
-  document.body.style.overflow = '';
-}
 function toggleMobileSubMenu(btn){
   const sub    = btn.nextElementSibling;
   const isOpen = sub.classList.contains('open');
@@ -589,8 +557,8 @@ if(document.getElementById('catTrack')) updateCategoryStrip();
         <a href="brands.html#platinum-spas"><i class="fa fa-star"></i> Platinum Spas (UK)</a>
         <a href="brands.html#master-spas"><i class="fa fa-star"></i> Master Spas (USA)</a>
         <a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
-        <a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
-        <a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+        <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
+        <a href="saunas.html"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
         <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
       </div>
     </details>

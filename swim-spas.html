@@ -405,8 +405,8 @@
           <a href="brands.html#platinum-spas"><i class="fa fa-star"></i> Platinum Spas (UK)</a>
           <a href="brands.html#master-spas"><i class="fa fa-star"></i> Master Spas (USA)</a>
           <a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
-          <a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
-          <a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+          <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
+          <a href="saunas.html"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
           <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
         </div>
       </div>
@@ -552,8 +552,8 @@
         </div>
 
         <div class="brand-actions">
-          <button class="btn-primary">Get Quote</button>
-          <a class="btn-ghost">WhatsApp</a>
+          <button class="btn-primary" onclick="(function(btn){var sec=btn.closest('.brand-block');var model=sec.querySelector('.modelTitle').textContent;window.open('https://wa.me/917756999108?text='+encodeURIComponent('Hi Aquashark, I am interested in the '+model+'. Please share price and availability.'),'_blank');})(this)">Get Quote</button>
+          <a class="btn-ghost" href="#" onclick="event.preventDefault();(function(el){var sec=el.closest('.brand-block');var model=sec.querySelector('.modelTitle').textContent;window.open('https://wa.me/917756999108?text='+encodeURIComponent('Hi Aquashark, I am interested in the '+model+'. Please share price and availability.'),'_blank');})(this)" rel="noopener">WhatsApp</a>
         </div>
 
       </div>
@@ -571,8 +571,8 @@
     </div>
 
     <div class="brand-tabs">
-      <button class="brand-tab active" onclick="switchModel(this,'mp-pro')">MP Pro</button>
-      <button class="brand-tab" onclick="switchModel(this,'mp-momentum')">Momentum</button>
+      <button class="brand-tab active" onclick="switchModel(this,'mp-pro')">MP Signature Pro</button>
+      <button class="brand-tab" onclick="switchModel(this,'mp-momentum')">MP Momentum</button>
     </div>
   </div>
 
@@ -587,17 +587,17 @@
       <h3 class="modelTitle">MP Signature Pro</h3>
 
       <div class="spec-grid">
-        <div><span>Dimensions</span><strong class="dim">579 × 234 × 155 cm</strong></div>
-        <div><span>Dry Weight</span><strong class="dry">1,800 kg</strong></div>
+        <div><span>Dimensions</span><strong class="dim">587 × 239 × 153 cm</strong></div>
+        <div><span>Dry Weight</span><strong class="dry">1,567 kg (3,455 lbs)</strong></div>
+
+        <div><span>Wet Weight</span><strong class="wet">11,238 kg (24,775 lbs)</strong></div>
+        <div><span>Water Capacity</span><strong class="water">9,255 L</strong></div>
 
         <div><span>Jets</span><strong class="jets">53</strong></div>
-        <div><span>Water</span><strong class="water">7,000 L</strong></div>
+        <div><span>Propulsion</span><strong class="prop">Air-Injected VIP Technology</strong></div>
 
-        <div><span>Propulsion</span><strong class="prop">Wave Propulsion</strong></div>
-        <div><span>Power</span><strong class="power">240V</strong></div>
-
-        <div><span>Pumps</span><strong class="pumps">5</strong></div>
-        <div><span>Features</span><strong class="features">Smart Control</strong></div>
+        <div><span>Power</span><strong class="power">240V / 60A</strong></div>
+        <div><span>Pumps</span><strong class="pumps">2</strong></div>
       </div>
 
     </div>
@@ -632,17 +632,17 @@
       <h3 class="modelTitle">Eros Swim Spa</h3>
 
       <div class="spec-grid">
-        <div><span>Dimensions</span><strong class="dim">600 × 230 × 150 cm</strong></div>
-        <div><span>Dry Weight</span><strong class="dry">1,500 kg</strong></div>
+        <div><span>Dimensions</span><strong class="dim">450 × 225 × 150 cm</strong></div>
+        <div><span>Dry/Wet Weight</span><strong class="dry">935 / 7,735 kg</strong></div>
 
         <div><span>Jets</span><strong class="jets">22</strong></div>
         <div><span>Water</span><strong class="water">6,800 L</strong></div>
 
-        <div><span>Propulsion</span><strong class="prop">Swim Jets</strong></div>
-        <div><span>Power</span><strong class="power">230V</strong></div>
+        <div><span>Pumps (Swim)</span><strong class="prop">3×3HP</strong></div>
+        <div><span>Power</span><strong class="power">40 Amp</strong></div>
 
-        <div><span>Pumps</span><strong class="pumps">3</strong></div>
-        <div><span>Features</span><strong class="features">Bluetooth + LED</strong></div>
+        <div><span>Pumps</span><strong class="pumps">1×3HP</strong></div>
+        <div><span>Features</span><strong class="features">BT + LED + Ozone</strong></div>
       </div>
 
     </div>
@@ -802,6 +802,7 @@ function switchModel(btn, model) {
   const power = section.querySelector('.power');
   const pumps = section.querySelector('.pumps');
   const features = section.querySelector('.features');
+  const wet = section.querySelector('.wet');
 
   /* ===== MASTER SPAS ===== */
   if (model === 'trainer') {
@@ -847,58 +848,66 @@ function switchModel(btn, model) {
   if (model === 'mp-pro') {
     title.textContent = "MP Signature Pro";
     image.src = "images/swimspa/MP pro.png";
-    dim.textContent = "579 × 234 × 155 cm";
-    dry.textContent = "1,800 kg";
+    dim.textContent = "587 × 239 × 153 cm";
+    dry.textContent = "1,567 kg (3,455 lbs)";
+    if (wet) wet.textContent = "11,238 kg (24,775 lbs)";
+    water.textContent = "9,255 L";
     jets.textContent = "53";
-    water.textContent = "7,000 L";
+    prop.textContent = "Air-Injected VIP Technology";
+    power.textContent = "240V / 60A";
+    pumps.textContent = "2";
   }
   if (model === 'mp-momentum') {
-    title.textContent = "MP Momentum Deep";
+    title.textContent = "MP Momentum";
     image.src = "images/swimspa/MP D.png";
-    dim.textContent = "579 × 234 × 155 cm";
-    dry.textContent = "1,800 kg";
-    jets.textContent = "53";
-    water.textContent = "7,000 L";
+    dim.textContent = "587 × 239 × 153 cm";
+    dry.textContent = "1,678 kg (3,700 lbs)";
+    if (wet) wet.textContent = "11,063 kg (24,390 lbs)";
+    water.textContent = "8,801 L";
+    jets.textContent = "45 + 2 Master Blasters®";
+    prop.textContent = "Wave XP Pro Propulsion™";
+    power.textContent = "130 Amp";
+    pumps.textContent = "3";
   }
 
   /* ===== PLATINUM ===== */
   if (model === 'eros') {
     title.textContent = "Eros Swim Spa";
     image.src = "images/swimspa/Erros Swim Spas.png";
-    dim.textContent = "600 × 230 × 150 cm";
-    dry.textContent = "1,500 kg";
+    dim.textContent = "450 × 225 × 150 cm";
+    dry.textContent = "935 / 7,735 kg";
     jets.textContent = "22";
     water.textContent = "6,800 L";
-    prop.textContent = "Swim Jets";
-    power.textContent = "230V";
-    pumps.textContent = "3";
-    features.textContent = "Bluetooth + LED";
+    prop.textContent = "3×3HP";
+    power.textContent = "40 Amp";
+    pumps.textContent = "1×3HP";
+    features.textContent = "BT + LED + Ozone";
   }
 
   if (model === 'helios') {
     title.textContent = "Helios Swim Spa";
     image.src = "images/swimspa/Helios Swim Spa.png";
-     dim.textContent = "600 × 230 × 150 cm";
-    dry.textContent = "1,500 kg";
-    jets.textContent = "22";
-    water.textContent = "6,800 L";
-    prop.textContent = "Swim Jets";
-    power.textContent = "230V";
-    pumps.textContent = "3";
-    features.textContent = "Bluetooth + LED";
+    dim.textContent = "590 × 225 × 150 cm";
+    dry.textContent = "1,450 / 11,950 kg";
+    jets.textContent = "53";
+    water.textContent = "10,500 L";
+    prop.textContent = "3×3HP";
+    power.textContent = "20A + 32A";
+    pumps.textContent = "2×2HP";
+    features.textContent = "BT + LED + Ozone";
   }
 
   if (model === 'zelus') {
     title.textContent = "Zelus Swim Spa";
     image.src = "images/swimspa/Zelus Swimspas (1).png";
-     dim.textContent = "600 × 230 × 150 cm";
-    dry.textContent = "1,500 kg";
-    jets.textContent = "22";
-    water.textContent = "6,800 L";
-    prop.textContent = "Swim Jets";
-    power.textContent = "230V";
-    pumps.textContent = "3";
-    features.textContent = "Bluetooth + LED";
+    dim.textContent = "590 × 225 × 150 cm";
+    dry.textContent = "1,350 / 11,150 kg";
+    jets.textContent = "42";
+    water.textContent = "9,800 L";
+    prop.textContent = "3×3HP";
+    power.textContent = "40 Amp";
+    pumps.textContent = "1×3HP";
+    features.textContent = "BT + LED + Ozone";
   }
 
 }

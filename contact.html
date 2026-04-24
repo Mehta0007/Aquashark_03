@@ -55,8 +55,8 @@
           <a href="brands.html#platinum-spas"><i class="fa fa-star"></i> Platinum Spas (UK)</a>
           <a href="brands.html#master-spas"><i class="fa fa-star"></i> Master Spas (USA)</a>
           <a href="brands.html#michael-phelps"><i class="fa fa-medal"></i> Michael Phelps Swim Spas</a>
-          <a href="brands.html#chilly-goat"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
-          <a href="brands.html#sweaty-goat"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
+          <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
+          <a href="saunas.html"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
           <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
         </div>
       </div>
@@ -757,7 +757,7 @@
           <textarea name="message" rows="4" placeholder="Tell us about your project or ask a question…"></textarea>
 
           <button type="submit" class="con-submit-btn"
-            onclick="event.preventDefault(); const name=this.form.name.value; const phone=this.form.phone.value; const product=this.form.product.value; const msg=this.form.message.value; window.open('https://wa.me/917756999108?text='+encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nProduct: '+product+'\nMessage: '+msg),'_blank')">
+            onclick="event.preventDefault(); const f=this.form; const name=f.name.value.trim(); const phone=f.phone.value.trim(); if(!name){alert('Please enter your full name.');f.name.focus();return;} if(!phone){alert('Please enter your phone number.');f.phone.focus();return;} const product=f.product.value; const msg=f.message.value; window.open('https://wa.me/917756999108?text='+encodeURIComponent('Name: '+name+'\nPhone: '+phone+'\nProduct: '+product+'\nMessage: '+msg),'_blank')">
             <i class="fab fa-whatsapp"></i> Send Enquiry via WhatsApp
           </button>
         </form>
@@ -852,8 +852,8 @@
           <li><a href="brands.html#platinum-spas">Platinum Spas (UK)</a></li>
           <li><a href="brands.html#master-spas">Master Spas (USA)</a></li>
           <li><a href="brands.html#michael-phelps">Michael Phelps Swim Spas</a></li>
-          <li><a href="brands.html#chilly-goat">Chilly Goat (USA)</a></li>
-          <li><a href="brands.html#sweaty-goat">Sweaty Goat Saunas</a></li>
+          <li><a href="cold-tubs.html">Chilly Goat (USA)</a></li>
+          <li><a href="saunas.html">Sweaty Goat Saunas</a></li>
           <li><a href="brands.html#natare">Natare Systems</a></li>
         </ul>
       </div>
