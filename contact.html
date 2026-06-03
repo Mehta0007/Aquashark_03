@@ -327,10 +327,13 @@
 }
 .offices-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .offices-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
   .offices-grid { grid-template-columns: 1fr; }
@@ -698,8 +701,24 @@
       <div class="con-info-card">
         <div class="con-info-card__icon"><i class="fa fa-location-dot"></i></div>
         <div>
-          <p class="con-info-card__label">Pune Office</p>
-          <p class="con-info-card__value">Gat No. 6/6, Bypass Road, Vitthal nagar, Dehugaon, Haveli, Pune – 412109</p>
+          <p class="con-info-card__label">Showroom/Office</p>
+          <p class="con-info-card__value">#1, Sai Audumbar Society, Bengaluru - Mumbai Highway, near Torna hotel, Punawale, Pune, Maharashtra 411033</p>
+        </div>
+      </div>
+
+      <div class="con-info-card">
+        <div class="con-info-card__icon"><i class="fa fa-industry"></i></div>
+        <div>
+          <p class="con-info-card__label">Factory Address</p>
+          <p class="con-info-card__value">Gat No. 6/6, Bypass Road, Vitthalnagar, Dehugaon, Haveli, Pune – 412109</p>
+        </div>
+      </div>
+
+      <div class="con-info-card">
+        <div class="con-info-card__icon"><i class="fa fa-file-invoice"></i></div>
+        <div>
+          <p class="con-info-card__label">GST</p>
+          <p class="con-info-card__value">27ABTFA6579L1ZG</p>
         </div>
       </div>
 
@@ -776,11 +795,22 @@
       <div class="office-card">
         <div class="office-card__header">
           <span class="office-card__emoji">🏙️</span>
-          <span class="office-card__city">Pune Showroom</span>
+          <span class="office-card__city">Pune Showroom/Office</span>
         </div>
         <div class="office-card__body">
-          <p class="office-card__addr">Gat No. 6/6, Bypass Road, Vitthal Nagar,<br>Dehugaon, Haveli, Pune – 412109<br>Maharashtra, India</p>
-          <a href="https://maps.google.com/?q=Gat+No+6+Bypass+Road+Vitthal Nagar+Dehugaon+Haveli+Pune+412109+Maharashtra+India" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
+          <p class="office-card__addr">#1, Sai Audumbar Society,<br>Bengaluru - Mumbai Highway,<br>near Torna hotel, Punawale,<br>Pune, Maharashtra 411033</p>
+          <a href="https://maps.google.com/?q=%231+Sai+Audumbar+Society+Bengaluru+Mumbai+Highway+near+Torna+hotel+Punawale+Pune+Maharashtra+411033" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
+        </div>
+      </div>
+
+      <div class="office-card">
+        <div class="office-card__header">
+          <span class="office-card__emoji">🏭</span>
+          <span class="office-card__city">Factory</span>
+        </div>
+        <div class="office-card__body">
+          <p class="office-card__addr">Gat No. 6/6, Bypass Road,<br>Vitthalnagar, Dehugaon,<br>Haveli, Pune – 412109<br>Maharashtra, India</p>
+          <a href="https://maps.google.com/?q=Gat+No+6%2F6+Bypass+Road+Vitthalnagar+Dehugaon+Haveli+Pune+412109+Maharashtra+India" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
         </div>
       </div>
 
@@ -805,7 +835,7 @@
 <section class="con-cta">
   <div class="con-cta__inner">
     <h2>Visit Our Showroom</h2>
-    <p>Experience our products in person. Book a visit at our Pune showroom or Dubai office.</p>
+    <p>Experience our products in person. Book a visit at our Pune showroom/office or Dubai office.</p>
     <a href="tel:+917756999108" class="con-cta__btn"><i class="fa fa-phone"></i> Book a Visit</a>
   </div>
 </section>
@@ -829,7 +859,9 @@
           <li><i class="fa fa-phone"></i><span>+91 77569 99108 &nbsp;|&nbsp; +91 77569 99118</span></li>
           <li><i class="fa fa-envelope"></i><span>info@aquashark.in</span></li>
           <li><i class="fa fa-globe"></i><span>www.aquashark.in &nbsp;|&nbsp; www.aquasharkpools.in</span></li>
-          <li><i class="fa fa-location-dot"></i><span>Gat No. 6/6, Bypass Road, Vitthal Nagar, Dehugaon, Haveli, Pune – 412109</span></li>
+          <li><i class="fa fa-location-dot"></i><span>Showroom/Office: #1, Sai Audumbar Society, Bengaluru - Mumbai Highway, near Torna hotel, Punawale, Pune, Maharashtra 411033</span></li>
+          <li><i class="fa fa-industry"></i><span>Factory: Gat No. 6/6, Bypass Road, Vitthalnagar, Dehugaon, Haveli, Pune – 412109</span></li>
+          <li><i class="fa fa-file-invoice"></i><span>GST: 27ABTFA6579L1ZG</span></li>
           <li><i class="fa fa-location-dot"></i><span>26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</span></li>
         </ul>
       </div>
@@ -879,7 +911,7 @@
           <a href="https://wa.me/917756999108" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
         <h5 style="margin-top:4px;">Offices</h5>
-        <p style="font-size:12px;color:#556677;line-height:1.7;">🏙️ Pune, Maharashtra<br>🌍 Dubai, UAE</p>
+        <p style="font-size:12px;color:#556677;line-height:1.7;">Showroom: Punawale, Pune<br>Factory: Dehugaon, Pune<br>Dubai, UAE</p>
       </div>
     </div>
     <div class="footer-bottom">

@@ -4,14 +4,18 @@ const dir = __dirname;
 
 const htmlFiles = fs.readdirSync(dir).filter(f => f.endsWith('.html'));
 
+const footerAddressLines = [
+  '<li><i class="fa fa-location-dot"></i><span>Showroom/Office: #1, Sai Audumbar Society, Bengaluru - Mumbai Highway, near Torna hotel, Punawale, Pune, Maharashtra 411033</span></li>',
+  '<li><i class="fa fa-industry"></i><span>Factory: Gat No. 6/6, Bypass Road, Vitthalnagar, Dehugaon, Haveli, Pune – 412109</span></li>',
+  '<li><i class="fa fa-file-invoice"></i><span>GST: 27ABTFA6579L1ZG</span></li>',
+  '<li><i class="fa fa-location-dot"></i><span>26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</span></li>',
+].join('\n          ');
+
 const replacements = [
-  // Fix "North Goa" in short footers
-  [/Pune, Maharashtra &nbsp;\|&nbsp; North Goa/g, 'Pune, Maharashtra &nbsp;|&nbsp; Dubai, UAE'],
-  // Fix duplicate "India & Middle East" line in offices block
-  [/🌍 Dubai, UAE<br>🌍 India &amp; Middle East/g, '🌍 Dubai, UAE'],
-  // Fix contact.html Goa office card (full address block)
-  [/1390, Maximiana Villa, Madel,<br>\s*Thivim, North Goa – 403502<br>\s*Goa, India/g,
-   '26th Floor, Amber Gen Tower,<br>Ajman, Dubai, UAE'],
+  // Replace old short footer location lines with current Aquashark addresses.
+  [/<li><i class="fa fa-location-dot"><\/i><span>Pune, Maharashtra &nbsp;\|&nbsp; Dubai, UAE<\/span><\/li>/g, footerAddressLines],
+  // Fix duplicate "India & Middle East" line in offices block.
+  [/🌍 Dubai, UAE<br>🌍 India &amp; Middle East/g, 'Showroom: Punawale, Pune<br>Factory: Dehugaon, Pune<br>Dubai, UAE'],
 ];
 
 let totalFiles = 0;
