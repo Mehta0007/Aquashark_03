@@ -164,7 +164,7 @@ function filterByCategory(catName, btn){
       grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;">
         <div style="font-size:48px;margin-bottom:12px;">🚧</div>
         <div style="font-size:16px;font-weight:700;color:#1a2330;">Coming Soon</div>
-        <div style="font-size:13px;color:#6d7680;margin-top:6px;">Products in this category will be listed shortly.<br>Call us on <strong>+91 77569 99108</strong> to enquire.</div>
+        <div style="font-size:13px;color:#6d7680;margin-top:6px;">Products in this category will be listed shortly.<br>Call us on <strong>+91-9765376667</strong> to enquire.</div>
       </div>`;
     } else {
       grid.innerHTML = filtered.map(p=>productCardHTML(p)).join('');
@@ -255,7 +255,7 @@ function sendEnquiry(){
   if(!cart.length){ showToast('Add at least one product to enquire.','cart'); return; }
   const productList = cart.map(i=>`${i.name} (x${i.qty})`).join(', ');
   const msg = encodeURIComponent(`Hi Aquashark! I'd like a quote for: ${productList}`);
-  window.open(`https://wa.me/917756999108?text=${msg}`, '_blank');
+  window.open(`https://wa.me/919765376667?text=${msg}`, '_blank');
 }
 
 // ============================================================
@@ -580,7 +580,7 @@ if(document.getElementById('catTrack')) updateCategoryStrip();
   <div class="mobile-nav-footer">
     <a href="contact.html" class="mob-enquire-btn"><i class="fa fa-phone"></i> Enquire Now</a>
     <div class="mob-contact-info">
-      <a href="tel:+917756999108"><i class="fa fa-phone"></i>+91 77569 99108</a>
+      <a href="tel:+919765376667"><i class="fa fa-phone"></i>+91-9765376667</a>
       <a href="mailto:info@aquashark.in"><i class="fa fa-envelope"></i>info@aquashark.in</a>
     </div>
   </div>
