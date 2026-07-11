@@ -560,6 +560,7 @@ if(document.getElementById('catTrack')) updateCategoryStrip();
         <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Chilly Goat (USA)</a>
         <a href="saunas.html"><i class="fa fa-fire"></i> Sweaty Goat Saunas</a>
         <a href="brands.html#natare"><i class="fa fa-gear"></i> Natare Systems</a>
+        <a href="pooltron.html"><i class="fa fa-shield-halved"></i> Pooltron® (UK)</a>
       </div>
     </details>
     <details class="mob-accordion">
