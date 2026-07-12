@@ -322,7 +322,7 @@ function updateSlider(){
   slidesEl.style.transform=`translateX(-${current*100}%)`;
   document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===current));
 }
-function slide(dir){ current=(current+dir+3)%3; updateSlider(); }
+function slide(dir){ current=(current+dir+4)%4; updateSlider(); }
 function goSlide(i){ current=i; updateSlider(); }
 if(document.getElementById('slides')) setInterval(()=>slide(1),6000);
 
