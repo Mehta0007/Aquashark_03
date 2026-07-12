@@ -24,69 +24,72 @@
 /* ── POOLTRON PAGE STYLES ── */
 .pt-hero {
   position: relative;
-  min-height: 88vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #001e30 0%, #003459 55%, #005f94 100%);
-}
-.pt-hero__bg {
-  position: absolute;
-  inset: 0;
-  background: url('images/hero/hero-pool.jpg') center/cover no-repeat;
-  opacity: 0.22;
-}
-.pt-hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(0,20,40,0.92) 0%, rgba(0,30,55,0.7) 60%, rgba(0,30,55,0.3) 100%);
+  background: linear-gradient(180deg, #f4fbff 0%, #ffffff 60%);
+  padding: 40px 0;
 }
 .pt-hero__inner {
   position: relative;
   z-index: 2;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 120px 40px 80px;
+  padding: 60px 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
 }
-.pt-hero__tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(0,180,216,0.15);
-  border: 1px solid rgba(0,180,216,0.4);
-  color: var(--aqua);
-  padding: 6px 18px;
-  border-radius: 50px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 22px;
+.pt-hero__brand {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--primary-dark);
+  line-height: 1;
+  letter-spacing: -1px;
+  margin-bottom: 14px;
 }
 .pt-hero__h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 900;
-  color: #fff;
-  line-height: 1.15;
-  margin-bottom: 10px;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.25;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 .pt-hero__h1 em {
   color: var(--aqua);
   font-style: normal;
+  display: block;
 }
 .pt-hero__sub {
-  font-size: 1.05rem;
-  color: rgba(255,255,255,0.8);
+  font-size: 1rem;
+  color: #556677;
   line-height: 1.8;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   max-width: 540px;
 }
-.pt-hero__btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.pt-hero__feats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 32px; }
+.pt-feat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90px;
+  gap: 8px;
+}
+.pt-feat .pt-feat-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 1.5px solid #cfe6f4;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--primary);
+  background: #fff;
+}
+.pt-feat span { font-size: 10.5px; font-weight: 700; letter-spacing: 0.03em; color: #334155; text-transform: uppercase; line-height: 1.4; }
+.pt-hero__btns { display: flex; gap: 14px; flex-wrap: wrap; }
 .pt-hero__btns a {
   display: inline-flex;
   align-items: center;
@@ -98,51 +101,25 @@
   text-decoration: none;
   transition: all 0.2s;
 }
-.pt-btn-primary { background: var(--primary); color: #fff; }
-.pt-btn-primary:hover { background: #005f94; transform: translateY(-2px); }
-.pt-btn-outline { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.4); color: #fff; }
-.pt-btn-outline:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-.pt-hero__badges { display: flex; gap: 14px; flex-wrap: wrap; }
-.pt-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.85);
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-}
-.pt-badge i { color: var(--aqua); }
+.pt-btn-primary { background: var(--primary-dark); color: #fff; }
+.pt-btn-primary:hover { background: var(--primary); transform: translateY(-2px); }
+.pt-btn-outline { background: #fff; border: 1.5px solid #cfe6f4; color: var(--primary-dark); }
+.pt-btn-outline:hover { background: #f0f9ff; transform: translateY(-2px); }
 .pt-hero__visual {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
 }
 .pt-hero__product-img {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.15);
   border-radius: 20px;
-  padding: 32px;
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,52,89,0.18);
   width: 100%;
 }
-.pt-hero__product-img img { width: 100%; max-width: 420px; border-radius: 10px; }
-.pt-trust-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
-.pt-trust-item {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 10px;
-  padding: 10px 16px;
-  text-align: center;
-  color: rgba(255,255,255,0.8);
-  font-size: 12px;
-  font-weight: 600;
-}
-.pt-trust-item i { display: block; font-size: 18px; color: var(--aqua); margin-bottom: 4px; }
+.pt-hero__product-img img { width: 100%; display: block; }
+.pt-hero__badges-img { width: 100%; max-width: 480px; }
+.pt-hero__badges-img img { width: 100%; display: block; border-radius: 10px; }
 
 /* Sections */
 .pt-section { padding: 80px 20px; }
@@ -222,10 +199,11 @@
 }
 .pt-why-icon {
   width: 56px; height: 56px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  border-radius: 50%;
+  border: 1.5px solid #cfe6f4;
+  background: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-size: 22px; color: #fff; margin-bottom: 18px;
+  font-size: 22px; color: var(--primary); margin-bottom: 18px;
 }
 .pt-why-card h3 { font-size: 1rem; font-weight: 700; color: #003459; margin-bottom: 10px; }
 .pt-why-card p { font-size: 13.5px; color: #556677; line-height: 1.7; }
@@ -234,49 +212,63 @@
 .pt-why-card ul li::before { content: '✓'; color: var(--aqua); font-weight: 700; }
 
 /* How it works */
-.pt-how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; position: relative; }
-.pt-how-grid::before {
-  content: '';
-  position: absolute;
-  top: 44px;
-  left: calc(16.67% + 32px);
-  right: calc(16.67% + 32px);
-  height: 2px;
-  background: linear-gradient(90deg, var(--aqua), #0077b6);
+.pt-how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; }
+.pt-how-step { text-align: center; position: relative; z-index: 1; }
+.pt-how-img {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  height: 150px;
+  border: 1px solid rgba(255,255,255,0.12);
 }
-.pt-how-step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+.pt-how-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pt-how-arrow {
+  position: absolute;
+  top: 75px;
+  right: -32px;
+  font-size: 20px;
+  color: var(--aqua);
+  z-index: 2;
+}
 .pt-how-num {
-  width: 88px; height: 88px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   background: linear-gradient(135deg, #00b4d8, #0077b6);
   color: #fff;
   font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
+  font-size: 1.1rem;
   font-weight: 900;
   display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 24px;
+  margin: 0 auto 18px;
   box-shadow: 0 8px 24px rgba(0,119,182,0.35);
 }
 .pt-how-step h3 { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
 .pt-how-step p { font-size: 13.5px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+@media(max-width: 768px) { .pt-how-arrow { display: none; } }
 
 /* Problems solved */
 .pt-problems-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .pt-problem-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: #fff;
+  border: 1px solid #e2ecf4;
   border-radius: 14px;
-  padding: 24px 18px;
+  overflow: hidden;
   text-align: center;
   transition: all 0.25s;
 }
 .pt-problem-card:hover {
-  background: rgba(255,255,255,0.1);
-  border-color: rgba(0,180,216,0.4);
+  border-color: var(--aqua);
+  box-shadow: 0 12px 32px rgba(0,52,89,0.1);
   transform: translateY(-4px);
 }
-.pt-problem-card i { font-size: 28px; color: #7dd3fc; margin-bottom: 12px; display: block; }
-.pt-problem-card h4 { font-size: 13px; font-weight: 700; color: #fff; }
+.pt-problem-card .pt-problem-thumb {
+  height: 90px;
+  background: linear-gradient(135deg, #eaf6fb, #e0f2fe);
+  display: flex; align-items: center; justify-content: center;
+}
+.pt-problem-card .pt-problem-thumb i { font-size: 30px; color: var(--primary); }
+.pt-problem-card h4 { font-size: 12.5px; font-weight: 700; color: #003459; padding: 14px 10px; }
 
 /* Install checklist */
 .pt-install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -306,10 +298,19 @@
   background: var(--primary); color: #fff;
   font-size: 10px; font-weight: 700; padding: 3px 12px; border-radius: 20px; white-space: nowrap;
 }
+.pt-range-icon { width: 100%; height: 34px; object-fit: contain; margin-bottom: 12px; }
 .pt-range-model { font-family: 'Poppins',sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--primary); margin-bottom: 4px; }
 .pt-range-type { font-size: 13px; color: #556677; line-height: 1.5; }
-.pt-range-note { text-align: center; margin-top: 28px; color: #556677; font-size: 14px; }
-.pt-range-note a { color: var(--primary); font-weight: 700; text-decoration: none; }
+.pt-range-note {
+  display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap;
+  text-align: center; margin-top: 28px; color: #556677; font-size: 14px;
+}
+.pt-range-note a.pt-range-cta {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--primary-dark); color: #fff; font-weight: 700;
+  padding: 10px 22px; border-radius: 8px; text-decoration: none; transition: 0.2s;
+}
+.pt-range-note a.pt-range-cta:hover { background: var(--primary); transform: translateY(-2px); }
 
 /* Clients */
 .pt-clients-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; align-items: center; }
@@ -508,33 +509,28 @@
 
 <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
 <section class="pt-hero">
-  <div class="pt-hero__bg"></div>
-  <div class="pt-hero__overlay"></div>
   <div class="pt-hero__inner">
     <div>
-      <span class="pt-hero__tag"><i class="fa fa-shield-halved"></i> Patented UK Technology</span>
-      <h1 class="pt-hero__h1">Protect Your Pool from<br><em>Hard Water Damage</em></h1>
-      <p class="pt-hero__sub">Pooltron® is a patented UK technology that prevents calcium and magnesium scale formation in swimming pools — without chemicals, electricity, maintenance, or consumables.</p>
-      <div class="pt-hero__btns">
-        <a href="contact.html" class="pt-btn-primary"><i class="fa fa-file-lines"></i> Request a Quote</a>
-        <a href="tel:+919765376667" class="pt-btn-outline"><i class="fa fa-phone"></i> Talk to an Expert</a>
+      <div class="pt-hero__brand">POOLTRON<sup style="font-size:0.4em;">®</sup></div>
+      <h1 class="pt-hero__h1">Stop Calcium Scaling<br><em>in Swimming Pools Without Chemicals</em></h1>
+      <p class="pt-hero__sub">Pooltron® is a patented UK technology that prevents calcium and magnesium scale formation in swimming pools—without chemicals, electricity, maintenance, or consumables.</p>
+      <div class="pt-hero__feats">
+        <div class="pt-feat"><div class="pt-feat-icon"><i class="fa fa-leaf"></i></div><span>Chemical Free</span></div>
+        <div class="pt-feat"><div class="pt-feat-icon"><i class="fa fa-bolt"></i></div><span>No Electricity</span></div>
+        <div class="pt-feat"><div class="pt-feat-icon"><i class="fa fa-wrench"></i></div><span>Zero Maintenance</span></div>
+        <div class="pt-feat"><div class="pt-feat-icon"><i class="fa fa-shield-halved"></i></div><span>Patented Technology</span></div>
       </div>
-      <div class="pt-hero__badges">
-        <span class="pt-badge"><i class="fa fa-ban"></i> Chemical Free</span>
-        <span class="pt-badge"><i class="fa fa-bolt-lightning" style="text-decoration:line-through;opacity:0.5;"></i> No Electricity</span>
-        <span class="pt-badge"><i class="fa fa-wrench" style="opacity:0.5;text-decoration:line-through;"></i> Zero Maintenance</span>
-        <span class="pt-badge"><i class="fa fa-certificate"></i> Patented Technology</span>
+      <div class="pt-hero__btns">
+        <a href="contact.html" class="pt-btn-primary"><i class="fa fa-envelope"></i> Request a Quote</a>
+        <a href="tel:+919765376667" class="pt-btn-outline"><i class="fa fa-phone"></i> Talk to an Expert</a>
       </div>
     </div>
     <div class="pt-hero__visual">
       <div class="pt-hero__product-img">
-        <img src="images/hero/Aquashark Pools website banner (1).png" alt="Pooltron water conditioner installed in pump room">
+        <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/Gemini_Generated_Image_qtjc0yqtjc0yqtjc.png" alt="Pooltron water conditioner beside a luxury infinity pool">
       </div>
-      <div class="pt-trust-row">
-        <div class="pt-trust-item"><i class="fa fa-flag"></i>Made in UK</div>
-        <div class="pt-trust-item"><i class="fa fa-certificate"></i>WRAS Approved</div>
-        <div class="pt-trust-item"><i class="fa fa-shield-halved"></i>Patent Protected</div>
-        <div class="pt-trust-item"><i class="fa fa-globe"></i>50+ Years Proven</div>
+      <div class="pt-hero__badges-img">
+        <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/Wras-patentProtected-madeinUK.png" alt="WRAS Approved Product, Patent Protected, Made in UK">
       </div>
     </div>
   </div>
@@ -562,12 +558,10 @@
       <div>
         <div class="pt-split-img">
           <div>
-            <img src="images/hero/hero-pool.jpg" alt="Beautiful clear swimming pool">
-            <span class="pt-split-label good">Beautiful Today</span>
+            <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/beautiful-today.png" alt="Beautiful clear swimming pool today">
           </div>
           <div>
-            <img src="images/paris.jpeg" alt="Calcium scaling damage on pool">
-            <span class="pt-split-label bad">Damaged Tomorrow</span>
+            <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/Damage-tommorow.png" alt="Calcium scaling damage on pool furniture tomorrow">
           </div>
         </div>
       </div>
@@ -670,16 +664,27 @@
     </div>
     <div class="pt-how-grid">
       <div class="pt-how-step">
+        <div class="pt-how-img">
+          <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/01-and-03-how-pooltron-works.png" alt="Water flows through the Pooltron unit">
+          <i class="fa fa-chevron-right pt-how-arrow"></i>
+        </div>
         <div class="pt-how-num">1</div>
         <h3>Water Flows Through Pooltron</h3>
         <p>Your pool's circulation water passes through the Pooltron unit installed inline in the pump room — no bypass, no bypass valves needed.</p>
       </div>
       <div class="pt-how-step">
+        <div class="pt-how-img">
+          <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/02-how-pooltron-works.png" alt="The patented chamber changes the crystal formation of dissolved minerals">
+          <i class="fa fa-chevron-right pt-how-arrow"></i>
+        </div>
         <div class="pt-how-num">2</div>
         <h3>Patented Chamber Changes Crystal Formation</h3>
         <p>The patented internal chamber changes the crystal structure of dissolved calcium and magnesium minerals without removing them from the water.</p>
       </div>
       <div class="pt-how-step">
+        <div class="pt-how-img">
+          <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/01-and-03-how-pooltron-works.png" alt="Minerals stay suspended in water instead of sticking to surfaces">
+        </div>
         <div class="pt-how-num">3</div>
         <h3>Minerals Stay Suspended, Not Stuck</h3>
         <p>Minerals remain suspended in water instead of sticking to surfaces, helping prevent scale formation and keeping systems operating efficiently.</p>
@@ -689,21 +694,21 @@
 </section>
 
 <!-- ══════════════════════════════ PROBLEMS SOLVED ══════════════════ -->
-<section class="pt-section dark" style="padding-top:0;">
+<section class="pt-section">
   <div class="pt-container">
     <div style="text-align:center;margin-bottom:40px;">
       <span class="pt-kicker">Problems Pooltron Solves</span>
       <h2 class="pt-h2" style="text-align:center;">8 Common Pool Problems, One Solution</h2>
     </div>
     <div class="pt-problems-grid">
-      <div class="pt-problem-card"><i class="fa fa-droplet-slash"></i><h4>White Tile Stains</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-pipe-section"></i><h4>Blocked Pipes</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-temperature-high"></i><h4>Heat Exchanger Scaling</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-gears"></i><h4>Pump Damage</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-water"></i><h4>Poor Water Circulation</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-bolt"></i><h4>High Electricity Bills</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-flask"></i><h4>Frequent Acid Cleaning</h4></div>
-      <div class="pt-problem-card"><i class="fa fa-triangle-exclamation"></i><h4>Corroded Equipment</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-droplet-slash"></i></div><h4>White Tile Stains</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-faucet-drip"></i></div><h4>Blocked Pipes</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-temperature-high"></i></div><h4>Heat Exchanger Scaling</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-gears"></i></div><h4>Pump Damage</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-water"></i></div><h4>Poor Water Circulation</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-bolt"></i></div><h4>High Electricity Bills</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-flask"></i></div><h4>Frequent Acid Cleaning</h4></div>
+      <div class="pt-problem-card"><div class="pt-problem-thumb"><i class="fa fa-triangle-exclamation"></i></div><h4>Corroded Equipment</h4></div>
     </div>
   </div>
 </section>
@@ -735,14 +740,18 @@
       <div>
         <span class="pt-kicker" style="display:block;margin-bottom:16px;">Easy Installation. Zero Hassle.</span>
         <div class="pt-install-img">
-          <img src="images/goa.jpeg" alt="Pooltron installed in pump room">
+          <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/easy-installments.png" alt="Pooltron installed inline in the pool plant room pipework">
         </div>
         <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;">
           <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Installs inline in the pump room</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Positioned after the sand filter</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Positioned after sand filters</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Suitable for new builds and retrofit installations</div>
           <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> No power supply or control equipment required</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Suitable for new builds and retrofits</div>
-          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Once installed, operates continuously</div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:14px;color:#334155;"><i class="fa fa-check-circle" style="color:var(--aqua);"></i> Once installed, operates continuously without intervention</div>
+        </div>
+        <div style="margin-top:20px;background:#e0f2fe;border-radius:12px;padding:14px 18px;border-left:4px solid var(--aqua);display:flex;align-items:center;gap:10px;">
+          <i class="fa fa-shield-halved" style="color:var(--aqua);font-size:16px;flex-shrink:0;"></i>
+          <p style="margin:0;font-size:14px;color:#003459;font-weight:600;">The smart, maintenance-free solution for pool protection.</p>
         </div>
       </div>
     </div>
@@ -759,40 +768,48 @@
     </div>
     <div class="pt-range-grid">
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT10">
         <div class="pt-range-model">PT10</div>
         <div class="pt-range-type">Small Pools<br><span style="font-size:12px;color:#94a3b8;">1 – 12 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT15">
         <div class="pt-range-model">PT15</div>
         <div class="pt-range-type">Residential Pools<br><span style="font-size:12px;color:#94a3b8;">8 – 25 lpm</span></div>
       </div>
       <div class="pt-range-card featured">
         <span class="pt-range-badge">Most Popular</span>
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT20">
         <div class="pt-range-model">PT20</div>
         <div class="pt-range-type">Medium Pools<br><span style="font-size:12px;color:#94a3b8;">24 – 54 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT25">
         <div class="pt-range-model">PT25</div>
         <div class="pt-range-type">Large Residential<br><span style="font-size:12px;color:#94a3b8;">45 – 90 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT40">
         <div class="pt-range-model">PT40</div>
         <div class="pt-range-type">Hotels<br><span style="font-size:12px;color:#94a3b8;">110 – 210 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT50">
         <div class="pt-range-model">PT50</div>
         <div class="pt-range-type">Commercial Pools<br><span style="font-size:12px;color:#94a3b8;">170 – 330 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT65">
         <div class="pt-range-model">PT65</div>
         <div class="pt-range-type">Large Commercial<br><span style="font-size:12px;color:#94a3b8;">310 – 675 lpm</span></div>
       </div>
       <div class="pt-range-card">
+        <img class="pt-range-icon" src="images/Aquashark Images for Developer/Pooltron_Client_imgs/product-all.png" alt="Pooltron PT80">
         <div class="pt-range-model">PT80</div>
         <div class="pt-range-type">Olympic / Water Parks<br><span style="font-size:12px;color:#94a3b8;">600 – 1175 lpm</span></div>
       </div>
     </div>
-    <p class="pt-range-note">Not sure which model is right for your pool? <a href="contact.html">Contact our experts for free sizing assistance →</a></p>
+    <p class="pt-range-note"><span><i class="fa fa-shield-halved" style="color:var(--aqua);margin-right:6px;"></i>Not sure which model is right for your pool? Our experts will help you choose the perfect size.</span> <a href="contact.html" class="pt-range-cta">Contact Us <i class="fa fa-arrow-right"></i></a></p>
   </div>
 </section>
 
@@ -834,7 +851,7 @@
         </div>
       </div>
       <div>
-        <img src="images/hero/hero-pool.jpg" alt="Luxury swimming pool protected by Pooltron" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,52,89,0.18);">
+        <img src="images/Aquashark Images for Developer/Pooltron_Client_imgs/w-buy.png" alt="Luxury resort pool protected by Pooltron" style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,52,89,0.18);">
       </div>
     </div>
   </div>
