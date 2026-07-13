@@ -235,6 +235,44 @@
   margin: 0;
 }
 
+/* Region cards (grouped India / UAE addresses) */
+.con-region-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 14px rgba(0,52,89,0.07);
+  border-left: 4px solid #0077b6;
+}
+.con-region-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #003459;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin: 0 0 12px;
+}
+.con-region-card__title i { color: #0077b6; }
+.con-region-card__loc { margin-bottom: 12px; }
+.con-region-card__loc:last-of-type { margin-bottom: 0; }
+.con-region-card__company { font-weight: 700; color: #003459; font-size: 13.5px; margin: 0 0 2px; }
+.con-region-card__addr { color: #556677; font-size: 14px; line-height: 1.65; margin: 0; }
+.con-region-card__contact {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid #e2ecf4;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.con-region-card__contact a { color: #0077b6; font-size: 13.5px; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+.con-region-card__contact a:hover { text-decoration: underline; }
+.con-region-card__contact span { font-size: 12px; color: #94a3b8; }
+
 /* WhatsApp card */
 .con-wa-card {
   background: linear-gradient(135deg,#25d366,#128c4a);
@@ -336,15 +374,12 @@
 }
 .offices-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  max-width: 1100px;
+  max-width: 800px;
   margin: 0 auto;
 }
-@media (max-width: 900px) {
-  .offices-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .offices-grid { grid-template-columns: 1fr; }
 }
 .office-card {
@@ -707,37 +742,32 @@
         </div>
       </div>
 
-      <div class="con-info-card">
-        <div class="con-info-card__icon"><i class="fa fa-location-dot"></i></div>
-        <div>
-          <p class="con-info-card__label">Showroom/Office</p>
-          <p class="con-info-card__value"><strong>Aquashark Pools and Spas</strong><br>#1, Sai Audumbar, Mumbai-Bengalaru Highway, Punawale, Pune-411033, Maharashtra, India</p>
+      <div class="con-region-card">
+        <p class="con-region-card__title"><i class="fa fa-location-dot"></i> India</p>
+        <div class="con-region-card__loc">
+          <p class="con-region-card__company">Aquashark Pools and Spas</p>
+          <p class="con-region-card__addr">#1, Sai Audumbar, Mumbai-Bengalaru Highway, Punawale, Pune-411033, Maharashtra, India</p>
+        </div>
+        <div class="con-region-card__contact">
+          <a href="tel:+919765376667"><i class="fa fa-phone"></i> +91-9765376667</a>
+          <a href="mailto:info@aquashark.in"><i class="fa fa-envelope"></i> info@aquashark.in</a>
+          <span>GST: 27ABTFA6579L1ZG</span>
         </div>
       </div>
 
-      <!-- RESTORE: factory address info card removed per client request -->
-
-      <div class="con-info-card">
-        <div class="con-info-card__icon"><i class="fa fa-file-invoice"></i></div>
-        <div>
-          <p class="con-info-card__label">GST</p>
-          <p class="con-info-card__value">27ABTFA6579L1ZG</p>
+      <div class="con-region-card">
+        <p class="con-region-card__title"><i class="fa fa-location-dot"></i> UAE</p>
+        <div class="con-region-card__loc">
+          <p class="con-region-card__company">Aquashark Fiberglass Pools LLC</p>
+          <p class="con-region-card__addr">26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</p>
         </div>
-      </div>
-
-      <div class="con-info-card">
-        <div class="con-info-card__icon"><i class="fa fa-location-dot"></i></div>
-        <div>
-          <p class="con-info-card__label">UAE Office 1 — Ajman</p>
-          <p class="con-info-card__value"><strong>Aquashark Fiberglass Pools LLC</strong><br>26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</p>
+        <div class="con-region-card__loc">
+          <p class="con-region-card__company">Aquashark Swimming Pools LLC</p>
+          <p class="con-region-card__addr">F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</p>
         </div>
-      </div>
-
-      <div class="con-info-card">
-        <div class="con-info-card__icon"><i class="fa fa-location-dot"></i></div>
-        <div>
-          <p class="con-info-card__label">UAE Office 2 — Hor Al Anz</p>
-          <p class="con-info-card__value"><strong>Aquashark Swimming Pools LLC</strong><br>F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</p>
+        <div class="con-region-card__contact">
+          <a href="tel:+971559968803"><i class="fa fa-phone"></i> +971-55 996 8803</a>
+          <a href="mailto:info@aquashark.me"><i class="fa fa-envelope"></i> info@aquashark.me</a>
         </div>
       </div>
 
@@ -800,47 +830,34 @@
 <!-- ══════════════════════════════════════ OFFICES SECTION ═══ -->
 <section class="con-offices">
   <div class="con-offices__inner">
-    <h2>Our Offices</h2>
+    <h2>Our Locations</h2>
     <div class="offices-grid">
 
       <div class="office-card">
         <div class="office-card__header">
-          <span class="office-card__emoji">🏙️</span>
-          <span class="office-card__city">India Office</span>
+          <span class="office-card__emoji">🇮🇳</span>
+          <span class="office-card__city">India</span>
         </div>
         <div class="office-card__body">
           <p class="office-card__addr"><strong>Aquashark Pools and Spas</strong><br>#1, Sai Audumbar,<br>Mumbai-Bengalaru Highway,<br>Punawale, Pune-411033, Maharashtra, India</p>
-          <p style="font-size:13px;color:#334155;margin:6px 0 2px;">📞 <a href="tel:+971559968803" style="color:var(--aqua);">+971-55 996 8803</a></p>
-          <p style="font-size:13px;color:#334155;margin:0 0 8px;"><a href="mailto:info@aquashark.me" style="color:var(--aqua);">info@aquashark.me</a></p>
+          <p style="font-size:13px;color:#334155;margin:6px 0 2px;">📞 <a href="tel:+919765376667" style="color:var(--aqua);">+91-9765376667</a></p>
+          <p style="font-size:13px;color:#334155;margin:0 0 12px;"><a href="mailto:info@aquashark.in" style="color:var(--aqua);">info@aquashark.in</a></p>
           <a href="https://maps.google.com/?q=%231+Sai+Audumbar+Bengalaru+Mumbai+Highway+Punawale+Pune+Maharashtra+411033" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
         </div>
       </div>
 
-      <!-- RESTORE: factory office card removed per client request -->
-
       <div class="office-card">
         <div class="office-card__header">
-          <span class="office-card__emoji">🏙️</span>
-          <span class="office-card__city">Ajman, UAE</span>
+          <span class="office-card__emoji">🇦🇪</span>
+          <span class="office-card__city">UAE</span>
         </div>
         <div class="office-card__body">
-          <p class="office-card__addr"><strong>Aquashark Fiberglass Pools LLC</strong><br>26th Floor, Amber Gen Tower,<br>Ajman, Dubai, UAE</p>
+          <p class="office-card__addr" style="margin-bottom:8px;"><strong>Aquashark Fiberglass Pools LLC</strong><br>26th Floor, Amber Gen Tower,<br>Ajman, Dubai, UAE</p>
+          <a href="https://maps.google.com/?q=Amber+Gen+Tower+Ajman+Dubai+UAE" target="_blank" rel="noopener" class="office-card__dir" style="margin-bottom:16px;"><i class="fa fa-location-arrow"></i> Get Directions</a>
+          <p class="office-card__addr" style="margin-top:16px;margin-bottom:8px;"><strong>Aquashark Swimming Pools LLC</strong><br>F1 657, Khaled Mohammad Abdulla<br>Alzahed F-1, Hor Al Anz,<br>Dubai, UAE</p>
+          <a href="https://maps.google.com/?q=Hor+Al+Anz+Dubai+UAE" target="_blank" rel="noopener" class="office-card__dir" style="margin-bottom:16px;"><i class="fa fa-location-arrow"></i> Get Directions</a>
           <p style="font-size:13px;color:#334155;margin:6px 0 2px;">📞 <a href="tel:+971559968803" style="color:var(--aqua);">+971-55 996 8803</a></p>
-          <p style="font-size:13px;color:#334155;margin:0 0 8px;"><a href="mailto:info@aquashark.me" style="color:var(--aqua);">info@aquashark.me</a></p>
-          <a href="https://maps.google.com/?q=Amber+Gen+Tower+Ajman+Dubai+UAE" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
-        </div>
-      </div>
-
-      <div class="office-card">
-        <div class="office-card__header">
-          <span class="office-card__emoji">🌍</span>
-          <span class="office-card__city">Hor Al Anz, UAE</span>
-        </div>
-        <div class="office-card__body">
-          <p class="office-card__addr"><strong>Aquashark Swimming Pools LLC</strong><br>F1 657, Khaled Mohammad Abdulla<br>Alzahed F-1, Hor Al Anz,<br>Dubai, UAE</p>
-          <p style="font-size:13px;color:#334155;margin:6px 0 2px;">📞 <a href="tel:+971559968803" style="color:var(--aqua);">+971-55 996 8803</a></p>
-          <p style="font-size:13px;color:#334155;margin:0 0 8px;"><a href="mailto:info@aquashark.me" style="color:var(--aqua);">info@aquashark.me</a></p>
-          <a href="https://maps.google.com/?q=Hor+Al+Anz+Dubai+UAE" target="_blank" rel="noopener" class="office-card__dir"><i class="fa fa-location-arrow"></i> Get Directions</a>
+          <p style="font-size:13px;color:#334155;margin:0;"><a href="mailto:info@aquashark.me" style="color:var(--aqua);">info@aquashark.me</a></p>
         </div>
       </div>
 
@@ -876,9 +893,9 @@
           <li><i class="fa fa-phone"></i><span>+971-55 996 8803</span></li>
           <li><i class="fa fa-envelope"></i><span>info@aquashark.me</span></li>
           <li><i class="fa fa-globe"></i><span>www.aquashark.me</span></li>
-          <li><i class="fa fa-location-dot"></i><span>Showroom/Office: #1, Sai Audumbar, Bengalaru - Mumbai Highway, Punawale, Pune, Maharashtra 411033, India</span></li>
-          <li><i class="fa fa-location-dot"></i><span>UAE Office 1: 26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</span></li>
-          <li><i class="fa fa-location-dot"></i><span>UAE Office 2: F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</span></li>
+          <li><i class="fa fa-location-dot"></i><span>India: #1, Sai Audumbar, Bengalaru - Mumbai Highway, Punawale, Pune, Maharashtra 411033, India</span></li>
+          <li><i class="fa fa-location-dot"></i><span>UAE: 26th Floor, Amber Gen Tower, Ajman, Dubai, UAE</span></li>
+          <li><i class="fa fa-location-dot"></i><span>UAE: F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</span></li>
           <li><i class="fa fa-file-invoice"></i><span>GST: 27ABTFA6579L1ZG</span></li>
         </ul>
       </div>
@@ -925,8 +942,8 @@
           <a href="https://www.linkedin.com/company/aquashark-pools-spas/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           <a href="https://wa.me/971559968803" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <h5 style="margin-top:4px;">Offices</h5>
-        <p style="font-size:12px;color:#556677;line-height:1.7;">Punawale, Pune, India<br>UAE: 26th Floor, Amber Gen Tower, Ajman, Dubai, UAE<br>UAE: F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</p>
+        <h5 style="margin-top:4px;">Locations</h5>
+        <p style="font-size:12px;color:#556677;line-height:1.7;">India: Punawale, Pune, India<br>UAE: 26th Floor, Amber Gen Tower, Ajman, Dubai, UAE<br>UAE: F1 657, Khaled Mohammad Abdulla Alzahed F-1, Hor Al Anz, Dubai, UAE</p>
       </div>
     </div>
     <div class="footer-bottom">
