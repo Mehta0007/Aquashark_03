@@ -59,7 +59,7 @@ function updateCartBadge(){
 function getCategoryFromProduct(p) {
   const name = (p.name || '').toLowerCase();
   if (name.includes('fiberglass pool') || name.includes('ibiza') || name.includes('cocktail') || name.includes('manila') || name.includes('sydney') || name.includes('toronto') || name.includes('paris') || name.includes('mexico')) return 'Fiberglass Pool';
-  if (name.includes('above ground') || name.includes('bombay')) return 'Above Ground Pool';
+  if (name.includes('above ground') || name.includes('bombay')) return 'Balcony Pool';
   if (name.includes('swim spa') || name.includes('trainer') || name.includes('challenger') || name.includes('mp signature') || name.includes('helios') || name.includes('zelus')) return 'Swim Spa';
   if (name.includes('hot tub') || name.includes('happy') || name.includes('palma') || name.includes('santorini') || name.includes('maximus') || name.includes('lsx')) return 'Hot Tub';
   if (name.includes('cold tub') || name.includes('chill tub') || name.includes('alpine')) return 'Cold Tub';
@@ -542,7 +542,7 @@ if(document.getElementById('catTrack')) updateCategoryStrip();
       <summary class="mob-link">Products <i class="fa fa-chevron-down"></i></summary>
       <div class="mob-sub">
         <a href="fiberglass-pools.html"><i class="fa fa-water"></i> Fiberglass Pools</a>
-        <a href="above-ground-pools.html"><i class="fa fa-person-swimming"></i> Above Ground Pools</a>
+        <a href="above-ground-pools.html"><i class="fa fa-person-swimming"></i> Balcony Pools</a>
         <a href="swim-spas.html"><i class="fa fa-hot-tub-person"></i> Swim Spas</a>
         <a href="hot-tubs.html"><i class="fa fa-bath"></i> Hot Tubs</a>
         <a href="cold-tubs.html"><i class="fa fa-snowflake"></i> Cold / Chill Tubs</a>
